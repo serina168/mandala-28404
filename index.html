@@ -1,0 +1,2355 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>曼陀羅心靈彩繪｜二級講師培訓 第十四屆｜心語能量美學・黃彥蓁老師</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;700&family=Noto+Sans+TC:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C9A96E;
+    --gold-light: #E8D5B0;
+    --gold-deep: #9B7A45;
+    --ink: #1A1410;
+    --ink-soft: #3D3328;
+    --sand: #F5EFE4;
+    --sand-dark: #EDE4D3;
+    --rose: #C4806A;
+    --teal-deep: #2D6B6B;
+    --cream: #FDFAF5;
+    --text-muted: #7A6A5A;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 300;
+    line-height: 1.8;
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: var(--ink);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 50% at 50% 30%, rgba(201,169,110,0.12) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 60% at 20% 80%, rgba(196,128,106,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 40% at 80% 20%, rgba(45,107,107,0.06) 0%, transparent 60%);
+  }
+
+  .mandala-bg {
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.04;
+    animation: slowRotate 60s linear infinite;
+  }
+
+  @keyframes slowRotate {
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+
+  .hero-badge {
+    display: inline-block;
+    border: 0.5px solid var(--gold);
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 3px;
+    padding: 6px 20px;
+    margin-bottom: 40px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 300;
+    animation: fadeUp 1s ease both;
+  }
+
+  .hero-institute {
+    color: var(--gold-light);
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    font-weight: 300;
+    opacity: 0.8;
+    animation: fadeUp 1s ease 0.1s both;
+  }
+
+  .hero-title {
+    font-family: 'Noto Serif TC', serif;
+    font-size: clamp(32px, 6vw, 60px);
+    font-weight: 300;
+    color: #fff;
+    line-height: 1.3;
+    margin-bottom: 12px;
+    animation: fadeUp 1s ease 0.2s both;
+  }
+
+  .hero-title em {
+    font-style: normal;
+    color: var(--gold);
+  }
+
+  .hero-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(16px, 2.5vw, 22px);
+    color: var(--gold-light);
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    font-weight: 300;
+    font-style: italic;
+    animation: fadeUp 1s ease 0.3s both;
+  }
+
+  .hero-tagline {
+    color: rgba(255,255,255,0.65);
+    font-size: 14px;
+    line-height: 2;
+    max-width: 480px;
+    margin-bottom: 60px;
+    animation: fadeUp 1s ease 0.4s both;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 48px;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeUp 1s ease 0.5s both;
+  }
+
+  .hero-stat {
+    text-align: center;
+  }
+
+  .hero-stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    color: var(--gold);
+    font-weight: 300;
+    line-height: 1;
+  }
+
+  .hero-stat-label {
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 1px;
+    margin-top: 4px;
+  }
+
+  .hero-divider {
+    width: 1px;
+    height: 60px;
+    background: rgba(201,169,110,0.3);
+    align-self: center;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── SECTION COMMON ── */
+  section {
+    padding: 100px 40px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    font-weight: 400;
+  }
+
+  .section-heading {
+    font-family: 'Noto Serif TC', serif;
+    font-size: clamp(24px, 4vw, 38px);
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 32px;
+    color: var(--ink);
+  }
+
+  .section-heading em {
+    font-style: normal;
+    color: var(--gold-deep);
+    font-weight: 300;
+  }
+
+  /* ── INTRO STRIP ── */
+  .intro-strip {
+    background: var(--sand);
+    padding: 80px 40px;
+    text-align: center;
+  }
+
+  .intro-strip-inner {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .intro-quote {
+    font-family: 'Noto Serif TC', serif;
+    font-size: clamp(20px, 3vw, 30px);
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    margin-bottom: 20px;
+  }
+
+  .intro-quote strong {
+    color: var(--gold-deep);
+    font-weight: 500;
+  }
+
+  .intro-sub {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.9;
+  }
+
+  /* ── FOR WHOM ── */
+  .for-whom-bg {
+    background: var(--ink);
+    padding: 100px 40px;
+  }
+
+  .for-whom-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .for-whom-bg .section-heading {
+    color: #fff;
+  }
+
+  .persona-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1px;
+    background: rgba(201,169,110,0.2);
+    border: 0.5px solid rgba(201,169,110,0.2);
+    margin-top: 48px;
+  }
+
+  .persona-card {
+    background: var(--ink);
+    padding: 40px 32px;
+    transition: background 0.3s;
+  }
+
+  .persona-card:hover {
+    background: #201a14;
+  }
+
+  .persona-icon {
+    font-size: 28px;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .persona-title {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 17px;
+    color: var(--gold);
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+
+  .persona-desc {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.8;
+  }
+
+  /* ── TEACHER ── */
+  .teacher-section {
+    background: var(--cream);
+    padding: 100px 40px;
+  }
+
+  .teacher-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  @media (max-width: 680px) {
+    .teacher-inner { grid-template-columns: 1fr; gap: 40px; }
+  }
+
+  .teacher-left {}
+
+  .teacher-credential-box {
+    background: var(--sand);
+    border-left: 2px solid var(--gold);
+    padding: 28px 24px;
+    margin-bottom: 24px;
+  }
+
+  .teacher-credential-title {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+
+  .credential-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+
+  .credential-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--gold);
+    margin-top: 9px;
+    flex-shrink: 0;
+  }
+
+  .credential-text {
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.7;
+  }
+
+  .teacher-highlight {
+    background: var(--gold);
+    color: var(--ink);
+    font-size: 12px;
+    padding: 12px 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+  }
+
+  .teacher-story {
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 2;
+    margin-bottom: 24px;
+  }
+
+  .teacher-story p { margin-bottom: 16px; }
+
+  .teacher-story strong {
+    color: var(--gold-deep);
+    font-weight: 500;
+  }
+
+  /* ── CURRICULUM ── */
+  .curriculum-bg {
+    background: var(--sand-dark);
+    padding: 100px 40px;
+  }
+
+  .curriculum-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .day-block {
+    margin-bottom: 48px;
+  }
+
+  .day-label {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--ink);
+    font-size: 11px;
+    letter-spacing: 2px;
+    padding: 5px 16px;
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+
+  .learn-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+  }
+
+  .learn-item {
+    background: var(--cream);
+    padding: 20px 24px;
+    border-bottom: 1.5px solid var(--gold-light);
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  .learn-check {
+    color: var(--gold-deep);
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .learn-text {
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.7;
+  }
+
+  .learn-text strong {
+    display: block;
+    color: var(--ink);
+    font-weight: 500;
+    margin-bottom: 2px;
+    font-size: 14px;
+  }
+
+  /* ── ROI ── */
+  .roi-section {
+    background: var(--teal-deep);
+    padding: 100px 40px;
+  }
+
+  .roi-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .roi-section .section-heading {
+    color: #fff;
+  }
+
+  .roi-section .section-label {
+    color: rgba(255,255,255,0.5);
+  }
+
+  .roi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 48px;
+  }
+
+  @media (max-width: 600px) {
+    .roi-grid { grid-template-columns: 1fr; }
+  }
+
+  .roi-card {
+    background: rgba(255,255,255,0.07);
+    border: 0.5px solid rgba(255,255,255,0.15);
+    padding: 32px 28px;
+  }
+
+  .roi-card-title {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 17px;
+    color: var(--gold-light);
+    margin-bottom: 16px;
+    font-weight: 400;
+  }
+
+  .roi-list {
+    list-style: none;
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+    line-height: 2;
+  }
+
+  .roi-list li::before {
+    content: '→ ';
+    color: var(--gold);
+  }
+
+  .roi-calc {
+    background: var(--gold);
+    padding: 36px 32px;
+    grid-column: 1 / -1;
+  }
+
+  .roi-calc-title {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 18px;
+    color: var(--ink);
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+
+  .roi-calc-body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 24px;
+  }
+
+  .roi-calc-step {
+    text-align: center;
+  }
+
+  .roi-calc-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    color: var(--ink);
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  .roi-calc-label {
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin-top: 6px;
+    line-height: 1.5;
+  }
+
+  .roi-calc-arrow {
+    align-self: center;
+    text-align: center;
+    font-size: 20px;
+    color: var(--ink-soft);
+  }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials-section {
+    background: var(--cream);
+    padding: 100px 40px;
+  }
+
+  .testimonials-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .testi-note {
+    background: var(--sand);
+    border: 0.5px solid var(--gold-light);
+    padding: 20px 24px;
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 40px;
+    font-style: italic;
+  }
+
+  .testi-placeholder-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+
+  .testi-card {
+    background: var(--sand);
+    padding: 28px 24px;
+    border-bottom: 2px solid var(--gold-light);
+    position: relative;
+  }
+
+  .testi-quote-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 64px;
+    color: var(--gold-light);
+    line-height: 0.6;
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .testi-text {
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.9;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+
+  .testi-author {
+    font-size: 12px;
+    color: var(--gold-deep);
+    font-weight: 500;
+  }
+
+  .testi-role {
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  /* ── CERTIFICATE ── */
+  .cert-strip {
+    background: var(--sand);
+    padding: 80px 40px;
+    text-align: center;
+    border-top: 0.5px solid var(--gold-light);
+    border-bottom: 0.5px solid var(--gold-light);
+  }
+
+  .cert-strip-inner {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .cert-box {
+    display: inline-block;
+    border: 1px solid var(--gold);
+    padding: 48px 60px;
+    position: relative;
+    margin: 40px 0;
+  }
+
+  .cert-box::before, .cert-box::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-color: var(--gold);
+    border-style: solid;
+  }
+
+  .cert-box::before {
+    top: -1px; left: -1px;
+    border-width: 2px 0 0 2px;
+  }
+
+  .cert-box::after {
+    bottom: -1px; right: -1px;
+    border-width: 0 2px 2px 0;
+  }
+
+  .cert-title {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 22px;
+    color: var(--ink);
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  .cert-subtitle {
+    font-size: 13px;
+    color: var(--gold-deep);
+    letter-spacing: 1px;
+  }
+
+  .cert-requirement {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 2;
+  }
+
+  /* ── SCHEDULE & PRICING ── */
+  .schedule-section {
+    background: var(--ink);
+    padding: 100px 40px;
+  }
+
+  .schedule-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .schedule-section .section-heading {
+    color: #fff;
+  }
+
+  .location-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 48px;
+  }
+
+  @media (max-width: 640px) {
+    .location-grid { grid-template-columns: 1fr; }
+  }
+
+  .location-card {
+    border: 0.5px solid rgba(201,169,110,0.3);
+    padding: 36px 28px;
+  }
+
+  .location-city {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 22px;
+    color: var(--gold);
+    margin-bottom: 20px;
+    font-weight: 300;
+  }
+
+  .location-info {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    line-height: 2;
+  }
+
+  .location-info strong {
+    color: rgba(255,255,255,0.9);
+    font-weight: 400;
+    display: block;
+  }
+
+  .class-tag {
+    display: inline-block;
+    border: 0.5px solid rgba(201,169,110,0.4);
+    color: var(--gold-light);
+    font-size: 12px;
+    padding: 4px 12px;
+    margin: 6px 4px 0 0;
+  }
+
+  .pricing-box {
+    margin-top: 60px;
+    border: 0.5px solid rgba(201,169,110,0.3);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 600px) {
+    .pricing-box { grid-template-columns: 1fr; }
+  }
+
+  .pricing-left {
+    padding: 48px 40px;
+    border-right: 0.5px solid rgba(201,169,110,0.3);
+  }
+
+  @media (max-width: 600px) {
+    .pricing-left { border-right: none; border-bottom: 0.5px solid rgba(201,169,110,0.3); }
+  }
+
+  .pricing-right {
+    padding: 48px 40px;
+  }
+
+  .price-original {
+    font-size: 13px;
+    color: rgba(255,255,255,0.35);
+    text-decoration: line-through;
+    margin-bottom: 4px;
+  }
+
+  .price-main {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    color: var(--gold);
+    font-weight: 300;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .price-unit {
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 16px;
+  }
+
+  .price-deadline {
+    background: rgba(201,169,110,0.12);
+    border: 0.5px solid rgba(201,169,110,0.3);
+    padding: 10px 14px;
+    font-size: 12px;
+    color: var(--gold-light);
+    line-height: 1.6;
+  }
+
+  .includes-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 16px;
+  }
+
+  .includes-list {
+    list-style: none;
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+    line-height: 2.2;
+  }
+
+  .includes-list li::before {
+    content: '✦ ';
+    color: var(--gold);
+    font-size: 10px;
+  }
+
+  .per-hour-note {
+    margin-top: 20px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+    line-height: 1.7;
+  }
+
+  /* ── CTA ── */
+  .cta-section {
+    background: var(--gold);
+    padding: 100px 40px;
+    text-align: center;
+  }
+
+  .cta-inner {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .cta-eyebrow {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--ink-soft);
+    margin-bottom: 20px;
+  }
+
+  .cta-heading {
+    font-family: 'Noto Serif TC', serif;
+    font-size: clamp(24px, 4vw, 38px);
+    color: var(--ink);
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+
+  .cta-sub {
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.9;
+    margin-bottom: 48px;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+  }
+
+  .btn-primary {
+    background: var(--ink);
+    color: var(--gold);
+    padding: 16px 40px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s;
+  }
+
+  .btn-primary:hover {
+    background: var(--ink-soft);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--ink);
+    padding: 16px 40px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border: 1px solid var(--ink);
+    cursor: pointer;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s;
+  }
+
+  .btn-secondary:hover {
+    background: rgba(0,0,0,0.05);
+  }
+
+  .cta-urgency {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .urgency-item {
+    font-size: 12px;
+    color: var(--ink-soft);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .urgency-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--ink);
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    padding: 48px 40px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 18px;
+    color: var(--gold);
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+
+  .footer-sub {
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: 24px;
+  }
+
+  .footer-contact {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    line-height: 2;
+  }
+
+  .footer-contact a {
+    color: var(--gold-light);
+    text-decoration: none;
+  }
+
+  /* ── DECORATIVE DIVIDER ── */
+  .gold-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin: 0 auto;
+    max-width: 300px;
+    padding: 24px 0;
+  }
+
+  .gold-divider-line {
+    flex: 1;
+    height: 0.5px;
+    background: var(--gold-light);
+  }
+
+  .gold-divider-gem {
+    width: 6px;
+    height: 6px;
+    background: var(--gold);
+    transform: rotate(45deg);
+    flex-shrink: 0;
+  }
+
+  /* ── SCROLL REVEAL ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (max-width: 600px) {
+    section { padding: 60px 24px; }
+    .hero { padding: 60px 24px; }
+    .for-whom-bg, .roi-section, .schedule-section, .teacher-section,
+    .curriculum-bg, .testimonials-section, .cta-section { padding: 60px 24px; }
+    .cert-box { padding: 32px 24px; }
+    .pricing-left, .pricing-right { padding: 28px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <svg class="mandala-bg" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="200" cy="200" r="190" stroke="#C9A96E" stroke-width="0.5"/>
+    <circle cx="200" cy="200" r="160" stroke="#C9A96E" stroke-width="0.5"/>
+    <circle cx="200" cy="200" r="130" stroke="#C9A96E" stroke-width="0.5"/>
+    <circle cx="200" cy="200" r="100" stroke="#C9A96E" stroke-width="0.5"/>
+    <circle cx="200" cy="200" r="70" stroke="#C9A96E" stroke-width="0.5"/>
+    <circle cx="200" cy="200" r="40" stroke="#C9A96E" stroke-width="0.5"/>
+    <line x1="200" y1="10" x2="200" y2="390" stroke="#C9A96E" stroke-width="0.5"/>
+    <line x1="10" y1="200" x2="390" y2="200" stroke="#C9A96E" stroke-width="0.5"/>
+    <line x1="65" y1="65" x2="335" y2="335" stroke="#C9A96E" stroke-width="0.5"/>
+    <line x1="335" y1="65" x2="65" y2="335" stroke="#C9A96E" stroke-width="0.5"/>
+    <line x1="132" y1="10" x2="268" y2="390" stroke="#C9A96E" stroke-width="0.3"/>
+    <line x1="268" y1="10" x2="132" y2="390" stroke="#C9A96E" stroke-width="0.3"/>
+    <line x1="10" y1="132" x2="390" y2="268" stroke="#C9A96E" stroke-width="0.3"/>
+    <line x1="10" y1="268" x2="390" y2="132" stroke="#C9A96E" stroke-width="0.3"/>
+    <polygon points="200,80 220,170 200,190 180,170" fill="none" stroke="#C9A96E" stroke-width="0.5"/>
+    <polygon points="200,320 220,230 200,210 180,230" fill="none" stroke="#C9A96E" stroke-width="0.5"/>
+    <polygon points="80,200 170,220 190,200 170,180" fill="none" stroke="#C9A96E" stroke-width="0.5"/>
+    <polygon points="320,200 230,220 210,200 230,180" fill="none" stroke="#C9A96E" stroke-width="0.5"/>
+  </svg>
+
+  <div style="position:relative;z-index:1;">
+    <div class="hero-badge">中華綜合發展研究院・文創藝術研究所</div>
+    <p class="hero-institute">心語能量美學｜心靈美學藝術學程・第十四屆</p>
+    <h1 class="hero-title">曼陀羅<em>心靈</em>彩繪<br>二級講師培訓</h1>
+    <p class="hero-subtitle">Mandala Soul Painting Instructor Program — Level II</p>
+    <p class="hero-tagline">
+      不只是學會畫畫，<br>
+      而是建立一套屬於你的<br>
+      藝術與心靈教學系統。
+    </p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num">500<span style="font-size:24px">+</span></div>
+        <div class="hero-stat-label">位學員信任</div>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">14</div>
+        <div class="hero-stat-label">屆師資傳承</div>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">15<span style="font-size:24px">+</span></div>
+        <div class="hero-stat-label">位講師已開班</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- INTRO STRIP -->
+<div class="intro-strip">
+  <div class="intro-strip-inner reveal">
+    <div class="gold-divider"><div class="gold-divider-line"></div><div class="gold-divider-gem"></div><div class="gold-divider-line"></div></div>
+    <p class="intro-quote">
+      你喜歡藝術，也對心靈療癒充滿熱情——<br>
+      但你還不確定，<strong>這份熱情能不能成為一門課？</strong>
+    </p>
+    <p class="intro-sub">
+      曼陀羅心靈彩繪，不只是藝術創作，<br>
+      更是一門融合色彩學、結構美學與能量覺察的專業系統。<br><br>
+      這門課，正是為那些準備好<strong>將熱情化為專業</strong>的你所設計的。<br><br>
+      十四屆以來，每班從不超過 6 位學員——<br>
+      因為黃彥蓁老師相信，真正的學習需要被<strong>看見、引導、陪伴</strong>。
+    </p>
+    <div class="gold-divider" style="margin-top:24px;"><div class="gold-divider-line"></div><div class="gold-divider-gem"></div><div class="gold-divider-line"></div></div>
+  </div>
+</div>
+
+
+
+<!-- PHOTO STRIP: 課程現場 -->
+<div style="background:var(--ink);padding:0;overflow:hidden;">
+  <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:2px;">
+    <div style="overflow:hidden;max-height:420px;">
+      <img src="IMG_20260228_150302.jpg" alt="心語能量美學小班上課實景" 
+           style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.88);">
+    </div>
+    <div style="display:grid;grid-template-rows:1fr 1fr;gap:2px;">
+      <div style="overflow:hidden;">
+        <img src="IMG_20260428_114422.jpg" alt="學員專注創作中" 
+             style="width:100%;height:200px;object-fit:cover;display:block;filter:brightness(0.88);">
+      </div>
+      <div style="overflow:hidden;">
+        <img src="IMG_20260428_180613.jpg" alt="學員細心彩繪" 
+             style="width:100%;height:200px;object-fit:cover;display:block;filter:brightness(0.88);">
+      </div>
+    </div>
+    <div style="overflow:hidden;max-height:420px;">
+      <img src="FB_IMG_1776688649932.jpg" alt="學員認真創作" 
+           style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.88);">
+    </div>
+  </div>
+  <div style="text-align:center;padding:20px;background:var(--ink);">
+    <p style="font-size:11px;letter-spacing:3px;color:rgba(255,255,255,0.35);">INSIDE THE CLASSROOM・課堂實景</p>
+  </div>
+</div>
+<!-- FOUNDER PHILOSOPHY -->
+<div style="background:var(--ink);padding:100px 40px;position:relative;overflow:hidden;">
+  <div style="position:absolute;top:-60px;right:-60px;width:400px;height:400px;border-radius:50%;border:0.5px solid rgba(201,169,110,0.08);pointer-events:none;"></div>
+  <div style="position:absolute;top:20px;right:20px;width:260px;height:260px;border-radius:50%;border:0.5px solid rgba(201,169,110,0.05);pointer-events:none;"></div>
+
+  <div style="max-width:860px;margin:0 auto;" class="reveal">
+
+    <!-- 引言 -->
+    <div style="border-left:2px solid var(--gold);padding-left:32px;margin-bottom:64px;">
+      <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,3vw,32px);color:rgba(255,255,255,0.9);line-height:1.7;font-weight:300;font-style:italic;margin-bottom:16px;">
+        "所有專業的講師，<br>都不是一夕養成的。"
+      </p>
+      <p style="font-size:13px;color:var(--gold);letter-spacing:1px;">── 黃彥蓁老師・心語能量美學創辦人</p>
+    </div>
+
+    <!-- 理念說明 -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;">
+      <div>
+        <p style="font-size:10px;letter-spacing:3px;color:rgba(255,255,255,0.35);margin-bottom:20px;">THE PHILOSOPHY・創辦理念</p>
+        <p style="font-family:'Noto Serif TC',serif;font-size:clamp(18px,2.5vw,24px);color:#fff;line-height:1.6;font-weight:300;margin-bottom:24px;">
+          一張證書，<br>從來不等於一位<em style="color:var(--gold);font-style:normal;">真正的好老師</em>。
+        </p>
+        <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:2;margin-bottom:20px;">
+          黃彥蓁老師從事彩繪教學逾 35 年，她深知：
+          真正的教學能力，來自於一次又一次站上講台的實踐，
+          來自於不斷回頭檢視、修正、再出發的過程。
+        </p>
+        <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:2;">
+          市面上的師資課程，大多是「給你工具，祝你好運」。
+          但她想做的，是在你走出去之後，
+          依然還在你身後——<strong style="color:rgba(255,255,255,0.85);">直到你真正站穩為止</strong>。
+        </p>
+      </div>
+      <div>
+        <p style="font-size:10px;letter-spacing:3px;color:rgba(255,255,255,0.35);margin-bottom:20px;">THE INNOVATION・首創制度</p>
+        <div style="background:rgba(201,169,110,0.07);border:0.5px solid rgba(201,169,110,0.25);padding:32px 28px;margin-bottom:16px;">
+          <p style="font-size:11px;letter-spacing:2px;color:var(--gold);margin-bottom:12px;">INDUSTRY FIRST・彩繪界首創</p>
+          <p style="font-family:'Noto Serif TC',serif;font-size:clamp(17px,2vw,22px);color:#fff;line-height:1.6;font-weight:300;margin-bottom:16px;">
+            三年內・無限次・免學費複訓制度
+          </p>
+          <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.9;">
+            這是黃彥蓁老師為了維持師資品質，<br>
+            在彩繪界<strong style="color:rgba(255,255,255,0.8);">首創</strong>的培育制度。<br><br>
+            不是優惠，不是促銷——<br>
+            而是一種對「教學品質」的承諾：<br>
+            <strong style="color:var(--gold);">你準備好了，才是真的準備好了。</strong>
+          </p>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+          <div style="border:0.5px solid rgba(255,255,255,0.08);padding:16px;text-align:center;">
+            <p style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gold);font-weight:300;line-height:1;">3</p>
+            <p style="font-size:11px;color:rgba(255,255,255,0.4);margin-top:4px;">年陪伴期</p>
+          </div>
+          <div style="border:0.5px solid rgba(255,255,255,0.08);padding:16px;text-align:center;">
+            <p style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gold);font-weight:300;line-height:1;">∞</p>
+            <p style="font-size:11px;color:rgba(255,255,255,0.4);margin-top:4px;">次複訓無上限</p>
+          </div>
+          <div style="border:0.5px solid rgba(255,255,255,0.08);padding:16px;text-align:center;">
+            <p style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gold);font-weight:300;line-height:1;">$0</p>
+            <p style="font-size:11px;color:rgba(255,255,255,0.4);margin-top:4px;">複訓學費</p>
+          </div>
+          <div style="border:0.5px solid rgba(255,255,255,0.08);padding:16px;text-align:center;">
+            <p style="font-size:16px;color:var(--gold);font-weight:500;line-height:1;margin-top:4px;">首創</p>
+            <p style="font-size:11px;color:rgba(255,255,255,0.4);margin-top:4px;">彩繪界唯一</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 底部時間軸：講師養成路徑 -->
+    <div style="margin-top:72px;padding-top:48px;border-top:0.5px solid rgba(255,255,255,0.08);">
+      <p style="font-size:10px;letter-spacing:3px;color:rgba(255,255,255,0.35);text-align:center;margin-bottom:36px;">THE JOURNEY・一位好老師的養成路徑</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:0;position:relative;">
+        <div style="text-align:center;padding:0 16px;position:relative;">
+          <div style="width:40px;height:40px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--ink);font-weight:400;">1</div>
+          <p style="font-size:13px;color:#fff;font-weight:500;margin-bottom:6px;">兩天培訓</p>
+          <p style="font-size:11px;color:rgba(255,255,255,0.4);line-height:1.7;">技法・色彩・教學系統完整建立</p>
+        </div>
+        <div style="display:flex;align-items:flex-start;justify-content:center;padding-top:20px;">
+          <div style="width:40px;height:0.5px;background:rgba(201,169,110,0.4);margin-top:0;"></div>
+        </div>
+        <div style="text-align:center;padding:0 16px;">
+          <div style="width:40px;height:40px;border-radius:50%;background:rgba(201,169,110,0.2);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold);font-weight:400;">2</div>
+          <p style="font-size:13px;color:#fff;font-weight:500;margin-bottom:6px;">初次開班</p>
+          <p style="font-size:11px;color:rgba(255,255,255,0.4);line-height:1.7;">帶著學費回收的成就感，也帶著第一次教學的問題</p>
+        </div>
+        <div style="display:flex;align-items:flex-start;justify-content:center;padding-top:20px;">
+          <div style="width:40px;height:0.5px;background:rgba(201,169,110,0.4);"></div>
+        </div>
+        <div style="text-align:center;padding:0 16px;">
+          <div style="width:40px;height:40px;border-radius:50%;background:rgba(201,169,110,0.2);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold);font-weight:400;">3</div>
+          <p style="font-size:13px;color:#fff;font-weight:500;margin-bottom:6px;">回來複訓</p>
+          <p style="font-size:11px;color:rgba(255,255,255,0.4);line-height:1.7;">帶著真實教學經驗重新學習，收穫完全不同</p>
+        </div>
+        <div style="display:flex;align-items:flex-start;justify-content:center;padding-top:20px;">
+          <div style="width:40px;height:0.5px;background:rgba(201,169,110,0.4);"></div>
+        </div>
+        <div style="text-align:center;padding:0 16px;">
+          <div style="width:40px;height:40px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:16px;">✦</div>
+          <p style="font-size:13px;color:var(--gold);font-weight:500;margin-bottom:6px;">成為真正的好老師</p>
+          <p style="font-size:11px;color:rgba(255,255,255,0.4);line-height:1.7;">不斷精進，直到教學成為你自然流動的能力</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOR WHOM -->
+<div class="for-whom-bg">
+  <div class="for-whom-inner reveal">
+    <div class="section-label">這門課適合你嗎</div>
+    <h2 class="section-heading">如果你是以下任何一種人，<br><em>這門課為你而開</em></h2>
+    <div class="persona-grid">
+      <div class="persona-card">
+        <span class="persona-icon">🎨</span>
+        <div class="persona-title">藝術創作者</div>
+        <p class="persona-desc">熱愛創作，想將自己的藝術能量系統化，並傳授給更多人。</p>
+      </div>
+      <div class="persona-card">
+        <span class="persona-icon">🌿</span>
+        <div class="persona-title">心靈療癒工作者</div>
+        <p class="persona-desc">已在帶領靜心、能量療癒或身心靈工作坊，想為學員加入有形的創作體驗。</p>
+      </div>
+      <div class="persona-card">
+        <span class="persona-icon">✏️</span>
+        <div class="persona-title">手作與美學教師</div>
+        <p class="persona-desc">目前已在教學，想拓展課程種類，增加藝術療癒的深度與吸引力。</p>
+      </div>
+      <div class="persona-card">
+        <span class="persona-icon">🌱</span>
+        <div class="persona-title">想開展第二專長的你</div>
+        <p class="persona-desc">渴望擁有一門能結合藝術、美學與心靈探索的斜槓事業，從興趣到收入。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- SMALL CLASS PROMISE -->
+<div style="background: #F5EFE4; padding: 80px 40px; border-top: 0.5px solid #E8D5B0; border-bottom: 0.5px solid #E8D5B0;">
+  <div style="max-width:860px; margin:0 auto;" class="reveal">
+    <div style="text-align:center; margin-bottom:48px;">
+      <p style="font-size:10px;letter-spacing:4px;color:#9B7A45;margin-bottom:14px;">OUR COMMITMENT・我們的承諾</p>
+      <h2 style="font-family:'Noto Serif TC',serif;font-size:clamp(22px,3.5vw,34px);font-weight:400;color:#1A1410;line-height:1.5;margin-bottom:20px;">
+        每班最多 10 人小班精緻制，<br>加上亞洲唯一的三年無限複訓承諾
+      </h2>
+      <p style="font-size:14px;color:#7A6A5A;line-height:2;max-width:560px;margin:0 auto;">
+        不是因為場地限制，而是因為黃彥蓁老師相信——<br>
+        在這麼重要的學習旅程裡，你值得被老師<strong style="color:#9B7A45;">真正看見</strong>。
+      </p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:#E8D5B0;">
+      <div style="background:#F5EFE4;padding:32px 28px;text-align:center;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:48px;color:#C9A96E;font-weight:300;line-height:1;">500<span style="font-size:28px;">+</span></div>
+        <div style="font-size:13px;color:#3D3328;margin-top:8px;line-height:1.6;">位學員親身體驗<br><span style="font-size:11px;color:#7A6A5A;">超過十年的市場口碑積累</span></div>
+      </div>
+      <div style="background:#F5EFE4;padding:32px 28px;text-align:center;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:48px;color:#C9A96E;font-weight:300;line-height:1;">15<span style="font-size:28px;">+</span></div>
+        <div style="font-size:13px;color:#3D3328;margin-top:8px;line-height:1.6;">位講師實際開班<br><span style="font-size:11px;color:#7A6A5A;">不只拿證書，而是真的在教</span></div>
+      </div>
+      <div style="background:#F5EFE4;padding:32px 28px;text-align:center;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:48px;color:#C9A96E;font-weight:300;line-height:1;">14</div>
+        <div style="font-size:13px;color:#3D3328;margin-top:8px;line-height:1.6;">屆皆堅持小班<br><span style="font-size:11px;color:#7A6A5A;">品質從未因招生壓力妥協</span></div>
+      </div>
+      <div style="background:#F5EFE4;padding:32px 28px;text-align:center;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:48px;color:#C9A96E;font-weight:300;line-height:1;">2–6</div>
+        <div style="font-size:13px;color:#3D3328;margin-top:8px;line-height:1.6;">人精緻小班制<br><span style="font-size:11px;color:#7A6A5A;">老師全程親自陪伴每位學員</span></div>
+      </div>
+    </div>
+    <div style="background:#1A1410;padding:28px 36px;margin-top:1px;text-align:center;">
+      <p style="font-size:14px;color:rgba(255,255,255,0.75);line-height:2;margin:0;">
+        超過 500 位學員體驗過心語能量美學的課程，<br>
+        我們從未用「擴大招生」換取品質。<br>
+        <strong style="color:#C9A96E;">每班 2–6 人的堅持，已走過十四屆。</strong>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- TEACHER -->
+<div class="teacher-section" style="padding:0;background:var(--ink);overflow:hidden;">
+
+  <!-- 師資視覺大圖帶 -->
+  <div style="display:grid;grid-template-columns:1fr 1.8fr 1fr;gap:2px;max-height:600px;overflow:hidden;">
+    <div style="overflow:hidden;background:var(--sand);">
+      <img src="MEITU_20251211_130554138.jpg" alt="心語能量美學師資團隊" 
+           style="width:100%;height:600px;object-fit:cover;object-position:center top;display:block;filter:brightness(0.88);">
+    </div>
+    <div style="overflow:hidden;position:relative;">
+      <img src="FB_IMG_1765665067930.jpg" alt="黃彥蓁老師與曼陀羅作品" 
+           style="width:100%;height:600px;object-fit:cover;object-position:center 15%;display:block;">
+      <!-- 覆蓋文字 -->
+      <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top, rgba(26,20,16,0.92) 0%, transparent 60%);padding:40px 32px 32px;">
+        <p style="font-size:10px;letter-spacing:4px;color:var(--gold);margin-bottom:8px;">MASTER TEACHER・首席師資</p>
+        <h2 style="font-family:'Noto Serif TC',serif;font-size:clamp(28px,4vw,44px);font-weight:300;color:#fff;line-height:1.2;margin-bottom:6px;">黃彥蓁 老師</h2>
+        <p style="font-size:13px;color:rgba(255,255,255,0.6);letter-spacing:1px;">心語能量美學 創辦人</p>
+      </div>
+    </div>
+    <div style="overflow:hidden;">
+      <img src="MEITU_20251211_130524502.jpg" alt="黃彥蓁老師坐姿形象照" 
+           style="width:100%;height:600px;object-fit:cover;object-position:center top;display:block;filter:brightness(0.9);">
+    </div>
+  </div>
+
+  <!-- 師資詳細介紹 -->
+  <div style="background:var(--cream);padding:80px 40px;">
+    <div style="max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1.6fr;gap:80px;align-items:start;" class="reveal">
+
+      <!-- 左：資歷認證 -->
+      <div>
+        <div class="section-label">關於師資</div>
+        <div class="teacher-credential-box">
+          <p class="teacher-credential-title">CREDENTIALS・資歷認證</p>
+          <div class="credential-item">
+            <div class="credential-dot"></div>
+            <p class="credential-text">美國 SDP 彩繪協會國際認證藝術家 CDA</p>
+          </div>
+          <div class="credential-item">
+            <div class="credential-dot"></div>
+            <p class="credential-text">Heritage 國際證書傳承藝術家</p>
+          </div>
+          <div class="credential-item">
+            <div class="credential-dot"></div>
+            <p class="credential-text">中華民國傢飾彩繪協會創會理事長</p>
+          </div>
+          <div class="credential-item">
+            <div class="credential-dot"></div>
+            <p class="credential-text">中華綜合發展研究院文創藝術研究所所長</p>
+          </div>
+          <div class="credential-item">
+            <div class="credential-dot"></div>
+            <p class="credential-text">出版彩繪著作六冊，含中英文版</p>
+          </div>
+          <div class="credential-item">
+            <div class="credential-dot"></div>
+            <p class="credential-text">彩繪教學資歷逾 35 年（1989 年起）</p>
+          </div>
+        </div>
+        <div class="teacher-highlight">
+          🌏 台灣首位受邀赴美國俄亥俄州<br>彩繪大會授課的華人藝術家<br><br>
+          ✦ 心語能量美學 創辦人<br>
+          ✦ 彩繪界首創免費複訓制度
+        </div>
+      </div>
+
+      <!-- 右：師資故事 -->
+      <div>
+        <h2 class="section-heading" style="font-size:clamp(22px,3vw,32px);">從一把畫筆，<em>走出一個世界</em></h2>
+        <div class="teacher-story">
+          <p>從 1989 年拿起畫筆至今，黃彥蓁老師在彩繪藝術與教學的路上，走了超過三十五年。</p>
+          <p>2015 年，她受邀赴美國俄亥俄州彩繪大會授課，成為登上這個國際殿堂的<strong>第一位華人講師</strong>。那一刻，不只是個人的榮耀——那是她將東方靈性美學帶向世界的起點。</p>
+          <p>她深信：<strong>每個人內在都有一幅等待被看見的圖。</strong></p>
+          <p>曼陀羅心靈彩繪，是她將多年藝術創作、色彩心理學研究，以及逾 500 位學員作品解析的精華，凝聚成一套完整系統。學員學到的，不只是如何畫出一幅美麗的曼陀羅——而是如何<strong>透過色彩與圖形，引導一個人遇見自己。</strong></p>
+          <p>為了讓每一位結業的講師都能真正站上講台，她在彩繪界首創「三年無限次免費複訓」的制度——<strong>因為她知道，好老師從來不是一夕養成的。</strong></p>
+          <p style="font-family:'Noto Serif TC',serif;font-size:15px;color:var(--gold-deep);border-left:2px solid var(--gold);padding-left:16px;margin-top:24px;line-height:1.9;">
+            這門課，是她三十五年心血的傾囊相授，<br>也是她給每一位有志成為講師的你，<br>最深的祝福。
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- CURRICULUM -->
+<div class="curriculum-bg">
+  <div class="curriculum-inner reveal">
+    <div class="section-label">課程內容</div>
+    <h2 class="section-heading">兩天 18 小時，<br><em>建立完整的創作與教學基礎</em></h2>
+
+    <div style="margin-bottom:16px;">
+      <div class="day-label">DAY 1・藝術技法與色彩系統</div>
+      <div class="learn-grid">
+        <div class="learn-item">
+          <span class="learn-check">✦</span>
+          <div class="learn-text">
+            <strong>曼陀羅的文化背景與象徵</strong>
+            理解幾何圖形背後的靈性意義與東西方脈絡
+          </div>
+        </div>
+        <div class="learn-item" style="border-left:2px solid var(--gold-deep);background:var(--cream);">
+          <span class="learn-check" style="color:var(--gold-deep);">★</span>
+          <div class="learn-text">
+            <strong style="color:var(--gold-deep);">基礎色彩學：6色調出100+色</strong>
+            色相、明度、彩度、色溫完整理論，加上老師親自示範調色，學員現場演練——課堂結束前每人至少調出 18 種配色，帶著真實手感離開
+          </div>
+        </div>
+        <div class="learn-item">
+          <span class="learn-check">✦</span>
+          <div class="learn-text">
+            <strong>幾何結構與對稱設計技巧</strong>
+            曼陀羅骨架的精確繪製方法，從基礎到進階圖形設計
+          </div>
+        </div>
+        <div class="learn-item">
+          <span class="learn-check">✦</span>
+          <div class="learn-text">
+            <strong>進階彩繪技法實作</strong>
+            點、線、逗點、長線筆等多種筆觸，創造層次豐富的作品
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:32px;">
+      <div class="day-label">DAY 2・心靈教學・引導系統・團體共創</div>
+      <div class="learn-grid">
+        <div class="learn-item">
+          <span class="learn-check">✦</span>
+          <div class="learn-text">
+            <strong>能量覺察與靜心創作方法</strong>
+            融入冥想與意圖設定，讓藝術創作成為覺察的過程
+          </div>
+        </div>
+        <div class="learn-item" style="border-left:2px solid var(--gold-deep);background:var(--cream);">
+          <span class="learn-check" style="color:var(--gold-deep);">★</span>
+          <div class="learn-text">
+            <strong style="color:var(--gold-deep);">色彩心理學 × 500位學員大數據解析</strong>
+            每個顏色的心理意義、畫在不同位置的象徵，結合黃老師親自解析逾 500 位學員作品所歸納的獨家系統——讓你能精準引導學員深入自我覺察，看見並突破內在盲點
+          </div>
+        </div>
+        <div class="learn-item">
+          <span class="learn-check">✦</span>
+          <div class="learn-text">
+            <strong>心靈彩繪課程教學流程</strong>
+            如何設計一堂完整的體驗工作坊：從暖場、創作到收尾引導
+          </div>
+        </div>
+        <div class="learn-item">
+          <span class="learn-check">✦</span>
+          <div class="learn-text">
+            <strong>學生引導技巧實練</strong>
+            如何帶領不同狀態的學員，讓每個人都能在課堂中有所收穫
+          </div>
+        </div>
+        <div class="learn-item" style="border-left:2px solid var(--gold-deep);background:var(--cream);">
+          <span class="learn-check" style="color:var(--gold-deep);">★</span>
+          <div class="learn-text">
+            <strong style="color:var(--gold-deep);">壓軸單元｜全員團體創作</strong>
+            新舊生共同在同一幅曼陀羅上創作——在共創中看見自己在團體的角色、突破慣性框架、感受集體能量的流動。這是每屆學員最難忘的課堂時刻。
+          </div>
+        </div>
+        <div class="learn-item" style="border-left:2px solid var(--gold-deep);background:var(--cream);">
+          <span class="learn-check" style="color:var(--gold-deep);">★</span>
+          <div class="learn-text">
+            <strong style="color:var(--gold-deep);">新舊生共學・能量傳承</strong>
+            結業講師與新生同堂學習，舊生的實戰經驗為新生帶來信心；新生的新鮮視角為舊生開啟新的教學思維。這是心語能量美學獨有的課堂生態。
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- ARTWORK GALLERY -->
+<div style="background:var(--ink);padding:80px 40px;">
+  <div style="max-width:900px;margin:0 auto;" class="reveal">
+    <div style="text-align:center;margin-bottom:40px;">
+      <p style="font-size:10px;letter-spacing:4px;color:var(--gold);margin-bottom:12px;">STUDENT ARTWORKS・學員作品</p>
+      <h2 style="font-family:'Noto Serif TC',serif;font-size:clamp(20px,3vw,30px);font-weight:300;color:#fff;line-height:1.5;">
+        這些，都是學員<em style="color:var(--gold);font-style:normal;">兩天內</em>完成的作品
+      </h2>
+    </div>
+
+    <!-- 主要大圖 -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-bottom:3px;">
+      <div style="overflow:hidden;">
+        <img src="FB_IMG_1773062278551.jpg" alt="學員曼陀羅作品" 
+             style="width:100%;height:320px;object-fit:cover;display:block;transition:transform 0.4s;" 
+             onmouseover="this.style.transform='scale(1.03)'" 
+             onmouseout="this.style.transform='scale(1)'">
+      </div>
+      <div style="overflow:hidden;">
+        <img src="MEITU_20260309_202627003.jpg" alt="精美曼陀羅圓盤作品" 
+             style="width:100%;height:320px;object-fit:cover;display:block;transition:transform 0.4s;"
+             onmouseover="this.style.transform='scale(1.03)'" 
+             onmouseout="this.style.transform='scale(1)'">
+      </div>
+    </div>
+    <!-- 小圖三格 -->
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;">
+      <div style="overflow:hidden;">
+        <img src="IMG_20260430_233614.jpg" alt="學員展示作品" 
+             style="width:100%;height:220px;object-fit:cover;object-position:center top;display:block;transition:transform 0.4s;"
+             onmouseover="this.style.transform='scale(1.03)'" 
+             onmouseout="this.style.transform='scale(1)'">
+      </div>
+      <div style="overflow:hidden;">
+        <img src="IMG_20260430_233641.jpg" alt="學員展示三件作品" 
+             style="width:100%;height:220px;object-fit:cover;object-position:center top;display:block;transition:transform 0.4s;"
+             onmouseover="this.style.transform='scale(1.03)'" 
+             onmouseout="this.style.transform='scale(1)'">
+      </div>
+      <div style="overflow:hidden;">
+        <img src="IMG_20260428_115928.jpg" alt="學員結業作品展示" 
+             style="width:100%;height:220px;object-fit:cover;object-position:center top;display:block;transition:transform 0.4s;"
+             onmouseover="this.style.transform='scale(1.03)'" 
+             onmouseout="this.style.transform='scale(1)'">
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:28px;padding:20px;border:0.5px solid rgba(201,169,110,0.25);border-radius:4px;">
+      <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:2;margin:0;">
+        ✦ 所有作品均為學員在兩天課程中親手完成 ✦<br>
+        <span style="font-size:12px;color:rgba(255,255,255,0.35);">無需任何彩繪基礎・老師全程示範引導</span>
+      </p>
+    </div>
+  </div>
+</div>
+<!-- COLOR SCIENCE & BIG DATA -->
+<div style="background:var(--cream);padding:100px 40px;">
+  <div style="max-width:900px;margin:0 auto;" class="reveal">
+
+    <div style="text-align:center;margin-bottom:64px;">
+      <p style="font-size:10px;letter-spacing:4px;color:var(--gold-deep);margin-bottom:14px;">WHAT YOU LEARN・你真正學到的</p>
+      <h2 style="font-family:'Noto Serif TC',serif;font-size:clamp(22px,3.5vw,36px);font-weight:400;color:var(--ink);line-height:1.5;margin-bottom:16px;">
+        不只是「畫曼陀羅」——<br>
+        <em style="color:var(--gold-deep);font-style:normal;">你在學習一門讀懂人心的科學</em>
+      </h2>
+      <p style="font-size:14px;color:var(--text-muted);line-height:2;max-width:580px;margin:0 auto;">
+        心語能量美學的課程，建立在兩套嚴謹的知識系統之上——<br>
+        一套來自學術，一套來自 500 位學員的真實數據。
+      </p>
+    </div>
+
+    <!-- 兩大知識系統並排 -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--gold-light);margin-bottom:2px;">
+
+      <!-- 左：色彩學 -->
+      <div style="background:var(--sand);padding:48px 40px;">
+        <div style="display:inline-block;background:var(--gold);color:var(--ink);font-size:10px;letter-spacing:3px;padding:5px 14px;margin-bottom:28px;font-weight:500;">SYSTEM 01・色彩科學</div>
+        <h3 style="font-family:'Noto Serif TC',serif;font-size:clamp(20px,2.5vw,26px);font-weight:400;color:var(--ink);line-height:1.5;margin-bottom:20px;">
+          六色調出百色——<br>
+          <span style="color:var(--gold-deep);">從理論到你手上的畫筆</span>
+        </h3>
+        <p style="font-size:14px;color:var(--ink-soft);line-height:2;margin-bottom:28px;">
+          第一堂課，黃彥蓁老師親自示範：
+          用 6 種基礎顏色，調配出上百種顏色的完整方法。
+          不只講理論——每位學員當場實際演練，
+          <strong style="color:var(--ink);">課堂結束前至少調出 18 種配色</strong>，
+          帶著真實的手感與信心離開。
+        </p>
+
+        <!-- 色彩學學習路徑 -->
+        <div style="border-top:0.5px solid var(--gold-light);padding-top:24px;">
+          <p style="font-size:11px;letter-spacing:2px;color:var(--gold-deep);margin-bottom:16px;">你將掌握的色彩能力</p>
+          <div style="display:grid;gap:10px;">
+            <div style="display:flex;align-items:flex-start;gap:12px;padding:12px;background:var(--cream);border-left:2px solid var(--gold);">
+              <span style="font-size:16px;flex-shrink:0;">🎨</span>
+              <div>
+                <p style="font-size:13px;font-weight:500;color:var(--ink);margin-bottom:2px;">色相・明度・彩度・色溫</p>
+                <p style="font-size:12px;color:var(--text-muted);line-height:1.6;">四大維度完整理解，讓你的配色不再靠直覺猜測</p>
+              </div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:12px;padding:12px;background:var(--cream);border-left:2px solid var(--gold);">
+              <span style="font-size:16px;flex-shrink:0;">🔬</span>
+              <div>
+                <p style="font-size:13px;font-weight:500;color:var(--ink);margin-bottom:2px;">6色 → 100+色的調色系統</p>
+                <p style="font-size:12px;color:var(--text-muted);line-height:1.6;">課堂示範 + 學員實際演練，當場調出至少 18 種顏色</p>
+              </div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:12px;padding:12px;background:var(--cream);border-left:2px solid var(--gold);">
+              <span style="font-size:16px;flex-shrink:0;">🖌️</span>
+              <div>
+                <p style="font-size:13px;font-weight:500;color:var(--ink);margin-bottom:2px;">帶著能力走，不是帶著筆記走</p>
+                <p style="font-size:12px;color:var(--text-muted);line-height:1.6;">學員能在任何場合自信地示範調色給自己的學員看</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 右：色彩心理學大數據 -->
+      <div style="background:var(--ink);padding:48px 40px;">
+        <div style="display:inline-block;background:rgba(201,169,110,0.15);border:0.5px solid var(--gold);color:var(--gold);font-size:10px;letter-spacing:3px;padding:5px 14px;margin-bottom:28px;font-weight:500;">SYSTEM 02・色彩心理學</div>
+        <h3 style="font-family:'Noto Serif TC',serif;font-size:clamp(20px,2.5vw,26px);font-weight:300;color:#fff;line-height:1.5;margin-bottom:20px;">
+          每一個顏色，<br>
+          <em style="color:var(--gold);font-style:normal;">都在說一件關於你的事</em>
+        </h3>
+        <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:2;margin-bottom:28px;">
+          每個顏色在心理學上有其代表意義，
+          而畫在曼陀羅的<strong style="color:rgba(255,255,255,0.9);">不同位置</strong>，
+          又有著更深一層的心理象徵。
+          這不只是直覺，而是有學術根據的解析系統。
+        </p>
+
+        <!-- 大數據亮點 -->
+        <div style="background:rgba(201,169,110,0.08);border:1px solid rgba(201,169,110,0.3);padding:28px 24px;margin-bottom:24px;">
+          <p style="font-size:10px;letter-spacing:3px;color:var(--gold);margin-bottom:14px;">BIG DATA・獨家大數據</p>
+          <p style="font-family:'Noto Serif TC',serif;font-size:clamp(16px,2vw,20px);color:#fff;line-height:1.7;font-weight:300;margin-bottom:12px;">
+            500 位學員作品解析，<br>
+            建立出一套無法複製的<br>
+            <strong style="color:var(--gold);">曼陀羅心理解讀系統</strong>
+          </p>
+          <p style="font-size:13px;color:rgba(255,255,255,0.5);line-height:1.8;">
+            這不是書本上的理論——<br>
+            這是黃彥蓁老師親自解析超過 500 位學員作品，
+            從真實數據中歸納出的心理規律。
+            <strong style="color:rgba(255,255,255,0.75);">色彩 × 位置 × 筆觸</strong>，
+            三個維度交叉解讀，
+            讓你能精準看見學員當下的內在狀態。
+          </p>
+        </div>
+
+        <div style="display:grid;gap:10px;">
+          <div style="display:flex;align-items:flex-start;gap:12px;">
+            <div style="width:4px;height:4px;border-radius:50%;background:var(--gold);margin-top:9px;flex-shrink:0;"></div>
+            <p style="font-size:13px;color:rgba(255,255,255,0.6);line-height:1.7;">
+              <strong style="color:rgba(255,255,255,0.85);">幫助學員更了解自己</strong>——
+              作品完成後的解析，讓學員在創作中照見平時看不見的盲點
+            </p>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:12px;">
+            <div style="width:4px;height:4px;border-radius:50%;background:var(--gold);margin-top:9px;flex-shrink:0;"></div>
+            <p style="font-size:13px;color:rgba(255,255,255,0.6);line-height:1.7;">
+              <strong style="color:rgba(255,255,255,0.85);">引導突破的工具</strong>——
+              不只是觀察，更能深入引導，協助學員突破慣性限制
+            </p>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:12px;">
+            <div style="width:4px;height:4px;border-radius:50%;background:var(--gold);margin-top:9px;flex-shrink:0;"></div>
+            <p style="font-size:13px;color:rgba(255,255,255,0.6);line-height:1.7;">
+              <strong style="color:rgba(255,255,255,0.85);">讓你的課程有深度</strong>——
+              學員帶走的不只是一幅畫，而是一次真實的自我覺察
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 底部整合說明：這兩個系統如何在課堂結合 -->
+    <div style="background:var(--ink);padding:40px 48px;display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:center;">
+      <div style="text-align:center;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:56px;color:var(--gold);font-weight:300;line-height:1;">×</div>
+      </div>
+      <div>
+        <p style="font-family:'Noto Serif TC',serif;font-size:clamp(15px,2vw,20px);color:#fff;line-height:1.7;font-weight:300;margin-bottom:12px;">
+          色彩科學 <span style="color:var(--gold);">×</span> 大數據心理解析
+        </p>
+        <p style="font-size:13px;color:rgba(255,255,255,0.5);line-height:1.9;margin:0;">
+          這兩套系統在課堂中交織運用——你教學員用科學調色，
+          也帶他們用心理學讀懂自己的作品。
+          <strong style="color:rgba(255,255,255,0.75);">一堂課，同時發生藝術與心靈的雙重深度。</strong>
+          這正是曼陀羅心靈彩繪與一般彩繪課程最根本的差異。
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- TWO UNIQUE HIGHLIGHTS -->
+<div style="background:var(--sand-dark);padding:100px 40px;">
+  <div style="max-width:900px;margin:0 auto;" class="reveal">
+
+    <div style="text-align:center;margin-bottom:60px;">
+      <p style="font-size:10px;letter-spacing:4px;color:var(--gold-deep);margin-bottom:14px;">WHAT MAKES US DIFFERENT・與眾不同的地方</p>
+      <h2 style="font-family:'Noto Serif TC',serif;font-size:clamp(22px,3.5vw,36px);font-weight:400;color:var(--ink);line-height:1.5;">
+        這不只是一門課，<br><em style="color:var(--gold-deep);font-style:normal;">是一個讓人真正蛻變的環境</em>
+      </h2>
+    </div>
+
+    <!-- 亮點一：新舊生共學 -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;margin-bottom:2px;background:var(--gold-light);">
+      <div style="background:var(--cream);padding:48px 40px;">
+        <div style="display:inline-block;background:var(--gold);color:var(--ink);font-size:10px;letter-spacing:3px;padding:5px 14px;margin-bottom:24px;font-weight:500;">HIGHLIGHT 01</div>
+        <h3 style="font-family:'Noto Serif TC',serif;font-size:clamp(20px,2.5vw,28px);font-weight:400;color:var(--ink);line-height:1.5;margin-bottom:20px;">
+          新舊生共學——<br>
+          <span style="color:var(--gold-deep);">經驗傳承，能量共振</span>
+        </h3>
+        <p style="font-size:14px;color:var(--ink-soft);line-height:2;margin-bottom:20px;">
+          心語能量美學的課堂裡，新生與舊生共同上課。
+          這不是偶然的設計，而是深思熟慮的教學哲學。
+        </p>
+        <p style="font-size:14px;color:var(--ink-soft);line-height:2;">
+          舊生帶著已開班的實戰經驗回到課堂，
+          他們的存在本身，就是新生最真實的「未來樣子」。
+          而對舊生而言，每一次複訓都是在演練如何帶領自己未來的學員——
+          從學習者的位置，悄悄轉換為引導者的視角。
+        </p>
+      </div>
+      <div style="background:var(--ink);padding:48px 40px;">
+        <p style="font-size:13px;color:rgba(255,255,255,0.4);letter-spacing:2px;margin-bottom:28px;">新舊生共學，你能獲得的</p>
+        <div style="margin-bottom:20px;">
+          <div style="display:flex;align-items:flex-start;gap:14px;margin-bottom:16px;">
+            <div style="width:2px;height:40px;background:var(--gold);flex-shrink:0;margin-top:3px;"></div>
+            <div>
+              <p style="font-size:14px;color:var(--gold-light);font-weight:500;margin-bottom:4px;">新生的收穫</p>
+              <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.8;">看見已結業的講師如何思考、如何表達，讓「開班」從想像變成真實可觸碰的目標</p>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px;margin-bottom:16px;">
+            <div style="width:2px;height:40px;background:var(--gold);flex-shrink:0;margin-top:3px;"></div>
+            <div>
+              <p style="font-size:14px;color:var(--gold-light);font-weight:500;margin-bottom:4px;">舊生的收穫</p>
+              <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.8;">在複訓中練習如何回應不同背景的學員，為自己未來的教學現場做最真實的準備</p>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px;">
+            <div style="width:2px;height:40px;background:var(--gold);flex-shrink:0;margin-top:3px;"></div>
+            <div>
+              <p style="font-size:14px;color:var(--gold-light);font-weight:500;margin-bottom:4px;">課堂的能量場</p>
+              <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.8;">不同屆的學員帶著各自的生命故事相遇，形成比單純同期班更豐富、更有深度的學習場域</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 亮點二：第二天團體創作 -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--gold-light);">
+      <div style="background:var(--ink);padding:48px 40px;order:1;">
+        <p style="font-size:13px;color:rgba(255,255,255,0.4);letter-spacing:2px;margin-bottom:28px;">團體創作，你會看見的</p>
+        <div style="space-y:16px;">
+          <div style="display:flex;align-items:flex-start;gap:14px;margin-bottom:16px;">
+            <div style="width:32px;height:32px;border:0.5px solid var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <span style="font-size:13px;color:var(--gold);">己</span>
+            </div>
+            <div>
+              <p style="font-size:14px;color:var(--gold-light);font-weight:500;margin-bottom:4px;">看見自己在團體中的角色</p>
+              <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.8;">你是引領者、協調者，還是創意的點火者？創作不說謊。</p>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px;margin-bottom:16px;">
+            <div style="width:32px;height:32px;border:0.5px solid var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <span style="font-size:13px;color:var(--gold);">框</span>
+            </div>
+            <div>
+              <p style="font-size:14px;color:var(--gold-light);font-weight:500;margin-bottom:4px;">突破自己慣性的框架</p>
+              <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.8;">在別人的創意面前，你會學習放下「應該這樣畫」的執念，讓作品自由流動。</p>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px;margin-bottom:16px;">
+            <div style="width:32px;height:32px;border:0.5px solid var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <span style="font-size:13px;color:var(--gold);">吸</span>
+            </div>
+            <div>
+              <p style="font-size:14px;color:var(--gold-light);font-weight:500;margin-bottom:4px;">吸收他人創意，擴展自己的美學視野</p>
+              <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.8;">每個人的配色直覺與圖形語言都不一樣，共創讓你在一天內學到十個人的創意思維。</p>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px;">
+            <div style="width:32px;height:32px;border:0.5px solid var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <span style="font-size:13px;color:var(--gold);">結</span>
+            </div>
+            <div>
+              <p style="font-size:14px;color:var(--gold-light);font-weight:500;margin-bottom:4px;">建立真實的師資情誼</p>
+              <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.8;">共同完成一件作品，形成語言無法取代的連結——這是很多學員說「最難忘的課堂片段」的時刻。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="background:var(--cream);padding:48px 40px;order:2;">
+        <div style="display:inline-block;background:var(--ink);color:var(--gold);font-size:10px;letter-spacing:3px;padding:5px 14px;margin-bottom:24px;font-weight:500;">HIGHLIGHT 02</div>
+        <h3 style="font-family:'Noto Serif TC',serif;font-size:clamp(20px,2.5vw,28px);font-weight:400;color:var(--ink);line-height:1.5;margin-bottom:20px;">
+          第二天團體創作——<br>
+          <span style="color:var(--gold-deep);">在共創中看見自己</span>
+        </h3>
+        <p style="font-size:14px;color:var(--ink-soft);line-height:2;margin-bottom:20px;">
+          第二天課程的壓軸單元，所有學員共同在同一幅曼陀羅上創作。
+        </p>
+        <p style="font-size:14px;color:var(--ink-soft);line-height:2;margin-bottom:20px;">
+          沒有分配，沒有指定範圍。
+          你會怎麼選擇自己的位置？遇到別人已畫的區域，你會如何回應？
+          這些在創作中自然浮現的反應，往往比任何心理測驗更誠實地照見你的內在模式。
+        </p>
+        <p style="font-size:14px;color:var(--ink-soft);line-height:2;">
+          對未來的講師而言，這更是一堂珍貴的示範課——
+          親身體驗「團體創作如何運作」，才能在自己的課堂上帶領學員走過同樣的歷程。
+        </p>
+        <div style="margin-top:28px;border-top:0.5px solid var(--gold-light);padding-top:20px;">
+          <p style="font-size:13px;color:var(--gold-deep);font-style:italic;line-height:1.8;">
+            「那幅我們一起完成的曼陀羅，<br>
+            讓我第一次理解什麼叫做<br>
+            '每個人都是完整的，在一起又更完整。'」
+          </p>
+          <p style="font-size:11px;color:var(--text-muted);margin-top:8px;">── 歷屆學員回饋（建議替換為真實見證）</p>
+        </div>
+      </div>
+    </div>
+
+
+        <!-- 團體創作作品展示：9張真實作品 -->
+        <div style="margin-top:2px;">
+
+          <!-- 第一排：三張精選 -->
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;">
+            <div style="overflow:hidden;">
+              <img src="456070.jpg" alt="團體創作：花卉拼圖" 
+                   style="width:100%;height:260px;object-fit:cover;display:block;transition:transform 0.4s;"
+                   onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="overflow:hidden;">
+              <img src="456076_0.jpg" alt="團體創作：彩色曼陀羅" 
+                   style="width:100%;height:260px;object-fit:cover;display:block;transition:transform 0.4s;"
+                   onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="overflow:hidden;">
+              <img src="456071_0.jpg" alt="團體創作：獨角獸" 
+                   style="width:100%;height:260px;object-fit:cover;display:block;transition:transform 0.4s;"
+                   onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+          </div>
+
+          <!-- 第二排：大圖+兩小圖 -->
+          <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:2px;margin-top:2px;">
+            <div style="overflow:hidden;">
+              <img src="456075_0.jpg" alt="團體創作：繽紛大花" 
+                   style="width:100%;height:300px;object-fit:cover;display:block;transition:transform 0.4s;"
+                   onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="display:grid;grid-template-rows:1fr 1fr;gap:2px;">
+              <div style="overflow:hidden;">
+                <img src="456072_0.jpg" alt="團體創作：愛心海浪" 
+                     style="width:100%;height:149px;object-fit:cover;display:block;transition:transform 0.4s;"
+                     onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+              </div>
+              <div style="overflow:hidden;">
+                <img src="456073_0.jpg" alt="團體創作：紫粉花" 
+                     style="width:100%;height:149px;object-fit:cover;display:block;transition:transform 0.4s;"
+                     onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+              </div>
+            </div>
+          </div>
+
+          <!-- 第三排：三張 -->
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;margin-top:2px;">
+            <div style="overflow:hidden;">
+              <img src="456074_0.jpg" alt="團體創作：熱帶植物" 
+                   style="width:100%;height:220px;object-fit:cover;display:block;transition:transform 0.4s;"
+                   onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="overflow:hidden;">
+              <img src="456077_0.jpg" alt="團體創作：蛇年" 
+                   style="width:100%;height:220px;object-fit:cover;display:block;transition:transform 0.4s;"
+                   onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="overflow:hidden;">
+              <img src="456080.jpg" alt="團體創作：錢來" 
+                   style="width:100%;height:220px;object-fit:cover;display:block;transition:transform 0.4s;"
+                   onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+          </div>
+
+        </div>
+
+        <div style="background:var(--gold);padding:20px 32px;text-align:center;">
+          <p style="font-size:13px;color:var(--ink);letter-spacing:1px;margin:0;line-height:1.8;">
+            以上均為歷屆學員<strong>第二天壓軸「團體創作」單元</strong>完成的真實作品<br>
+            <span style="font-size:11px;opacity:0.7;">每位學員各畫一格，合在一起就是一幅完整的大作</span>
+          </p>
+        </div>
+    <!-- 底部整合語 -->
+    <div style="background:var(--gold);padding:32px 40px;text-align:center;margin-top:2px;">
+      <p style="font-family:'Noto Serif TC',serif;font-size:clamp(15px,2vw,20px);color:var(--ink);line-height:1.9;font-weight:400;">
+        新舊生的相遇 × 個人創作的深度 × 團體共創的突破——<br>
+        <strong>這三層體驗，只在心語能量美學的課堂裡同時發生。</strong>
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<!-- UNIQUE BENEFIT - ASIA ONLY -->
+<div style="background:#1A1410; padding:100px 40px; position:relative; overflow:hidden;">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%, rgba(201,169,110,0.07) 0%, transparent 70%);pointer-events:none;"></div>
+  <div style="max-width:900px;margin:0 auto;position:relative;z-index:1;" class="reveal">
+
+    <!-- 標籤 -->
+    <div style="text-align:center;margin-bottom:48px;">
+      <div style="display:inline-block;border:1px solid #C9A96E;padding:8px 28px;margin-bottom:24px;">
+        <span style="font-size:11px;letter-spacing:4px;color:#C9A96E;font-weight:400;">EXCLUSIVE BENEFIT・獨家福利</span>
+      </div>
+      <h2 style="font-family:'Noto Serif TC',serif;font-size:clamp(24px,4vw,42px);font-weight:300;color:#fff;line-height:1.4;margin-bottom:16px;">
+        彩繪界首創——<br>
+        <em style="color:#C9A96E;font-style:normal;">三年內無限次免費複訓</em>
+      </h2>
+      <p style="font-size:15px;color:rgba(255,255,255,0.6);line-height:2;max-width:580px;margin:0 auto;">
+        這是黃彥蓁老師為維持師資品質，<br>
+        在彩繪界<strong style="color:#C9A96E;">首創</strong>的培育制度——<br>
+        亞洲唯一，全球找不到第二家。
+      </p>
+    </div>
+
+    <!-- 核心說明卡 -->
+    <div style="background:rgba(201,169,110,0.08);border:1px solid rgba(201,169,110,0.35);padding:48px 40px;margin-bottom:32px;text-align:center;">
+      <p style="font-family:'Noto Serif TC',serif;font-size:clamp(18px,2.5vw,26px);color:#fff;line-height:1.8;font-weight:300;margin-bottom:24px;">
+        結業後三年內，<br>
+        你可以<strong style="color:#C9A96E;">無限次數</strong>回來複訓——<br>
+        <span style="font-size:0.85em;color:rgba(255,255,255,0.7);">只需支付材料費、場地分攤與餐費，<strong style="color:#fff;">學費永遠是零。</strong></span>
+      </p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:rgba(201,169,110,0.2);margin-top:32px;">
+        <div style="background:#1A1410;padding:28px 20px;text-align:center;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:44px;color:#C9A96E;font-weight:300;line-height:1;">3</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.6);margin-top:6px;line-height:1.5;">年有效期<br><span style="font-size:11px;color:rgba(255,255,255,0.35);">結業後即刻生效</span></div>
+        </div>
+        <div style="background:#1A1410;padding:28px 20px;text-align:center;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:44px;color:#C9A96E;font-weight:300;line-height:1;">∞</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.6);margin-top:6px;line-height:1.5;">次複訓次數<br><span style="font-size:11px;color:rgba(255,255,255,0.35);">沒有上限</span></div>
+        </div>
+        <div style="background:#1A1410;padding:28px 20px;text-align:center;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:44px;color:#C9A96E;font-weight:300;line-height:1;">$0</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.6);margin-top:6px;line-height:1.5;">複訓學費<br><span style="font-size:11px;color:rgba(255,255,255,0.35);">只需材料費與餐費</span></div>
+        </div>
+        <div style="background:#1A1410;padding:28px 20px;text-align:center;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:#C9A96E;font-weight:300;line-height:1.2;margin-top:8px;">亞洲<br>唯一</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.6);margin-top:6px;line-height:1.5;">同類課程中<br><span style="font-size:11px;color:rgba(255,255,255,0.35);">全球僅此一家</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 為什麼這個福利這麼重要 -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+      <div style="border:0.5px solid rgba(255,255,255,0.1);padding:28px 24px;">
+        <div style="font-size:20px;margin-bottom:12px;">🔄</div>
+        <p style="font-size:14px;color:#C9A96E;font-weight:500;margin-bottom:8px;">技法一直在進化</p>
+        <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.8;">課程內容持續更新，複訓讓你同步掌握最新技法，教學不落伍。</p>
+      </div>
+      <div style="border:0.5px solid rgba(255,255,255,0.1);padding:28px 24px;">
+        <div style="font-size:20px;margin-bottom:12px;">💪</div>
+        <p style="font-size:14px;color:#C9A96E;font-weight:500;margin-bottom:8px;">開班前的信心補給</p>
+        <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.8;">準備開第一堂課前緊張？回來複訓，把每個細節再走一遍，帶著滿滿把握上場。</p>
+      </div>
+      <div style="border:0.5px solid rgba(255,255,255,0.1);padding:28px 24px;">
+        <div style="font-size:20px;margin-bottom:12px;">👥</div>
+        <p style="font-size:14px;color:#C9A96E;font-weight:500;margin-bottom:8px;">師資社群的持續連結</p>
+        <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.8;">每次複訓都是與同期、跨期講師交流的機會，形成互相支持的師資生態圈。</p>
+      </div>
+      <div style="border:0.5px solid rgba(255,255,255,0.1);padding:28px 24px;">
+        <div style="font-size:20px;margin-bottom:12px;">💰</div>
+        <p style="font-size:14px;color:#C9A96E;font-weight:500;margin-bottom:8px;">真正的長期投資回報</p>
+        <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.8;">NT$21,000 不只買一次培訓，而是三年內無數次的學習機會——攤下來，每次複訓幾乎是零成本。</p>
+      </div>
+    </div>
+
+    <!-- 底部金色標語 -->
+    <div style="text-align:center;margin-top:48px;padding-top:40px;border-top:0.5px solid rgba(201,169,110,0.2);">
+      <p style="font-family:'Noto Serif TC',serif;font-size:clamp(16px,2.5vw,22px);color:rgba(255,255,255,0.85);line-height:1.9;font-weight:300;">
+        其他課程給你一張證書，<br>
+        <strong style="color:#C9A96E;">我們給你三年的陪伴。</strong>
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<!-- ROI -->
+<div class="roi-section">
+  <div class="roi-inner reveal">
+    <div class="section-label" style="color:rgba(255,255,255,0.45);">結業之後</div>
+    <h2 class="section-heading" style="color:#fff;">學完這門課，<br><em style="color:var(--gold-light);">你能做什麼？</em></h2>
+
+    <div class="roi-grid">
+      <div class="roi-card">
+        <p class="roi-card-title">🎓 取得專業認證</p>
+        <ul class="roi-list">
+          <li>獲頒曼陀羅心靈彩繪<br>二級講師證書</li>
+          <li>由中華綜合發展研究院<br>文創藝術研究所認證核發</li>
+          <li>具備開設體驗班與<br>工作坊的正式資格</li>
+        </ul>
+      </div>
+      <div class="roi-card">
+        <p class="roi-card-title">🌱 發展你的教學事業</p>
+        <ul class="roi-list">
+          <li>以獨立講師身分開班授課</li>
+          <li>融入既有的療癒或教學服務</li>
+          <li>加入師資社群，共享<br>教材資源與推廣支持</li>
+          <li>複訓時擔任「資深學員」角色<br>實際練習帶領課堂</li>
+          <li style="margin-top:8px;color:rgba(255,255,255,0.9);font-style:italic;">已有超過 15 位結業學員<br>在台灣各地持續開班授課</li>
+        </ul>
+      </div>
+
+      <div class="roi-calc">
+        <p class="roi-calc-title">💡 簡單試算：NT$21,000 能買到什麼？</p>
+        <div class="roi-calc-body">
+          <div class="roi-calc-step">
+            <div class="roi-calc-num">4hr</div>
+            <div class="roi-calc-label">開一堂<br>曼陀羅體驗班</div>
+          </div>
+          <div class="roi-calc-arrow">×</div>
+          <div class="roi-calc-step">
+            <div class="roi-calc-num">NT$1,800</div>
+            <div class="roi-calc-label">每位學員<br>收費參考</div>
+          </div>
+          <div class="roi-calc-arrow">×</div>
+          <div class="roi-calc-step">
+            <div class="roi-calc-num">12人</div>
+            <div class="roi-calc-label">只需這些學員<br>即可回收學費</div>
+          </div>
+          <div class="roi-calc-arrow">=</div>
+          <div class="roi-calc-step">
+            <div class="roi-calc-num" style="color:var(--teal-deep);">NT$21,600</div>
+            <div class="roi-calc-label">✓ 學費全數回收<br>後續每場純收入</div>
+          </div>
+        </div>
+        <div style="border-top:0.5px solid rgba(26,20,16,0.15);margin-top:24px;padding-top:20px;text-align:center;">
+          <p style="font-size:13px;color:var(--ink-soft);line-height:1.8;">
+            ＋ 三年內無限次複訓（免學費）<br>
+            <strong style="color:var(--ink);">每次複訓攤提成本 ≈ NT$0</strong><br>
+            <span style="font-size:12px;color:#7A6A5A;">這是亞洲唯一提供此福利的曼陀羅講師培訓</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- INSTRUCTOR COMMUNITY -->
+<div style="background:var(--ink);padding:0;overflow:hidden;">
+
+  <!-- 大圖主視覺：最正式的白色系排排站 -->
+  <div style="position:relative;overflow:hidden;max-height:520px;">
+    <img src="MEITU_20251211_130830765.jpg" alt="心語能量美學師資團隊" 
+         style="width:100%;height:520px;object-fit:cover;object-position:center 30%;display:block;filter:brightness(0.75);">
+    <div style="position:absolute;inset:0;background:linear-gradient(to right, rgba(26,20,16,0.7) 0%, transparent 40%, transparent 60%, rgba(26,20,16,0.7) 100%);"></div>
+    <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px;">
+      <p style="font-size:10px;letter-spacing:4px;color:var(--gold);margin-bottom:16px;">INSTRUCTOR COMMUNITY・師資社群</p>
+      <h2 style="font-family:'Noto Serif TC',serif;font-size:clamp(24px,4vw,48px);font-weight:300;color:#fff;line-height:1.4;margin-bottom:16px;">
+        你加入的，<br>不只是一門課——<br>
+        <em style="color:var(--gold);font-style:normal;">是一個師資家族</em>
+      </h2>
+      <p style="font-size:14px;color:rgba(255,255,255,0.7);line-height:2;max-width:520px;">
+        超過 40 位結業講師，遍佈台灣各地持續開班。<br>
+        這是一個互相支持、共同成長的師資生態圈。
+      </p>
+    </div>
+  </div>
+
+  <!-- 四格小圖：不同場合的師資合照 -->
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(201,169,110,0.15);">
+    <div style="overflow:hidden;">
+      <img src="MEITU_20251211_130609391.jpg" alt="師資團隊合照" 
+           style="width:100%;height:200px;object-fit:cover;object-position:center top;display:block;filter:brightness(0.85);transition:filter 0.3s;"
+           onmouseover="this.style.filter='brightness(1)'" onmouseout="this.style.filter='brightness(0.85)'">
+    </div>
+    <div style="overflow:hidden;">
+      <img src="MEITU_20251211_130742640.jpg" alt="師資圍裙合照" 
+           style="width:100%;height:200px;object-fit:cover;object-position:center top;display:block;filter:brightness(0.85);transition:filter 0.3s;"
+           onmouseover="this.style.filter='brightness(1)'" onmouseout="this.style.filter='brightness(0.85)'">
+    </div>
+    <div style="overflow:hidden;">
+      <img src="MEITU_20251211_130756765.jpg" alt="師資白色系合照" 
+           style="width:100%;height:200px;object-fit:cover;object-position:center 20%;display:block;filter:brightness(0.85);transition:filter 0.3s;"
+           onmouseover="this.style.filter='brightness(1)'" onmouseout="this.style.filter='brightness(0.85)'">
+    </div>
+    <div style="overflow:hidden;">
+      <img src="MEITU_20251211_130851654.jpg" alt="師資樓梯藝術照" 
+           style="width:100%;height:200px;object-fit:cover;object-position:center top;display:block;filter:brightness(0.85);transition:filter 0.3s;"
+           onmouseover="this.style.filter='brightness(1)'" onmouseout="this.style.filter='brightness(0.85)'">
+    </div>
+  </div>
+
+  <!-- 說明文字帶 -->
+  <div style="background:rgba(201,169,110,0.08);border-top:0.5px solid rgba(201,169,110,0.2);border-bottom:0.5px solid rgba(201,169,110,0.2);padding:32px 40px;">
+    <div style="max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;text-align:center;">
+      <div>
+        <p style="font-size:13px;color:var(--gold-light);font-weight:500;margin-bottom:6px;">🤝 互相支持的師資網絡</p>
+        <p style="font-size:12px;color:rgba(255,255,255,0.45);line-height:1.7;">結業後自動加入師資群，共享教材、資源與推廣互助</p>
+      </div>
+      <div>
+        <p style="font-size:13px;color:var(--gold-light);font-weight:500;margin-bottom:6px;">📸 專業形象照拍攝</p>
+        <p style="font-size:12px;color:rgba(255,255,255,0.45);line-height:1.7;">你看到的這些美麗師資照，都是師資社群共同創造的品牌資產</p>
+      </div>
+      <div>
+        <p style="font-size:13px;color:var(--gold-light);font-weight:500;margin-bottom:6px;">🌱 持續成長的生態圈</p>
+        <p style="font-size:12px;color:rgba(255,255,255,0.45);line-height:1.7;">新舊師資共同複訓、交流、成長——這個圈子會一直陪著你</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- TESTIMONIALS PLACEHOLDER -->
+<div class="testimonials-section">
+  <div class="testimonials-inner reveal">
+    <!-- 見證主視覺大照片 -->
+    <div style="margin-bottom:48px;display:grid;grid-template-columns:1fr 1fr;gap:3px;border-radius:var(--border-radius-lg);overflow:hidden;">
+      <div style="overflow:hidden;">
+        <img src="IMG_20260419_190952.jpg" alt="心語能量美學第十四屆學員結業合照" 
+             style="width:100%;height:320px;object-fit:cover;object-position:center top;display:block;">
+      </div>
+      <div style="overflow:hidden;">
+        <img src="FB_IMG_1773062260055.jpg" alt="歷屆學員結業合照" 
+             style="width:100%;height:320px;object-fit:cover;object-position:center top;display:block;">
+      </div>
+    </div>
+    <div class="section-label">學員聲音</div>
+    <h2 class="section-heading">500 位學員的選擇，<br><em>15 位講師用行動證明</em></h2>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:32px;">
+      <div style="background:var(--sand);border-radius:var(--border-radius-md);padding:16px;text-align:center;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--gold-deep);font-weight:300;">500+</div>
+        <div style="font-size:11px;color:var(--text-muted);margin-top:4px;">位學員信任</div>
+      </div>
+      <div style="background:var(--sand);border-radius:var(--border-radius-md);padding:16px;text-align:center;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--gold-deep);font-weight:300;">15+</div>
+        <div style="font-size:11px;color:var(--text-muted);margin-top:4px;">位講師已開班</div>
+      </div>
+      <div style="background:var(--sand);border-radius:var(--border-radius-md);padding:16px;text-align:center;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--gold-deep);font-weight:300;">14</div>
+        <div style="font-size:11px;color:var(--text-muted);margin-top:4px;">屆口碑傳承</div>
+      </div>
+      <div style="background:var(--sand);border-radius:var(--border-radius-md);padding:16px;text-align:center;">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--gold-deep);font-weight:300;">2–6</div>
+        <div style="font-size:11px;color:var(--text-muted);margin-top:4px;">人精緻小班</div>
+      </div>
+    </div>
+
+    <div class="testi-note">
+      以下為歷屆學員真實回饋。如您是本課程結業學員，歡迎分享您的學習心得——您的故事，可能正是下一位學員踏出那一步的契機。
+    </div>
+
+    <!-- 六大學員見證卡片 -->
+    <div class="testi-placeholder-grid">
+
+      <!-- 見證一：秀琪・團體創作 -->
+      <div class="testi-card">
+        <span class="testi-quote-mark">"</span>
+        <p class="testi-text">被老師指派當小老師，心裡很緊張——我拉線條不擅長。但後來發現，每一條線有它自己獨特的感覺，每一個圓把它畫好就夠了。我們每個人都很包容跟尊重，畫錯了，同學說「沒關係，不要急，我幫你」。</p>
+        <p style="font-size:13px;color:var(--ink-soft);line-height:1.8;font-style:italic;margin:0 0 16px;border-left:2px solid var(--gold-light);padding-left:12px;">「大家彼此等待，彼此包容，彼此看見。」</p>
+        <p class="testi-author">── 秀琪・學員</p>
+        <p class="testi-role">第二天團體創作課後分享</p>
+      </div>
+
+      <!-- 見證二：複訓藥師・成長蛻變 -->
+      <div class="testi-card">
+        <span class="testi-quote-mark">"</span>
+        <p class="testi-text">複訓跟第一次上課，自己可以看得出來差異很大。以前一直想「要用什麼顏色」，現在是心血來潮，想畫什麼就畫什麼，隨自己的心意，很自然。用心去畫就好，不要用頭腦去想。</p>
+        <p style="font-size:13px;color:var(--ink-soft);line-height:1.8;font-style:italic;margin:0 0 16px;border-left:2px solid var(--gold-light);padding-left:12px;">「學曼陀羅讓我更愛自己，不要一天到晚為別人忙碌，要給自己空間。」</p>
+        <p class="testi-author">── 複訓學員（藥師）</p>
+        <p class="testi-role">結業後回來複訓・課後分享</p>
+      </div>
+
+      <!-- 見證三：追蹤老師十幾年的學員 -->
+      <div class="testi-card">
+        <span class="testi-quote-mark">"</span>
+        <p class="testi-text">我追蹤燕子老師從蝶古巴特、木器彩繪這一類，追了十幾年。來學這個，是因為知道老師在彩繪有一定的底子，她會告訴我很多技巧，讓我少走冤枉路。色彩學讓我明白：用6瓶顏料，可以調出無限多的顏色，而且每個顏色都代表一種性格。</p>
+        <p style="font-size:13px;color:var(--ink-soft);line-height:1.8;font-style:italic;margin:0 0 16px;border-left:2px solid var(--gold-light);padding-left:12px;">「有付費學技巧，跟只上體驗班，學到的深度真的不一樣。」</p>
+        <p class="testi-author">── 追蹤老師十幾年的學員</p>
+        <p class="testi-role">首次參加師資培訓課後分享</p>
+      </div>
+
+      <!-- 見證四：資深複訓學員・教學實習 -->
+      <div class="testi-card">
+        <span class="testi-quote-mark">"</span>
+        <p class="testi-text">課程架構非常清晰，由簡入繁，一步一步讓你理解、操作、再精進。無論你已有繪畫經驗，或完全是初學者，學習都會很有效率。最棒的是老師讓我們實際試教——知道跟做到，真的是兩件事。</p>
+        <p style="font-size:13px;color:var(--ink-soft);line-height:1.8;font-style:italic;margin:0 0 16px;border-left:2px solid var(--gold-light);padding-left:12px;">「這裡不會讓你變成學習後的孤兒——結業後，有人一直在你身後陪著你。」</p>
+        <p class="testi-author">── 第一屆資深複訓學員</p>
+        <p class="testi-role">複訓次數最多・見證課程不斷精進</p>
+      </div>
+
+      <!-- 見證五：曼陀羅讓我靜下來 -->
+      <div class="testi-card">
+        <span class="testi-quote-mark">"</span>
+        <p class="testi-text">我是一個很難靜下來的人，個性急躁，工作也要快。但當我看曼陀羅影片的時候，我發現我竟然可以很專注、活在當下地去 focus 這一件事情。這是第一件讓我可以這麼忘我、讓心真正靜下來的事。</p>
+        <p style="font-size:13px;color:var(--ink-soft);line-height:1.8;font-style:italic;margin:0 0 16px;border-left:2px solid var(--gold-light);padding-left:12px;">「在畫作的當下，我的身體、心理和意識，他們是合在一起的。」</p>
+        <p class="testi-author">── 學員分享</p>
+        <p class="testi-role">談曼陀羅對身心靈的療癒力量</p>
+      </div>
+
+      <!-- 見證六：色彩解析照見自己 -->
+      <div class="testi-card">
+        <span class="testi-quote-mark">"</span>
+        <p class="testi-text">第二次畫完，我多了粉色系，黃色少了很多。老師說我是很想為別人做，扛太多，很委屈，外強內好。我透過這個解析，看見了自己——原來我一直沒有看見我自己。這讓我的方向更清楚，要把愛放對地方，也要保留給自己。</p>
+        <p style="font-size:13px;color:var(--ink-soft);line-height:1.8;font-style:italic;margin:0 0 16px;border-left:2px solid var(--gold-light);padding-left:12px;">「透過解析，我更清楚我現在在哪裡，我真心有熱誠要去做什麼。」</p>
+        <p class="testi-author">── 學員分享</p>
+        <p class="testi-role">談色彩心理學解析的自我覺察</p>
+      </div>
+
+    </div>
+
+    <!-- 秀琪金句特寫 -->
+    <div style="margin-top:48px;background:var(--ink);padding:48px 40px;text-align:center;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:-30px;left:50%;transform:translateX(-50%);font-family:'Cormorant Garamond',serif;font-size:180px;color:rgba(201,169,110,0.04);font-weight:300;line-height:1;pointer-events:none;">"</div>
+      <p style="font-size:10px;letter-spacing:3px;color:rgba(255,255,255,0.3);margin-bottom:24px;">STUDENT VOICE・學員的話</p>
+      <p style="font-family:'Noto Serif TC',serif;font-size:clamp(18px,3vw,28px);color:#fff;line-height:1.9;font-weight:300;max-width:640px;margin:0 auto 24px;">
+        「大家彼此等待，<br>
+        <em style="color:var(--gold);font-style:normal;">彼此包容，彼此看見。</em>」
+      </p>
+      <p style="font-size:13px;color:rgba(255,255,255,0.4);">── 秀琪・第十四屆學員・課後真實分享</p>
+    </div>
+
+    <!-- 複訓學員大引言 -->
+    <div style="margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:2px;">
+
+      <div style="background:var(--sand);padding:40px 36px;border-bottom:3px solid var(--gold);">
+        <p style="font-size:10px;letter-spacing:3px;color:var(--gold-deep);margin-bottom:20px;">SOUL PAINTING・心靈的聲音</p>
+        <p style="font-family:'Noto Serif TC',serif;font-size:clamp(16px,2vw,21px);color:var(--ink);line-height:1.9;font-weight:400;margin-bottom:20px;">
+          「我是一個很難靜下來的人。<br><br>
+          但在畫作的當下，<br>
+          我的身體、心理和意識，<br>
+          <em style="color:var(--gold-deep);font-style:normal;">他們是合在一起的。</em>」
+        </p>
+        <p style="font-size:12px;color:var(--text-muted);">── 學員分享・談曼陀羅的療癒力量</p>
+      </div>
+
+      <div style="background:var(--ink);padding:40px 36px;">
+        <p style="font-size:10px;letter-spacing:3px;color:rgba(255,255,255,0.35);margin-bottom:20px;">THE POWER OF COLOR・色彩照見自己</p>
+        <p style="font-family:'Noto Serif TC',serif;font-size:clamp(15px,1.8vw,19px);color:#fff;line-height:1.9;font-weight:300;margin-bottom:20px;">
+          「我一直以為我兒子是商業的人，<br>
+          但從他的曼陀羅作品裡我看見——<br>
+          <em style="color:var(--gold);font-style:normal;">他其實是一個超大愛的人。</em><br><br>
+          色彩，是無法隱藏的。」
+        </p>
+        <p style="font-size:12px;color:rgba(255,255,255,0.35);">── 複訓學員・談色彩心理學解析的震撼</p>
+      </div>
+
+      <div style="background:var(--teal-deep);padding:40px 36px;grid-column:1/-1;">
+        <p style="font-size:10px;letter-spacing:3px;color:rgba(255,255,255,0.4);margin-bottom:20px;">FROM STUDENT TO INSTRUCTOR・從學員到講師</p>
+        <p style="font-family:'Noto Serif TC',serif;font-size:clamp(16px,2vw,22px);color:#fff;line-height:1.9;font-weight:300;margin-bottom:16px;">
+          「這裡不會讓你變成<em style="color:var(--gold-light);font-style:normal;">學習後的孤兒</em>——<br>
+          結業後，有人一直在你身後陪著你。<br><br>
+          知道，跟做到，真的是兩件事。<br>
+          <em style="color:var(--gold-light);font-style:normal;">這門課，讓我真正做到了。</em>」
+        </p>
+        <p style="font-size:12px;color:rgba(255,255,255,0.4);">── 第一屆資深複訓學員・複訓次數最多・見證課程十四屆的成長</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- CERTIFICATE STRIP -->
+<div class="cert-strip">
+  <div class="cert-strip-inner reveal">
+    <div class="section-label">結業認證</div>
+    <h2 class="section-heading" style="font-size:clamp(20px,3vw,30px);">完成課程，取得正式師資認定</h2>
+    <div class="cert-box">
+      <p class="cert-title">曼陀羅心靈彩繪　二級講師證書</p>
+      <p class="cert-subtitle">中華綜合發展研究院・文創藝術研究所　核發</p>
+    </div>
+    <p class="cert-requirement">
+      完成 18 小時培訓課程，並提交一件曼陀羅作品，即可申請結業講師證書。<br>
+      持有證書者，具備開設曼陀羅心靈彩繪體驗班及工作坊之資格。
+    </p>
+  </div>
+</div>
+
+<!-- SCHEDULE & PRICING -->
+<div class="schedule-section">
+  <div class="schedule-inner reveal">
+    <div class="section-label" style="color:rgba(255,255,255,0.4);">課程資訊</div>
+    <h2 class="section-heading">班別、地點與費用</h2>
+
+    <div class="location-grid">
+      <div class="location-card">
+        <p class="location-city">台中班</p>
+        <div class="location-info">
+          <strong>上課地點</strong>
+          台中市西屯區中康街 7 號<br>（瑞恩悅琚）
+          <br><br>
+          <strong>上課時間</strong>
+          10:00 – 20:00
+          <br><br>
+          <strong>開課班別</strong>
+          <span class="class-tag">假日班 E｜4/12（六）+ 4/19（日）</span>
+          <span class="class-tag">假日班 G｜6/6（六）+ 6/7（日）</span>
+        </div>
+      </div>
+      <div class="location-card">
+        <p class="location-city">台北班</p>
+        <div class="location-info">
+          <strong>上課地點</strong>
+          台北市松江路 330 巷 26 號<br>（喜悅舒活藝文堂）
+          <br><br>
+          <strong>上課時間</strong>
+          11:00 – 21:00
+          <br><br>
+          <strong>開課班別</strong>
+          <span class="class-tag">假日班 F｜6/13（六）+ 6/14（日）</span>
+        </div>
+      </div>
+    </div>
+
+    <p style="font-size:12px;color:rgba(255,255,255,0.3);margin-top:16px;text-align:center;letter-spacing:1px;">
+      ※ 小班制教學，每班最多 10 人 ・ 報名確認後方保留名額
+    </p>
+
+    <div class="pricing-box">
+      <div class="pricing-left">
+        <p class="price-original">原價 NT$22,800</p>
+        <div class="price-main">21,000</div>
+        <p class="price-unit">新台幣・新春限時特惠</p>
+        <div class="price-deadline">
+          ⏰ 優惠截止：<strong style="color:var(--gold);">2026 年 4 月 28 日</strong><br>
+          逾期恢復原價 NT$22,800<br>
+          每班限額 6 人，額滿即止
+        </div>
+        <p class="per-hour-note">
+          18 小時培訓 ÷ NT$21,000<br>
+          平均每小時學費：約 NT$1,167<br><br>
+          每班僅 2–6 人的專屬指導<br>
+          台灣同等師資背景的<br>小班課程中最具競爭力的定價
+        </p>
+      </div>
+      <div class="pricing-right">
+        <p class="includes-label">INCLUDED・費用已包含</p>
+        <ul class="includes-list">
+          <li>兩天午餐</li>
+          <li>下午茶與飲料</li>
+          <li>全部課程材料</li>
+          <li>完整講義教材</li>
+          <li>結業講師證書申請資格</li>
+        </ul>
+        <div style="margin-top:20px;background:rgba(201,169,110,0.12);border:0.5px solid rgba(201,169,110,0.4);padding:14px 16px;">
+          <p style="font-size:11px;color:rgba(255,255,255,0.5);letter-spacing:1px;margin-bottom:6px;">INDUSTRY FIRST・彩繪界首創</p>
+          <p style="font-size:13px;color:#E8D5B0;line-height:1.8;margin:0;">
+            ✦ 結業後 <strong style="color:#C9A96E;">3 年內無限次複訓</strong><br>
+            ✦ 複訓學費永遠 <strong style="color:#C9A96E;">NT$0</strong><br>
+            ✦ 只需材料費・場地費・餐費<br>
+            <span style="font-size:11px;color:rgba(255,255,255,0.35);margin-top:4px;display:block;">亞洲唯一・全球僅此一家</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div class="cta-inner reveal">
+    <p class="cta-eyebrow">ENROLL NOW・立即加入</p>
+    <h2 class="cta-heading">500 位學員的起點<br>15 位講師的出發地——<br><span style="font-size:0.8em;font-weight:300;">下一位，是你嗎？</span></h2>
+    <p class="cta-sub">
+      超過 500 位學員曾在心語能量美學的課堂裡遇見曼陀羅，<br>
+      其中超過 15 位進一步成為活躍授課的講師——<br>
+      有人開設親子班，有人走進企業，有人成為身心靈工作坊的常駐夥伴。<br><br>
+      每班最多 10 人，名額確認後即截止開放。<br>
+      你準備好了嗎？
+    </p>
+    <div class="cta-buttons">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeak11VXL41_jswMJWrl0VAuuOXTvdeHsD1P_Ft1wAzn1XukQ/viewform" target="_blank" class="btn-primary">立即填寫報名表</a>
+      <a href="https://www.facebook.com/colorscantell" target="_blank" class="btn-secondary">前往粉絲頁了解更多</a>
+    </div>
+    <div class="cta-urgency">
+      <div class="urgency-item"><div class="urgency-dot"></div>每班限額 6 人</div>
+      <div class="urgency-item"><div class="urgency-dot"></div>優惠截止 4 月 28 日</div>
+      <div class="urgency-item"><div class="urgency-dot"></div>彩繪界首創・三年免費複訓</div>
+      <div class="urgency-item"><div class="urgency-dot"></div>結業頒發講師證書</div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <p class="footer-logo">心語能量美學・黃彥蓁老師</p>
+  <p class="footer-sub">心語能量美學｜中華綜合發展研究院 文創藝術研究所・心靈美學藝術學程</p>
+  <p class="footer-contact">
+    Facebook：<a href="https://www.facebook.com/colorscantell" target="_blank">facebook.com/colorscantell</a><br>
+    報名表單：<a href="https://docs.google.com/forms/d/e/1FAIpQLSeak11VXL41_jswMJWrl0VAuuOXTvdeHsD1P_Ft1wAzn1XukQ/viewform" target="_blank">點此填寫報名資料</a>
+  </p>
+</div>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(el => {
+    if (el.isIntersecting) {
+      el.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
