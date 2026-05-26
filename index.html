@@ -978,9 +978,173 @@
     .cert-box { padding: 32px 24px; }
     .pricing-left, .pricing-right { padding: 28px 24px; }
   }
+
+  /* ── NAVIGATION ── */
+  .nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(26,20,16,0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid rgba(201,169,110,0.2);
+    padding: 0 24px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13px;
+    color: var(--gold);
+    font-weight: 300;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .nav-links::-webkit-scrollbar { display: none; }
+
+  .nav-links a {
+    display: block;
+    padding: 0 14px;
+    height: 56px;
+    line-height: 56px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    transition: color 0.2s;
+    border-bottom: 2px solid transparent;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+  }
+
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 8px;
+    flex-shrink: 0;
+  }
+
+  .nav-hamburger span {
+    width: 22px;
+    height: 1.5px;
+    background: var(--gold);
+    display: block;
+    transition: all 0.3s;
+  }
+
+  /* 手機版導覽 */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      position: fixed;
+      top: 56px;
+      left: 0;
+      right: 0;
+      background: rgba(26,20,16,0.98);
+      flex-direction: column;
+      padding: 8px 0 16px;
+      border-bottom: 0.5px solid rgba(201,169,110,0.2);
+    }
+
+    .nav-links.open { display: flex; }
+
+    .nav-links a {
+      height: 44px;
+      line-height: 44px;
+      padding: 0 24px;
+      border-bottom: none;
+      border-left: 2px solid transparent;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      border-bottom: none;
+      border-left-color: var(--gold);
+      background: rgba(201,169,110,0.05);
+    }
+
+    .nav-hamburger { display: flex; }
+    .nav-logo { font-size: 12px; }
+  }
+
+  /* 讓 hero 區不被導覽列遮住 */
+  .hero { padding-top: 120px; }
+
+  @media (max-width: 600px) {
+    .hero { padding-top: 100px; }
+  }
 </style>
 </head>
 <body>
+
+<!-- NAVIGATION -->
+<nav class="nav-bar">
+  <div class="nav-logo">心語能量美學</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#for-whom">適合對象</a></li>
+    <li><a href="#teacher">師資介紹</a></li>
+    <li><a href="#curriculum">課程內容</a></li>
+    <li><a href="#gallery">學員作品</a></li>
+    <li><a href="#highlights">課程亮點</a></li>
+    <li><a href="#retrain">三年複訓</a></li>
+    <li><a href="#community">師資社群</a></li>
+    <li><a href="#testimonials">學員見證</a></li>
+    <li><a href="#pricing" style="color:var(--gold);font-weight:500;">立即報名</a></li>
+  </ul>
+  <div class="nav-hamburger" id="hamburger" onclick="toggleNav()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
+
+
+<!-- NAVIGATION -->
+<nav class="nav-bar">
+  <div class="nav-logo">心語能量美學</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#for-whom">適合對象</a></li>
+    <li><a href="#teacher">師資介紹</a></li>
+    <li><a href="#curriculum">課程內容</a></li>
+    <li><a href="#gallery">學員作品</a></li>
+    <li><a href="#highlights">課程亮點</a></li>
+    <li><a href="#retrain">三年複訓</a></li>
+    <li><a href="#community">師資社群</a></li>
+    <li><a href="#testimonials">學員見證</a></li>
+    <li><a href="#pricing" style="color:var(--gold);font-weight:500;">立即報名</a></li>
+  </ul>
+  <div class="nav-hamburger" id="hamburger" onclick="toggleNav()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
 
 <!-- HERO -->
 <div class="hero">
@@ -1055,33 +1219,33 @@
 
 
 
-<!-- PHOTO STRIP: 課程現場 -->
+<section id="classroom"><!-- PHOTO STRIP: 課程現場 -->
 <div style="background:var(--ink);padding:0;overflow:hidden;">
   <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:2px;">
     <div style="overflow:hidden;max-height:420px;">
       <img src="IMG_20260228_150302.jpg" alt="心語能量美學小班上課實景" 
-           style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.88);">
+           style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;filter:brightness(0.88);">
     </div>
     <div style="display:grid;grid-template-rows:1fr 1fr;gap:2px;">
       <div style="overflow:hidden;">
         <img src="IMG_20260428_114422.jpg" alt="學員專注創作中" 
-             style="width:100%;height:200px;object-fit:cover;display:block;filter:brightness(0.88);">
+             style="width:100%;height:200px;object-fit:cover;object-position:top;display:block;filter:brightness(0.88);">
       </div>
       <div style="overflow:hidden;">
         <img src="IMG_20260428_180613.jpg" alt="學員細心彩繪" 
-             style="width:100%;height:200px;object-fit:cover;display:block;filter:brightness(0.88);">
+             style="width:100%;height:200px;object-fit:cover;object-position:top;display:block;filter:brightness(0.88);">
       </div>
     </div>
     <div style="overflow:hidden;max-height:420px;">
       <img src="FB_IMG_1776688649932.jpg" alt="學員認真創作" 
-           style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.88);">
+           style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;filter:brightness(0.88);">
     </div>
   </div>
   <div style="text-align:center;padding:20px;background:var(--ink);">
     <p style="font-size:11px;letter-spacing:3px;color:rgba(255,255,255,0.35);">INSIDE THE CLASSROOM・課堂實景</p>
   </div>
 </div>
-<!-- FOUNDER PHILOSOPHY -->
+</section><section id="philosophy"><!-- FOUNDER PHILOSOPHY -->
 <div style="background:var(--ink);padding:100px 40px;position:relative;overflow:hidden;">
   <div style="position:absolute;top:-60px;right:-60px;width:400px;height:400px;border-radius:50%;border:0.5px solid rgba(201,169,110,0.08);pointer-events:none;"></div>
   <div style="position:absolute;top:20px;right:20px;width:260px;height:260px;border-radius:50%;border:0.5px solid rgba(201,169,110,0.05);pointer-events:none;"></div>
@@ -1189,7 +1353,7 @@
   </div>
 </div>
 
-<!-- FOR WHOM -->
+</section><section id="for-whom"><!-- FOR WHOM -->
 <div class="for-whom-bg">
   <div class="for-whom-inner reveal">
     <div class="section-label">這門課適合你嗎</div>
@@ -1220,7 +1384,7 @@
 </div>
 
 
-<!-- SMALL CLASS PROMISE -->
+</section><section id="promise"><!-- SMALL CLASS PROMISE -->
 <div style="background: #F5EFE4; padding: 80px 40px; border-top: 0.5px solid #E8D5B0; border-bottom: 0.5px solid #E8D5B0;">
   <div style="max-width:860px; margin:0 auto;" class="reveal">
     <div style="text-align:center; margin-bottom:48px;">
@@ -1261,18 +1425,18 @@
   </div>
 </div>
 
-<!-- TEACHER -->
+</section><section id="teacher"><!-- TEACHER -->
 <div class="teacher-section" style="padding:0;background:var(--ink);overflow:hidden;">
 
   <!-- 師資視覺大圖帶 -->
   <div style="display:grid;grid-template-columns:1fr 1.8fr 1fr;gap:2px;max-height:600px;overflow:hidden;">
     <div style="overflow:hidden;background:var(--sand);">
       <img src="MEITU_20251211_130554138.jpg" alt="心語能量美學師資團隊" 
-           style="width:100%;height:600px;object-fit:cover;object-position:center top;display:block;filter:brightness(0.88);">
+           style="width:100%;height:600px;object-fit:cover;object-position:top;display:block;filter:brightness(0.88);">
     </div>
     <div style="overflow:hidden;position:relative;">
       <img src="FB_IMG_1765665067930.jpg" alt="黃彥蓁老師與曼陀羅作品" 
-           style="width:100%;height:600px;object-fit:cover;object-position:center 15%;display:block;">
+           style="width:100%;height:600px;object-fit:cover;object-position:top 10%;display:block;">
       <!-- 覆蓋文字 -->
       <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top, rgba(26,20,16,0.92) 0%, transparent 60%);padding:40px 32px 32px;">
         <p style="font-size:10px;letter-spacing:4px;color:var(--gold);margin-bottom:8px;">MASTER TEACHER・首席師資</p>
@@ -1282,7 +1446,7 @@
     </div>
     <div style="overflow:hidden;">
       <img src="MEITU_20251211_130524502.jpg" alt="黃彥蓁老師坐姿形象照" 
-           style="width:100%;height:600px;object-fit:cover;object-position:center top;display:block;filter:brightness(0.9);">
+           style="width:100%;height:600px;object-fit:cover;object-position:top;display:block;filter:brightness(0.9);">
     </div>
   </div>
 
@@ -1346,7 +1510,7 @@
   </div>
 </div>
 
-<!-- CURRICULUM -->
+</section><section id="curriculum"><!-- CURRICULUM -->
 <div class="curriculum-bg">
   <div class="curriculum-inner reveal">
     <div class="section-label">課程內容</div>
@@ -1440,7 +1604,7 @@
 
 
 
-<!-- ARTWORK GALLERY -->
+</section><section id="gallery"><!-- ARTWORK GALLERY -->
 <div style="background:var(--ink);padding:80px 40px;">
   <div style="max-width:900px;margin:0 auto;" class="reveal">
     <div style="text-align:center;margin-bottom:40px;">
@@ -1454,13 +1618,13 @@
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-bottom:3px;">
       <div style="overflow:hidden;">
         <img src="FB_IMG_1773062278551.jpg" alt="學員曼陀羅作品" 
-             style="width:100%;height:320px;object-fit:cover;display:block;transition:transform 0.4s;" 
+             style="width:100%;height:320px;object-fit:cover;object-position:top;display:block;transition:transform 0.4s;" 
              onmouseover="this.style.transform='scale(1.03)'" 
              onmouseout="this.style.transform='scale(1)'">
       </div>
       <div style="overflow:hidden;">
         <img src="MEITU_20260309_202627003.jpg" alt="精美曼陀羅圓盤作品" 
-             style="width:100%;height:320px;object-fit:cover;display:block;transition:transform 0.4s;"
+             style="width:100%;height:320px;object-fit:cover;object-position:top;display:block;transition:transform 0.4s;"
              onmouseover="this.style.transform='scale(1.03)'" 
              onmouseout="this.style.transform='scale(1)'">
       </div>
@@ -1469,19 +1633,19 @@
     <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;">
       <div style="overflow:hidden;">
         <img src="IMG_20260430_233614.jpg" alt="學員展示作品" 
-             style="width:100%;height:220px;object-fit:cover;object-position:center top;display:block;transition:transform 0.4s;"
+             style="width:100%;height:220px;object-fit:cover;object-position:top;display:block;transition:transform 0.4s;"
              onmouseover="this.style.transform='scale(1.03)'" 
              onmouseout="this.style.transform='scale(1)'">
       </div>
       <div style="overflow:hidden;">
         <img src="IMG_20260430_233641.jpg" alt="學員展示三件作品" 
-             style="width:100%;height:220px;object-fit:cover;object-position:center top;display:block;transition:transform 0.4s;"
+             style="width:100%;height:220px;object-fit:cover;object-position:top;display:block;transition:transform 0.4s;"
              onmouseover="this.style.transform='scale(1.03)'" 
              onmouseout="this.style.transform='scale(1)'">
       </div>
       <div style="overflow:hidden;">
         <img src="IMG_20260428_115928.jpg" alt="學員結業作品展示" 
-             style="width:100%;height:220px;object-fit:cover;object-position:center top;display:block;transition:transform 0.4s;"
+             style="width:100%;height:220px;object-fit:cover;object-position:top;display:block;transition:transform 0.4s;"
              onmouseover="this.style.transform='scale(1.03)'" 
              onmouseout="this.style.transform='scale(1)'">
       </div>
@@ -1495,7 +1659,7 @@
     </div>
   </div>
 </div>
-<!-- COLOR SCIENCE & BIG DATA -->
+</section><section id="color-science"><!-- COLOR SCIENCE & BIG DATA -->
 <div style="background:var(--cream);padding:100px 40px;">
   <div style="max-width:900px;margin:0 auto;" class="reveal">
 
@@ -1637,7 +1801,7 @@
   </div>
 </div>
 
-<!-- TWO UNIQUE HIGHLIGHTS -->
+</section><section id="highlights"><!-- TWO UNIQUE HIGHLIGHTS -->
 <div style="background:var(--sand-dark);padding:100px 40px;">
   <div style="max-width:900px;margin:0 auto;" class="reveal">
 
@@ -1775,17 +1939,17 @@
           <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;">
             <div style="overflow:hidden;">
               <img src="456070.jpg" alt="團體創作：花卉拼圖" 
-                   style="width:100%;height:260px;object-fit:cover;display:block;transition:transform 0.4s;"
+                   style="width:100%;height:260px;object-fit:cover;object-position:top;display:block;transition:transform 0.4s;"
                    onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
             </div>
             <div style="overflow:hidden;">
               <img src="456076_0.jpg" alt="團體創作：彩色曼陀羅" 
-                   style="width:100%;height:260px;object-fit:cover;display:block;transition:transform 0.4s;"
+                   style="width:100%;height:260px;object-fit:cover;object-position:top;display:block;transition:transform 0.4s;"
                    onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
             </div>
             <div style="overflow:hidden;">
               <img src="456071_0.jpg" alt="團體創作：獨角獸" 
-                   style="width:100%;height:260px;object-fit:cover;display:block;transition:transform 0.4s;"
+                   style="width:100%;height:260px;object-fit:cover;object-position:top;display:block;transition:transform 0.4s;"
                    onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
             </div>
           </div>
@@ -1794,18 +1958,18 @@
           <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:2px;margin-top:2px;">
             <div style="overflow:hidden;">
               <img src="456075_0.jpg" alt="團體創作：繽紛大花" 
-                   style="width:100%;height:300px;object-fit:cover;display:block;transition:transform 0.4s;"
+                   style="width:100%;height:300px;object-fit:cover;object-position:top;display:block;transition:transform 0.4s;"
                    onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
             </div>
             <div style="display:grid;grid-template-rows:1fr 1fr;gap:2px;">
               <div style="overflow:hidden;">
                 <img src="456072_0.jpg" alt="團體創作：愛心海浪" 
-                     style="width:100%;height:149px;object-fit:cover;display:block;transition:transform 0.4s;"
+                     style="width:100%;height:149px;object-fit:cover;object-position:top;display:block;transition:transform 0.4s;"
                      onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
               </div>
               <div style="overflow:hidden;">
                 <img src="456073_0.jpg" alt="團體創作：紫粉花" 
-                     style="width:100%;height:149px;object-fit:cover;display:block;transition:transform 0.4s;"
+                     style="width:100%;height:149px;object-fit:cover;object-position:top;display:block;transition:transform 0.4s;"
                      onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
               </div>
             </div>
@@ -1815,17 +1979,31 @@
           <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;margin-top:2px;">
             <div style="overflow:hidden;">
               <img src="456074_0.jpg" alt="團體創作：熱帶植物" 
-                   style="width:100%;height:220px;object-fit:cover;display:block;transition:transform 0.4s;"
+                   style="width:100%;height:220px;object-fit:cover;object-position:top;display:block;transition:transform 0.4s;"
                    onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
             </div>
             <div style="overflow:hidden;">
               <img src="456077_0.jpg" alt="團體創作：蛇年" 
-                   style="width:100%;height:220px;object-fit:cover;display:block;transition:transform 0.4s;"
+                   style="width:100%;height:220px;object-fit:cover;object-position:top;display:block;transition:transform 0.4s;"
                    onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
             </div>
             <div style="overflow:hidden;">
               <img src="456080.jpg" alt="團體創作：錢來" 
-                   style="width:100%;height:220px;object-fit:cover;display:block;transition:transform 0.4s;"
+                   style="width:100%;height:220px;object-fit:cover;object-position:top;display:block;transition:transform 0.4s;"
+                   onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+          </div>
+
+          <!-- 第四排：兩張 -->
+          <div style="display:grid;grid-template-columns:1fr 1.6fr;gap:2px;margin-top:2px;">
+            <div style="overflow:hidden;">
+              <img src="456081.jpg" alt="團體創作：太極陰陽蝴蝶" 
+                   style="width:100%;height:280px;object-fit:cover;object-position:top;display:block;transition:transform 0.4s;"
+                   onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="overflow:hidden;">
+              <img src="456082.jpg" alt="團體創作：海景" 
+                   style="width:100%;height:280px;object-fit:cover;object-position:top;display:block;transition:transform 0.4s;"
                    onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
             </div>
           </div>
@@ -1834,7 +2012,7 @@
 
         <div style="background:var(--gold);padding:20px 32px;text-align:center;">
           <p style="font-size:13px;color:var(--ink);letter-spacing:1px;margin:0;line-height:1.8;">
-            以上均為歷屆學員<strong>第二天壓軸「團體創作」單元</strong>完成的真實作品<br>
+            以上 11 幅均為歷屆學員<strong>第二天壓軸「團體創作」單元</strong>完成的真實作品<br>
             <span style="font-size:11px;opacity:0.7;">每位學員各畫一格，合在一起就是一幅完整的大作</span>
           </p>
         </div>
@@ -1849,7 +2027,7 @@
   </div>
 </div>
 
-<!-- UNIQUE BENEFIT - ASIA ONLY -->
+</section><section id="retrain"><!-- UNIQUE BENEFIT - ASIA ONLY -->
 <div style="background:#1A1410; padding:100px 40px; position:relative; overflow:hidden;">
   <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%, rgba(201,169,110,0.07) 0%, transparent 70%);pointer-events:none;"></div>
   <div style="max-width:900px;margin:0 auto;position:relative;z-index:1;" class="reveal">
@@ -1932,7 +2110,7 @@
   </div>
 </div>
 
-<!-- ROI -->
+</section><section id="roi"><!-- ROI -->
 <div class="roi-section">
   <div class="roi-inner reveal">
     <div class="section-label" style="color:rgba(255,255,255,0.45);">結業之後</div>
@@ -1994,13 +2172,13 @@
 </div>
 
 
-<!-- INSTRUCTOR COMMUNITY -->
+</section><section id="community"><!-- INSTRUCTOR COMMUNITY -->
 <div style="background:var(--ink);padding:0;overflow:hidden;">
 
   <!-- 大圖主視覺：最正式的白色系排排站 -->
   <div style="position:relative;overflow:hidden;max-height:520px;">
     <img src="MEITU_20251211_130830765.jpg" alt="心語能量美學師資團隊" 
-         style="width:100%;height:520px;object-fit:cover;object-position:center 30%;display:block;filter:brightness(0.75);">
+         style="width:100%;height:520px;object-fit:cover;object-position:top;display:block;filter:brightness(0.75);">
     <div style="position:absolute;inset:0;background:linear-gradient(to right, rgba(26,20,16,0.7) 0%, transparent 40%, transparent 60%, rgba(26,20,16,0.7) 100%);"></div>
     <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px;">
       <p style="font-size:10px;letter-spacing:4px;color:var(--gold);margin-bottom:16px;">INSTRUCTOR COMMUNITY・師資社群</p>
@@ -2019,22 +2197,22 @@
   <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(201,169,110,0.15);">
     <div style="overflow:hidden;">
       <img src="MEITU_20251211_130609391.jpg" alt="師資團隊合照" 
-           style="width:100%;height:200px;object-fit:cover;object-position:center top;display:block;filter:brightness(0.85);transition:filter 0.3s;"
+           style="width:100%;height:200px;object-fit:cover;object-position:top;display:block;filter:brightness(0.85);transition:filter 0.3s;"
            onmouseover="this.style.filter='brightness(1)'" onmouseout="this.style.filter='brightness(0.85)'">
     </div>
     <div style="overflow:hidden;">
       <img src="MEITU_20251211_130742640.jpg" alt="師資圍裙合照" 
-           style="width:100%;height:200px;object-fit:cover;object-position:center top;display:block;filter:brightness(0.85);transition:filter 0.3s;"
+           style="width:100%;height:200px;object-fit:cover;object-position:top;display:block;filter:brightness(0.85);transition:filter 0.3s;"
            onmouseover="this.style.filter='brightness(1)'" onmouseout="this.style.filter='brightness(0.85)'">
     </div>
     <div style="overflow:hidden;">
       <img src="MEITU_20251211_130756765.jpg" alt="師資白色系合照" 
-           style="width:100%;height:200px;object-fit:cover;object-position:center 20%;display:block;filter:brightness(0.85);transition:filter 0.3s;"
+           style="width:100%;height:200px;object-fit:cover;object-position:top;display:block;filter:brightness(0.85);transition:filter 0.3s;"
            onmouseover="this.style.filter='brightness(1)'" onmouseout="this.style.filter='brightness(0.85)'">
     </div>
     <div style="overflow:hidden;">
       <img src="MEITU_20251211_130851654.jpg" alt="師資樓梯藝術照" 
-           style="width:100%;height:200px;object-fit:cover;object-position:center top;display:block;filter:brightness(0.85);transition:filter 0.3s;"
+           style="width:100%;height:200px;object-fit:cover;object-position:top;display:block;filter:brightness(0.85);transition:filter 0.3s;"
            onmouseover="this.style.filter='brightness(1)'" onmouseout="this.style.filter='brightness(0.85)'">
     </div>
   </div>
@@ -2059,18 +2237,18 @@
 
 </div>
 
-<!-- TESTIMONIALS PLACEHOLDER -->
+</section><section id="testimonials"><!-- TESTIMONIALS PLACEHOLDER -->
 <div class="testimonials-section">
   <div class="testimonials-inner reveal">
     <!-- 見證主視覺大照片 -->
     <div style="margin-bottom:48px;display:grid;grid-template-columns:1fr 1fr;gap:3px;border-radius:var(--border-radius-lg);overflow:hidden;">
       <div style="overflow:hidden;">
         <img src="IMG_20260419_190952.jpg" alt="心語能量美學第十四屆學員結業合照" 
-             style="width:100%;height:320px;object-fit:cover;object-position:center top;display:block;">
+             style="width:100%;height:320px;object-fit:cover;object-position:top;display:block;">
       </div>
       <div style="overflow:hidden;">
         <img src="FB_IMG_1773062260055.jpg" alt="歷屆學員結業合照" 
-             style="width:100%;height:320px;object-fit:cover;object-position:center top;display:block;">
+             style="width:100%;height:320px;object-fit:cover;object-position:top;display:block;">
       </div>
     </div>
     <div class="section-label">學員聲音</div>
@@ -2209,7 +2387,7 @@
   </div>
 </div>
 
-<!-- CERTIFICATE STRIP -->
+</section><section id="certificate"><!-- CERTIFICATE STRIP -->
 <div class="cert-strip">
   <div class="cert-strip-inner reveal">
     <div class="section-label">結業認證</div>
@@ -2225,7 +2403,7 @@
   </div>
 </div>
 
-<!-- SCHEDULE & PRICING -->
+</section><section id="pricing"><!-- SCHEDULE & PRICING -->
 <div class="schedule-section">
   <div class="schedule-inner reveal">
     <div class="section-label" style="color:rgba(255,255,255,0.4);">課程資訊</div>
@@ -2305,7 +2483,7 @@
   </div>
 </div>
 
-<!-- CTA -->
+</section><section id="cta"><!-- CTA -->
 <div class="cta-section">
   <div class="cta-inner reveal">
     <p class="cta-eyebrow">ENROLL NOW・立即加入</p>
@@ -2350,6 +2528,37 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+<script>
+function toggleNav() {
+  const links = document.getElementById('navLinks');
+  const ham = document.getElementById('hamburger');
+  links.classList.toggle('open');
+}
+
+// 點選連結後關閉手機選單
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', () => {
+    document.getElementById('navLinks').classList.remove('open');
+  });
+});
+
+// 滾動時高亮當前區塊
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const top = section.offsetTop - 80;
+    if (window.scrollY >= top) current = section.id;
+  });
+  navLinks.forEach(a => {
+    a.classList.remove('active');
+    if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+  });
+});
 </script>
 </body>
 </html>
