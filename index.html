@@ -1,2564 +1,454 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>曼陀羅心靈彩繪｜二級講師培訓 第十四屆｜心語能量美學・黃彥蓁老師</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;700&family=Noto+Sans+TC:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<title>曼陀羅心靈彩繪 ｜ 一級講師課程招生中</title>
+<meta name="description" content="黃彥蓁老師親授 — 曼陀羅心靈彩繪一級講師課程。透過點繪靜心療癒，從零基礎到成為認證講師。中華綜合發展研究院‧文創藝術研究所主辦。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --gold: #C9A96E;
-    --gold-light: #E8D5B0;
-    --gold-deep: #9B7A45;
-    --ink: #1A1410;
-    --ink-soft: #3D3328;
-    --sand: #F5EFE4;
-    --sand-dark: #EDE4D3;
-    --rose: #C4806A;
-    --teal-deep: #2D6B6B;
-    --cream: #FDFAF5;
-    --text-muted: #7A6A5A;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  body {
-    background: var(--cream);
-    color: var(--ink);
-    font-family: 'Noto Sans TC', sans-serif;
-    font-weight: 300;
-    line-height: 1.8;
-    overflow-x: hidden;
-  }
-
-  /* ── HERO ── */
-  .hero {
-    min-height: 100vh;
-    background: var(--ink);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 80px 40px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(ellipse 60% 50% at 50% 30%, rgba(201,169,110,0.12) 0%, transparent 70%),
-      radial-gradient(ellipse 40% 60% at 20% 80%, rgba(196,128,106,0.08) 0%, transparent 60%),
-      radial-gradient(ellipse 50% 40% at 80% 20%, rgba(45,107,107,0.06) 0%, transparent 60%);
-  }
-
-  .mandala-bg {
-    position: absolute;
-    width: 700px;
-    height: 700px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0.04;
-    animation: slowRotate 60s linear infinite;
-  }
-
-  @keyframes slowRotate {
-    to { transform: translate(-50%, -50%) rotate(360deg); }
-  }
-
-  .hero-badge {
-    display: inline-block;
-    border: 0.5px solid var(--gold);
-    color: var(--gold);
-    font-size: 11px;
-    letter-spacing: 3px;
-    padding: 6px 20px;
-    margin-bottom: 40px;
-    font-family: 'Noto Sans TC', sans-serif;
-    font-weight: 300;
-    animation: fadeUp 1s ease both;
-  }
-
-  .hero-institute {
-    color: var(--gold-light);
-    font-size: 13px;
-    letter-spacing: 2px;
-    margin-bottom: 16px;
-    font-weight: 300;
-    opacity: 0.8;
-    animation: fadeUp 1s ease 0.1s both;
-  }
-
-  .hero-title {
-    font-family: 'Noto Serif TC', serif;
-    font-size: clamp(32px, 6vw, 60px);
-    font-weight: 300;
-    color: #fff;
-    line-height: 1.3;
-    margin-bottom: 12px;
-    animation: fadeUp 1s ease 0.2s both;
-  }
-
-  .hero-title em {
-    font-style: normal;
-    color: var(--gold);
-  }
-
-  .hero-subtitle {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(16px, 2.5vw, 22px);
-    color: var(--gold-light);
-    letter-spacing: 1px;
-    margin-bottom: 40px;
-    font-weight: 300;
-    font-style: italic;
-    animation: fadeUp 1s ease 0.3s both;
-  }
-
-  .hero-tagline {
-    color: rgba(255,255,255,0.65);
-    font-size: 14px;
-    line-height: 2;
-    max-width: 480px;
-    margin-bottom: 60px;
-    animation: fadeUp 1s ease 0.4s both;
-  }
-
-  .hero-stats {
-    display: flex;
-    gap: 48px;
-    justify-content: center;
-    flex-wrap: wrap;
-    animation: fadeUp 1s ease 0.5s both;
-  }
-
-  .hero-stat {
-    text-align: center;
-  }
-
-  .hero-stat-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 42px;
-    color: var(--gold);
-    font-weight: 300;
-    line-height: 1;
-  }
-
-  .hero-stat-label {
-    font-size: 11px;
-    color: rgba(255,255,255,0.5);
-    letter-spacing: 1px;
-    margin-top: 4px;
-  }
-
-  .hero-divider {
-    width: 1px;
-    height: 60px;
-    background: rgba(201,169,110,0.3);
-    align-self: center;
-  }
-
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  /* ── SECTION COMMON ── */
-  section {
-    padding: 100px 40px;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .section-label {
-    font-size: 10px;
-    letter-spacing: 4px;
-    color: var(--gold);
-    text-transform: uppercase;
-    margin-bottom: 16px;
-    font-weight: 400;
-  }
-
-  .section-heading {
-    font-family: 'Noto Serif TC', serif;
-    font-size: clamp(24px, 4vw, 38px);
-    font-weight: 400;
-    line-height: 1.4;
-    margin-bottom: 32px;
-    color: var(--ink);
-  }
-
-  .section-heading em {
-    font-style: normal;
-    color: var(--gold-deep);
-    font-weight: 300;
-  }
-
-  /* ── INTRO STRIP ── */
-  .intro-strip {
-    background: var(--sand);
-    padding: 80px 40px;
-    text-align: center;
-  }
-
-  .intro-strip-inner {
-    max-width: 680px;
-    margin: 0 auto;
-  }
-
-  .intro-quote {
-    font-family: 'Noto Serif TC', serif;
-    font-size: clamp(20px, 3vw, 30px);
-    font-weight: 300;
-    line-height: 1.7;
-    color: var(--ink-soft);
-    margin-bottom: 20px;
-  }
-
-  .intro-quote strong {
-    color: var(--gold-deep);
-    font-weight: 500;
-  }
-
-  .intro-sub {
-    font-size: 14px;
-    color: var(--text-muted);
-    line-height: 1.9;
-  }
-
-  /* ── FOR WHOM ── */
-  .for-whom-bg {
-    background: var(--ink);
-    padding: 100px 40px;
-  }
-
-  .for-whom-inner {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .for-whom-bg .section-heading {
-    color: #fff;
-  }
-
-  .persona-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1px;
-    background: rgba(201,169,110,0.2);
-    border: 0.5px solid rgba(201,169,110,0.2);
-    margin-top: 48px;
-  }
-
-  .persona-card {
-    background: var(--ink);
-    padding: 40px 32px;
-    transition: background 0.3s;
-  }
-
-  .persona-card:hover {
-    background: #201a14;
-  }
-
-  .persona-icon {
-    font-size: 28px;
-    margin-bottom: 16px;
-    display: block;
-  }
-
-  .persona-title {
-    font-family: 'Noto Serif TC', serif;
-    font-size: 17px;
-    color: var(--gold);
-    margin-bottom: 8px;
-    font-weight: 400;
-  }
-
-  .persona-desc {
-    font-size: 13px;
-    color: rgba(255,255,255,0.5);
-    line-height: 1.8;
-  }
-
-  /* ── TEACHER ── */
-  .teacher-section {
-    background: var(--cream);
-    padding: 100px 40px;
-  }
-
-  .teacher-inner {
-    max-width: 900px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1.6fr;
-    gap: 80px;
-    align-items: start;
-  }
-
-  @media (max-width: 680px) {
-    .teacher-inner { grid-template-columns: 1fr; gap: 40px; }
-  }
-
-  .teacher-left {}
-
-  .teacher-credential-box {
-    background: var(--sand);
-    border-left: 2px solid var(--gold);
-    padding: 28px 24px;
-    margin-bottom: 24px;
-  }
-
-  .teacher-credential-title {
-    font-size: 10px;
-    letter-spacing: 3px;
-    color: var(--gold);
-    margin-bottom: 16px;
-  }
-
-  .credential-item {
-    display: flex;
-    gap: 10px;
-    align-items: flex-start;
-    margin-bottom: 10px;
-  }
-
-  .credential-dot {
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background: var(--gold);
-    margin-top: 9px;
-    flex-shrink: 0;
-  }
-
-  .credential-text {
-    font-size: 13px;
-    color: var(--ink-soft);
-    line-height: 1.7;
-  }
-
-  .teacher-highlight {
-    background: var(--gold);
-    color: var(--ink);
-    font-size: 12px;
-    padding: 12px 16px;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    line-height: 1.6;
-  }
-
-  .teacher-story {
-    font-size: 15px;
-    color: var(--ink-soft);
-    line-height: 2;
-    margin-bottom: 24px;
-  }
-
-  .teacher-story p { margin-bottom: 16px; }
-
-  .teacher-story strong {
-    color: var(--gold-deep);
-    font-weight: 500;
-  }
-
-  /* ── CURRICULUM ── */
-  .curriculum-bg {
-    background: var(--sand-dark);
-    padding: 100px 40px;
-  }
-
-  .curriculum-inner {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .day-block {
-    margin-bottom: 48px;
-  }
-
-  .day-label {
-    display: inline-block;
-    background: var(--gold);
-    color: var(--ink);
-    font-size: 11px;
-    letter-spacing: 2px;
-    padding: 5px 16px;
-    margin-bottom: 24px;
-    font-weight: 500;
-  }
-
-  .learn-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 16px;
-  }
-
-  .learn-item {
-    background: var(--cream);
-    padding: 20px 24px;
-    border-bottom: 1.5px solid var(--gold-light);
-    display: flex;
-    gap: 14px;
-    align-items: flex-start;
-  }
-
-  .learn-check {
-    color: var(--gold-deep);
-    font-size: 16px;
-    flex-shrink: 0;
-    margin-top: 2px;
-  }
-
-  .learn-text {
-    font-size: 14px;
-    color: var(--ink-soft);
-    line-height: 1.7;
-  }
-
-  .learn-text strong {
-    display: block;
-    color: var(--ink);
-    font-weight: 500;
-    margin-bottom: 2px;
-    font-size: 14px;
-  }
-
-  /* ── ROI ── */
-  .roi-section {
-    background: var(--teal-deep);
-    padding: 100px 40px;
-  }
-
-  .roi-inner {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .roi-section .section-heading {
-    color: #fff;
-  }
-
-  .roi-section .section-label {
-    color: rgba(255,255,255,0.5);
-  }
-
-  .roi-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
-    margin-top: 48px;
-  }
-
-  @media (max-width: 600px) {
-    .roi-grid { grid-template-columns: 1fr; }
-  }
-
-  .roi-card {
-    background: rgba(255,255,255,0.07);
-    border: 0.5px solid rgba(255,255,255,0.15);
-    padding: 32px 28px;
-  }
-
-  .roi-card-title {
-    font-family: 'Noto Serif TC', serif;
-    font-size: 17px;
-    color: var(--gold-light);
-    margin-bottom: 16px;
-    font-weight: 400;
-  }
-
-  .roi-list {
-    list-style: none;
-    font-size: 13px;
-    color: rgba(255,255,255,0.7);
-    line-height: 2;
-  }
-
-  .roi-list li::before {
-    content: '→ ';
-    color: var(--gold);
-  }
-
-  .roi-calc {
-    background: var(--gold);
-    padding: 36px 32px;
-    grid-column: 1 / -1;
-  }
-
-  .roi-calc-title {
-    font-family: 'Noto Serif TC', serif;
-    font-size: 18px;
-    color: var(--ink);
-    margin-bottom: 20px;
-    font-weight: 500;
-  }
-
-  .roi-calc-body {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 24px;
-  }
-
-  .roi-calc-step {
-    text-align: center;
-  }
-
-  .roi-calc-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 36px;
-    color: var(--ink);
-    font-weight: 400;
-    line-height: 1;
-  }
-
-  .roi-calc-label {
-    font-size: 12px;
-    color: var(--ink-soft);
-    margin-top: 6px;
-    line-height: 1.5;
-  }
-
-  .roi-calc-arrow {
-    align-self: center;
-    text-align: center;
-    font-size: 20px;
-    color: var(--ink-soft);
-  }
-
-  /* ── TESTIMONIALS ── */
-  .testimonials-section {
-    background: var(--cream);
-    padding: 100px 40px;
-  }
-
-  .testimonials-inner {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .testi-note {
-    background: var(--sand);
-    border: 0.5px solid var(--gold-light);
-    padding: 20px 24px;
-    font-size: 13px;
-    color: var(--text-muted);
-    line-height: 1.8;
-    margin-bottom: 40px;
-    font-style: italic;
-  }
-
-  .testi-placeholder-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
-  }
-
-  .testi-card {
-    background: var(--sand);
-    padding: 28px 24px;
-    border-bottom: 2px solid var(--gold-light);
-    position: relative;
-  }
-
-  .testi-quote-mark {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 64px;
-    color: var(--gold-light);
-    line-height: 0.6;
-    display: block;
-    margin-bottom: 16px;
-  }
-
-  .testi-text {
-    font-size: 14px;
-    color: var(--ink-soft);
-    line-height: 1.9;
-    margin-bottom: 20px;
-    font-style: italic;
-  }
-
-  .testi-author {
-    font-size: 12px;
-    color: var(--gold-deep);
-    font-weight: 500;
-  }
-
-  .testi-role {
-    font-size: 11px;
-    color: var(--text-muted);
-  }
-
-  /* ── CERTIFICATE ── */
-  .cert-strip {
-    background: var(--sand);
-    padding: 80px 40px;
-    text-align: center;
-    border-top: 0.5px solid var(--gold-light);
-    border-bottom: 0.5px solid var(--gold-light);
-  }
-
-  .cert-strip-inner {
-    max-width: 700px;
-    margin: 0 auto;
-  }
-
-  .cert-box {
-    display: inline-block;
-    border: 1px solid var(--gold);
-    padding: 48px 60px;
-    position: relative;
-    margin: 40px 0;
-  }
-
-  .cert-box::before, .cert-box::after {
-    content: '';
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    border-color: var(--gold);
-    border-style: solid;
-  }
-
-  .cert-box::before {
-    top: -1px; left: -1px;
-    border-width: 2px 0 0 2px;
-  }
-
-  .cert-box::after {
-    bottom: -1px; right: -1px;
-    border-width: 0 2px 2px 0;
-  }
-
-  .cert-title {
-    font-family: 'Noto Serif TC', serif;
-    font-size: 22px;
-    color: var(--ink);
-    font-weight: 400;
-    letter-spacing: 2px;
-    margin-bottom: 8px;
-  }
-
-  .cert-subtitle {
-    font-size: 13px;
-    color: var(--gold-deep);
-    letter-spacing: 1px;
-  }
-
-  .cert-requirement {
-    font-size: 13px;
-    color: var(--text-muted);
-    line-height: 2;
-  }
-
-  /* ── SCHEDULE & PRICING ── */
-  .schedule-section {
-    background: var(--ink);
-    padding: 100px 40px;
-  }
-
-  .schedule-inner {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .schedule-section .section-heading {
-    color: #fff;
-  }
-
-  .location-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    margin-top: 48px;
-  }
-
-  @media (max-width: 640px) {
-    .location-grid { grid-template-columns: 1fr; }
-  }
-
-  .location-card {
-    border: 0.5px solid rgba(201,169,110,0.3);
-    padding: 36px 28px;
-  }
-
-  .location-city {
-    font-family: 'Noto Serif TC', serif;
-    font-size: 22px;
-    color: var(--gold);
-    margin-bottom: 20px;
-    font-weight: 300;
-  }
-
-  .location-info {
-    font-size: 13px;
-    color: rgba(255,255,255,0.6);
-    line-height: 2;
-  }
-
-  .location-info strong {
-    color: rgba(255,255,255,0.9);
-    font-weight: 400;
-    display: block;
-  }
-
-  .class-tag {
-    display: inline-block;
-    border: 0.5px solid rgba(201,169,110,0.4);
-    color: var(--gold-light);
-    font-size: 12px;
-    padding: 4px 12px;
-    margin: 6px 4px 0 0;
-  }
-
-  .pricing-box {
-    margin-top: 60px;
-    border: 0.5px solid rgba(201,169,110,0.3);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  @media (max-width: 600px) {
-    .pricing-box { grid-template-columns: 1fr; }
-  }
-
-  .pricing-left {
-    padding: 48px 40px;
-    border-right: 0.5px solid rgba(201,169,110,0.3);
-  }
-
-  @media (max-width: 600px) {
-    .pricing-left { border-right: none; border-bottom: 0.5px solid rgba(201,169,110,0.3); }
-  }
-
-  .pricing-right {
-    padding: 48px 40px;
-  }
-
-  .price-original {
-    font-size: 13px;
-    color: rgba(255,255,255,0.35);
-    text-decoration: line-through;
-    margin-bottom: 4px;
-  }
-
-  .price-main {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 52px;
-    color: var(--gold);
-    font-weight: 300;
-    line-height: 1;
-    margin-bottom: 4px;
-  }
-
-  .price-unit {
-    font-size: 14px;
-    color: rgba(255,255,255,0.6);
-    margin-bottom: 16px;
-  }
-
-  .price-deadline {
-    background: rgba(201,169,110,0.12);
-    border: 0.5px solid rgba(201,169,110,0.3);
-    padding: 10px 14px;
-    font-size: 12px;
-    color: var(--gold-light);
-    line-height: 1.6;
-  }
-
-  .includes-label {
-    font-size: 10px;
-    letter-spacing: 2px;
-    color: rgba(255,255,255,0.4);
-    margin-bottom: 16px;
-  }
-
-  .includes-list {
-    list-style: none;
-    font-size: 13px;
-    color: rgba(255,255,255,0.7);
-    line-height: 2.2;
-  }
-
-  .includes-list li::before {
-    content: '✦ ';
-    color: var(--gold);
-    font-size: 10px;
-  }
-
-  .per-hour-note {
-    margin-top: 20px;
-    font-size: 12px;
-    color: rgba(255,255,255,0.35);
-    line-height: 1.7;
-  }
-
-  /* ── CTA ── */
-  .cta-section {
-    background: var(--gold);
-    padding: 100px 40px;
-    text-align: center;
-  }
-
-  .cta-inner {
-    max-width: 640px;
-    margin: 0 auto;
-  }
-
-  .cta-eyebrow {
-    font-size: 11px;
-    letter-spacing: 3px;
-    color: var(--ink-soft);
-    margin-bottom: 20px;
-  }
-
-  .cta-heading {
-    font-family: 'Noto Serif TC', serif;
-    font-size: clamp(24px, 4vw, 38px);
-    color: var(--ink);
-    font-weight: 400;
-    line-height: 1.5;
-    margin-bottom: 16px;
-  }
-
-  .cta-sub {
-    font-size: 14px;
-    color: var(--ink-soft);
-    line-height: 1.9;
-    margin-bottom: 48px;
-  }
-
-  .cta-buttons {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 48px;
-  }
-
-  .btn-primary {
-    background: var(--ink);
-    color: var(--gold);
-    padding: 16px 40px;
-    font-size: 14px;
-    letter-spacing: 1px;
-    border: none;
-    cursor: pointer;
-    font-family: 'Noto Sans TC', sans-serif;
-    font-weight: 400;
-    text-decoration: none;
-    display: inline-block;
-    transition: background 0.2s;
-  }
-
-  .btn-primary:hover {
-    background: var(--ink-soft);
-  }
-
-  .btn-secondary {
-    background: transparent;
-    color: var(--ink);
-    padding: 16px 40px;
-    font-size: 14px;
-    letter-spacing: 1px;
-    border: 1px solid var(--ink);
-    cursor: pointer;
-    font-family: 'Noto Sans TC', sans-serif;
-    font-weight: 400;
-    text-decoration: none;
-    display: inline-block;
-    transition: all 0.2s;
-  }
-
-  .btn-secondary:hover {
-    background: rgba(0,0,0,0.05);
-  }
-
-  .cta-urgency {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
-    flex-wrap: wrap;
-  }
-
-  .urgency-item {
-    font-size: 12px;
-    color: var(--ink-soft);
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-
-  .urgency-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--ink);
-  }
-
-  /* ── FOOTER ── */
-  .footer {
-    background: var(--ink);
-    padding: 48px 40px;
-    text-align: center;
-  }
-
-  .footer-logo {
-    font-family: 'Noto Serif TC', serif;
-    font-size: 18px;
-    color: var(--gold);
-    font-weight: 300;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
-  }
-
-  .footer-sub {
-    font-size: 12px;
-    color: rgba(255,255,255,0.35);
-    margin-bottom: 24px;
-  }
-
-  .footer-contact {
-    font-size: 13px;
-    color: rgba(255,255,255,0.5);
-    line-height: 2;
-  }
-
-  .footer-contact a {
-    color: var(--gold-light);
-    text-decoration: none;
-  }
-
-  /* ── DECORATIVE DIVIDER ── */
-  .gold-divider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    margin: 0 auto;
-    max-width: 300px;
-    padding: 24px 0;
-  }
-
-  .gold-divider-line {
-    flex: 1;
-    height: 0.5px;
-    background: var(--gold-light);
-  }
-
-  .gold-divider-gem {
-    width: 6px;
-    height: 6px;
-    background: var(--gold);
-    transform: rotate(45deg);
-    flex-shrink: 0;
-  }
-
-  /* ── SCROLL REVEAL ── */
-  .reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-  }
-
-  .reveal.visible {
-    opacity: 1;
-    transform: none;
-  }
-
-  @media (max-width: 600px) {
-    section { padding: 60px 24px; }
-    .hero { padding: 60px 24px; }
-    .for-whom-bg, .roi-section, .schedule-section, .teacher-section,
-    .curriculum-bg, .testimonials-section, .cta-section { padding: 60px 24px; }
-    .cert-box { padding: 32px 24px; }
-    .pricing-left, .pricing-right { padding: 28px 24px; }
-  }
-
-  /* ── NAVIGATION ── */
-  .nav-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    background: rgba(26,20,16,0.95);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 0.5px solid rgba(201,169,110,0.2);
-    padding: 0 24px;
-    height: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .nav-logo {
-    font-family: 'Noto Serif TC', serif;
-    font-size: 13px;
-    color: var(--gold);
-    font-weight: 300;
-    letter-spacing: 1px;
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 0;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-
-  .nav-links::-webkit-scrollbar { display: none; }
-
-  .nav-links a {
-    display: block;
-    padding: 0 14px;
-    height: 56px;
-    line-height: 56px;
-    font-size: 12px;
-    color: rgba(255,255,255,0.6);
-    text-decoration: none;
-    letter-spacing: 0.5px;
-    white-space: nowrap;
-    transition: color 0.2s;
-    border-bottom: 2px solid transparent;
-  }
-
-  .nav-links a:hover,
-  .nav-links a.active {
-    color: var(--gold);
-    border-bottom-color: var(--gold);
-  }
-
-  .nav-hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    padding: 8px;
-    flex-shrink: 0;
-  }
-
-  .nav-hamburger span {
-    width: 22px;
-    height: 1.5px;
-    background: var(--gold);
-    display: block;
-    transition: all 0.3s;
-  }
-
-  /* 手機版導覽 */
-  @media (max-width: 768px) {
-    .nav-links {
-      display: none;
-      position: fixed;
-      top: 56px;
-      left: 0;
-      right: 0;
-      background: rgba(26,20,16,0.98);
-      flex-direction: column;
-      padding: 8px 0 16px;
-      border-bottom: 0.5px solid rgba(201,169,110,0.2);
-    }
-
-    .nav-links.open { display: flex; }
-
-    .nav-links a {
-      height: 44px;
-      line-height: 44px;
-      padding: 0 24px;
-      border-bottom: none;
-      border-left: 2px solid transparent;
-    }
-
-    .nav-links a:hover,
-    .nav-links a.active {
-      border-bottom: none;
-      border-left-color: var(--gold);
-      background: rgba(201,169,110,0.05);
-    }
-
-    .nav-hamburger { display: flex; }
-    .nav-logo { font-size: 12px; }
-  }
-
-  /* 讓 hero 區不被導覽列遮住 */
-  .hero { padding-top: 120px; }
-
-  @media (max-width: 600px) {
-    .hero { padding-top: 100px; }
-  }
+:root{
+  --cream:#FAF4EA;--cream-2:#F3E9D8;--paper:#FFFDF8;
+  --clay:#BC6244;--clay-deep:#A04E33;--brown:#5E4032;--brown-soft:#7A5848;
+  --sage:#6E9285;--sage-deep:#4F7468;--rose:#B23E6C;--rose-soft:#C96A8E;
+  --gold:#CE9B3F;--gold-soft:#E2C078;--teal:#3F7E84;
+  --ink:#3A2A21;--ink-soft:#6B5648;--line:rgba(94,64,50,.16);
+  --shadow:0 18px 50px -20px rgba(94,64,50,.45);
+  --serif:"Noto Serif TC",serif;--sans:"Noto Sans TC",sans-serif;--display:"Cormorant Garamond",serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.85;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.5;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E")}
+img{display:block;max-width:100%} a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px;position:relative;z-index:2}
+
+/* NAV */
+header.nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:16px clamp(20px,4vw,52px);background:rgba(250,244,234,.82);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:.4s}
+header.nav.scrolled{border-bottom-color:var(--line);box-shadow:0 6px 26px -18px rgba(94,64,50,.5);background:rgba(250,244,234,.94)}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-weight:700;font-size:1.12rem;letter-spacing:.08em;color:var(--brown)}
+.brand .mk{width:34px;height:34px;flex:none} .brand .mk svg{width:100%;height:100%;display:block;animation:spin 60s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+nav.links{display:flex;gap:30px;align-items:center}
+nav.links a{font-size:.92rem;font-weight:500;color:var(--ink-soft);position:relative;letter-spacing:.04em;transition:.25s}
+nav.links a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--clay);transition:.3s;border-radius:2px}
+nav.links a:hover{color:var(--clay-deep)} nav.links a:hover::after{width:100%}
+.nav-cta{padding:9px 20px;background:var(--clay);color:#fff!important;border-radius:40px;font-weight:500;box-shadow:0 8px 20px -8px var(--clay);transition:.3s}
+.nav-cta:hover{background:var(--clay-deep);transform:translateY(-2px)} .nav-cta::after{display:none!important}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:6px}
+.burger span{width:26px;height:2px;background:var(--brown);border-radius:2px;transition:.3s}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:140px 0 90px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0;background:radial-gradient(120% 80% at 80% 10%,rgba(206,155,63,.18),transparent 55%),radial-gradient(90% 70% at 12% 90%,rgba(110,146,133,.20),transparent 55%),linear-gradient(160deg,#FBF5EC 0%,#F4E7D2 100%)}
+.hero-mandala{position:absolute;right:-180px;top:50%;transform:translateY(-50%);width:760px;height:760px;z-index:0;opacity:.55;animation:spin 120s linear infinite}
+.hero-mandala svg{width:100%;height:100%}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero-copy{position:relative;z-index:3}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-style:italic;font-size:1.25rem;color:var(--clay-deep);letter-spacing:.05em;margin-bottom:18px}
+.eyebrow::before{content:"";width:38px;height:1px;background:var(--clay)}
+.hero h1{font-family:var(--serif);font-weight:900;font-size:clamp(2.5rem,5.5vw,4rem);line-height:1.2;color:var(--brown);letter-spacing:.02em}
+.hero h1 .accent{color:var(--clay-deep);position:relative;white-space:nowrap}
+.hero h1 .accent::after{content:"";position:absolute;left:0;right:0;bottom:.08em;height:.28em;background:var(--gold-soft);opacity:.5;z-index:-1;border-radius:4px}
+.hero .lead{margin:22px 0 10px;font-size:1.08rem;color:var(--ink-soft);max-width:30em;font-weight:300}
+.hero .sub-line{font-family:var(--serif);color:var(--sage-deep);font-size:.95rem;letter-spacing:.06em;margin-bottom:30px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 30px;border-radius:46px;font-weight:500;font-size:1rem;letter-spacing:.05em;transition:.3s;cursor:pointer;border:none}
+.btn-primary{background:var(--clay);color:#fff;box-shadow:0 14px 30px -12px var(--clay)}
+.btn-primary:hover{background:var(--clay-deep);transform:translateY(-3px);box-shadow:0 20px 38px -14px var(--clay-deep)}
+.btn-ghost{background:transparent;color:var(--brown);border:1.5px solid var(--brown-soft)}
+.btn-ghost:hover{background:var(--brown);color:#fff;transform:translateY(-3px)}
+.hero-art{position:relative;z-index:2;display:flex;justify-content:center}
+.hero-art .showcase{position:relative;width:100%;max-width:500px;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);border:6px solid #fff}
+.hero-art .showcase img{width:100%;display:block}
+.hero-art .float-tag{position:absolute;background:rgba(255,253,248,.92);border:1px solid var(--line);border-radius:16px;padding:10px 16px;box-shadow:var(--shadow);font-size:.85rem;backdrop-filter:blur(4px)}
+.float-tag.t1{top:10%;left:-16px;color:var(--rose)} .float-tag.t2{bottom:10%;right:-16px;color:var(--sage-deep)}
+.float-tag b{font-family:var(--serif);display:block;font-size:1.3rem;color:var(--ink);font-weight:700;line-height:1}
+.float-tag small{color:var(--ink-soft)}
+
+/* SECTIONS */
+section{position:relative;padding:clamp(70px,9vw,120px) 0}
+.sec-head{text-align:center;max-width:640px;margin:0 auto clamp(36px,5vw,58px)}
+.sec-tag{font-family:var(--display);font-style:italic;font-size:1.2rem;color:var(--clay-deep);letter-spacing:.06em}
+.sec-head h2{font-family:var(--serif);font-weight:700;font-size:clamp(1.8rem,3.6vw,2.6rem);color:var(--brown);margin:6px 0 14px;letter-spacing:.04em}
+.sec-head p{color:var(--ink-soft);font-weight:300;font-size:1.02rem}
+.divider-dot{display:flex;justify-content:center;gap:8px;margin:12px 0} .divider-dot i{width:7px;height:7px;border-radius:50%;display:block}
+.divider-dot i:nth-child(1){background:var(--rose)} .divider-dot i:nth-child(2){background:var(--gold)} .divider-dot i:nth-child(3){background:var(--sage)}
+
+/* ABOUT */
+.about{background:var(--paper)}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,5vw,72px);align-items:center}
+.about-text h2{font-family:var(--serif);font-weight:700;font-size:clamp(1.6rem,3vw,2.2rem);color:var(--brown);line-height:1.45;margin-bottom:18px}
+.about-text p{color:var(--ink-soft);margin-bottom:14px;font-weight:300}
+.about-text .quote{font-family:var(--serif);font-size:1.12rem;color:var(--clay-deep);border-left:3px solid var(--gold);padding-left:20px;margin:22px 0}
+.about-visual img{width:100%;border-radius:20px;box-shadow:var(--shadow)}
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:50px}
+.benefit{background:var(--cream);border:1px solid var(--line);border-radius:20px;padding:28px 22px;text-align:center;transition:.35s}
+.benefit:hover{transform:translateY(-6px);box-shadow:var(--shadow);background:#fff}
+.benefit .ico{width:50px;height:50px;margin:0 auto 14px}
+.benefit h4{font-family:var(--serif);font-size:1.15rem;color:var(--brown);margin-bottom:6px}
+.benefit p{font-size:.9rem;color:var(--ink-soft);font-weight:300}
+
+/* INSTRUCTOR */
+.instructor{background:linear-gradient(180deg,var(--cream) 0%,var(--cream-2) 100%)}
+.inst-grid{display:grid;grid-template-columns:.55fr .45fr;gap:clamp(30px,5vw,60px);align-items:start}
+.inst-card{background:var(--paper);border-radius:26px;padding:clamp(26px,4vw,42px);box-shadow:var(--shadow);border:1px solid var(--line)}
+.inst-card h3{font-family:var(--serif);font-size:1.8rem;color:var(--brown);margin-bottom:4px}
+.inst-card .role{font-size:.92rem;color:var(--clay);margin-bottom:18px}
+.inst-card p{font-size:.94rem;color:var(--ink-soft);font-weight:300;margin-bottom:10px;line-height:1.8}
+.cred-list{margin:18px 0 0;padding:0;list-style:none}
+.cred-list li{display:flex;gap:10px;padding:8px 0;font-size:.9rem;font-weight:300;color:var(--ink-soft);border-bottom:1px dashed var(--line)}
+.cred-list li:last-child{border:none}
+.cred-list li::before{content:"✦";color:var(--gold);flex:none;margin-top:1px}
+.exp-card{background:var(--brown);color:#F3E6D6;border-radius:26px;padding:clamp(26px,4vw,38px);box-shadow:var(--shadow);position:relative;overflow:hidden}
+.exp-card::after{content:"";position:absolute;right:-60px;bottom:-60px;width:200px;height:200px;border-radius:50%;border:18px solid rgba(243,230,214,.07)}
+.exp-card h3{font-family:var(--serif);font-size:1.3rem;color:var(--gold-soft);margin-bottom:14px}
+.exp-card li{font-size:.88rem;font-weight:300;padding:6px 0;border-bottom:1px solid rgba(243,230,214,.1)}
+.exp-card li:last-child{border:none} .exp-card ul{list-style:none}
+.exp-card li::before{content:"◆ ";color:var(--gold-soft);font-size:.7rem}
+
+/* COURSE */
+.course{background:var(--paper)}
+.course-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:start}
+.course-card{background:var(--cream);border-radius:26px;padding:clamp(26px,3.5vw,40px);box-shadow:var(--shadow);border:1px solid var(--line)}
+.course-card h3{font-family:var(--serif);font-size:1.4rem;color:var(--clay-deep);margin-bottom:4px}
+.course-card .csub{color:var(--ink-soft);font-weight:300;margin-bottom:22px;font-size:.94rem}
+.step{display:flex;gap:16px;padding:16px 0;border-bottom:1px dashed var(--line)} .step:last-child{border-bottom:none}
+.step .num{flex:none;width:40px;height:40px;border-radius:50%;background:var(--cream-2);color:var(--clay-deep);font-family:var(--serif);font-weight:700;display:flex;align-items:center;justify-content:center;font-size:1rem}
+.step h5{font-family:var(--serif);font-size:1.05rem;color:var(--brown);margin-bottom:2px}
+.step p{font-size:.88rem;color:var(--ink-soft);font-weight:300;line-height:1.7}
+.kit{background:var(--cream);border:1px solid var(--line);border-radius:26px;padding:clamp(26px,3.5vw,38px);box-shadow:var(--shadow)}
+.kit h3{font-family:var(--serif);font-size:1.3rem;color:var(--clay-deep);margin-bottom:4px}
+.kit .ksub{font-size:.88rem;color:var(--ink-soft);font-weight:300;margin-bottom:18px}
+.kit ul{list-style:none} .kit li{display:flex;gap:10px;padding:8px 0;font-size:.92rem;font-weight:300;color:var(--ink-soft);border-bottom:1px solid var(--line)}
+.kit li:last-child{border:none} .kit li::before{content:"✦";color:var(--gold);flex:none}
+.info-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+.info-box{background:var(--cream);border:1px solid var(--line);border-radius:18px;padding:22px 18px;text-align:center}
+.info-box .lbl{font-size:.78rem;letter-spacing:.16em;color:var(--clay);text-transform:uppercase;margin-bottom:6px}
+.info-box .val{font-family:var(--serif);font-size:1.1rem;color:var(--brown);font-weight:600;line-height:1.4}
+.info-box .val small{display:block;font-size:.8rem;color:var(--ink-soft);font-weight:300;margin-top:3px}
+
+/* COHORTS */
+.cohorts{background:linear-gradient(180deg,var(--cream) 0%,var(--cream-2) 100%)}
+.cohort-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.cohort-card{border-radius:20px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line);background:#fff;transition:.4s}
+.cohort-card:hover{transform:translateY(-6px);box-shadow:0 22px 55px -20px rgba(94,64,50,.55)}
+.cohort-card img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.cohort-card .label{padding:16px 20px;text-align:center}
+.cohort-card .label h4{font-family:var(--serif);font-size:1.15rem;color:var(--brown)}
+.cohort-card .label p{font-size:.85rem;color:var(--ink-soft);font-weight:300}
+
+/* GALLERY */
+.gallery{background:var(--paper)}
+.g-masonry{columns:4;column-gap:18px}
+.g-item{break-inside:avoid;margin-bottom:18px;position:relative;border-radius:16px;overflow:hidden;cursor:pointer;box-shadow:0 10px 28px -16px rgba(94,64,50,.5);background:#fff}
+.g-item img{width:100%;display:block;transition:.8s cubic-bezier(.2,.7,.3,1)}
+.g-item:hover img{transform:scale(1.06)}
+.g-cap{position:absolute;inset:auto 0 0 0;padding:36px 16px 14px;background:linear-gradient(transparent,rgba(58,42,33,.85));color:#fff;transform:translateY(8px);opacity:0;transition:.4s}
+.g-item:hover .g-cap{transform:none;opacity:1}
+.g-cap b{font-family:var(--serif);font-size:1rem;display:block} .g-cap span{font-size:.8rem;opacity:.85;font-weight:300}
+
+/* lightbox */
+.lightbox{position:fixed;inset:0;background:rgba(48,34,26,.92);z-index:200;display:none;align-items:center;justify-content:center;padding:30px;backdrop-filter:blur(6px)}
+.lightbox.open{display:flex;animation:fade .3s} @keyframes fade{from{opacity:0}to{opacity:1}}
+.lightbox img{max-width:90vw;max-height:86vh;border-radius:14px;border:6px solid #fff;box-shadow:0 30px 80px -20px rgba(0,0,0,.6)}
+.lightbox .close{position:absolute;top:24px;right:30px;color:#fff;font-size:2.4rem;cursor:pointer;line-height:1;font-family:var(--serif)}
+
+/* CTA */
+.signup{background:radial-gradient(100% 100% at 50% 0%,rgba(206,155,63,.16),transparent 60%),linear-gradient(155deg,var(--clay) 0%,var(--clay-deep) 100%);color:#FFF6EC;text-align:center;position:relative;overflow:hidden}
+.signup::before{content:"";position:absolute;left:50%;top:-160px;transform:translateX(-50%);width:520px;height:520px;border-radius:50%;border:1px solid rgba(255,246,236,.18);box-shadow:0 0 0 40px rgba(255,246,236,.05),0 0 0 90px rgba(255,246,236,.03)}
+.signup .sec-tag{color:var(--gold-soft)}
+.signup h2{font-family:var(--serif);font-weight:700;font-size:clamp(1.9rem,4vw,2.8rem);margin:8px 0 16px;color:#FFFDF8}
+.signup p{max-width:34em;margin:0 auto 32px;font-weight:300;opacity:.92}
+.signup .btn-light{background:#FFF6EC;color:var(--clay-deep)} .signup .btn-light:hover{background:#fff;transform:translateY(-3px)}
+.signup .btn-outline{background:transparent;border:1.5px solid rgba(255,246,236,.6);color:#FFF6EC} .signup .btn-outline:hover{background:rgba(255,246,236,.14);transform:translateY(-3px)}
+
+/* CONTACT */
+.contact{background:var(--cream-2)}
+.c-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:900px;margin:0 auto}
+.c-card{text-align:center;padding:34px 24px;border:1px solid var(--line);border-radius:22px;background:var(--paper);transition:.35s}
+.c-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);background:#fff}
+.c-card .ico{width:46px;height:46px;margin:0 auto 14px}
+.c-card .lbl{font-size:.78rem;letter-spacing:.14em;color:var(--clay);text-transform:uppercase;margin-bottom:4px}
+.c-card .val{font-family:var(--serif);font-size:1.15rem;color:var(--brown);font-weight:600;word-break:break-word}
+
+/* FOOTER */
+footer{background:var(--brown);color:#E8D8C6;padding:54px 0 28px;text-align:center}
+footer .fbrand{display:flex;align-items:center;justify-content:center;gap:12px;font-family:var(--serif);font-size:1.2rem;color:var(--gold-soft);margin-bottom:10px}
+footer .fbrand svg{width:32px;height:32px}
+footer .fmotto{font-weight:300;opacity:.8;max-width:30em;margin:0 auto 20px;font-size:.92rem}
+footer .fsocial{display:flex;gap:18px;justify-content:center;margin-bottom:24px}
+footer .fsocial a{width:40px;height:40px;border:1px solid rgba(232,216,198,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:.3s}
+footer .fsocial a:hover{background:var(--gold);border-color:var(--gold);color:var(--brown);transform:translateY(-3px)}
+footer .fcopy{font-size:.8rem;opacity:.6;border-top:1px solid rgba(232,216,198,.16);padding-top:20px;font-weight:300}
+
+.reveal{opacity:0;transform:translateY(28px);transition:.9s cubic-bezier(.2,.7,.3,1)} .reveal.in{opacity:1;transform:none}
+
+.making img{transition:.6s}.making div:hover img{transform:scale(1.05)}
+@media(max-width:980px){
+  nav.links{position:fixed;inset:0 0 0 auto;width:min(320px,80vw);background:var(--paper);flex-direction:column;justify-content:center;padding:60px 40px;gap:26px;transform:translateX(100%);transition:.4s;box-shadow:-20px 0 60px -30px rgba(0,0,0,.4);z-index:60}
+  nav.links.open{transform:none} .burger{display:flex;z-index:61}
+  .hero .wrap{grid-template-columns:1fr;text-align:center} .eyebrow{justify-content:center} .hero .lead{margin-left:auto;margin-right:auto} .hero-actions{justify-content:center}
+  .hero-art{margin-top:30px} .hero-mandala{display:none}
+  .about .wrap,.inst-grid,.course-grid{grid-template-columns:1fr}
+  .about-visual{order:-1}
+  .benefits,.info-strip{grid-template-columns:1fr 1fr}
+  .cohort-grid{grid-template-columns:1fr}
+  .g-masonry{columns:2}
+  .c-grid{grid-template-columns:1fr}
+}
+@media(max-width:520px){ .info-strip{grid-template-columns:1fr} .g-masonry{columns:1} }
 </style>
 </head>
 <body>
 
-<!-- NAVIGATION -->
-<nav class="nav-bar">
-  <div class="nav-logo">心語能量美學</div>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#for-whom">適合對象</a></li>
-    <li><a href="#teacher">師資介紹</a></li>
-    <li><a href="#curriculum">課程內容</a></li>
-    <li><a href="#gallery">學員作品</a></li>
-    <li><a href="#highlights">課程亮點</a></li>
-    <li><a href="#retrain">三年複訓</a></li>
-    <li><a href="#community">師資社群</a></li>
-    <li><a href="#testimonials">學員見證</a></li>
-    <li><a href="#pricing" style="color:var(--gold);font-weight:500;">立即報名</a></li>
-  </ul>
-  <div class="nav-hamburger" id="hamburger" onclick="toggleNav()">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</nav>
+<header class="nav" id="nav">
+  <a href="#top" class="brand"><span class="mk"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(0 50 50)"/><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(30 50 50)"/><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(60 50 50)"/><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(90 50 50)"/><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(120 50 50)"/><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(150 50 50)"/><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(180 50 50)"/><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(210 50 50)"/><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(240 50 50)"/><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(270 50 50)"/><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(300 50 50)"/><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(330 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(0 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(30 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(60 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(90 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(120 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(150 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(180 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(210 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(240 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(270 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(300 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(330 50 50)"/><circle cx="50" cy="50" r="13" fill="none" stroke="#6E9285" stroke-width="2"/><circle cx="50" cy="50" r="6" fill="#B23E6C"/><circle cx="50" cy="50" r="2.4" fill="#FAF4EA"/></svg></span>曼陀羅心靈彩繪</a>
+  <button class="burger" id="burger" aria-label="選單"><span></span><span></span><span></span></button>
+  <nav class="links" id="links">
+    <a href="#about">關於課程</a>
+    <a href="#teacher">授課講師</a>
+    <a href="#course">課程內容</a>
+    <a href="#gallery">作品藝廊</a>
+    <a href="#contact">聯絡我們</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdtgas1QKlAV4T7Pfj-TnGiT-slAiPzlIK32NTCHJuTmBo0Qw/viewform?usp=send_form" target="_blank" rel="noopener" class="nav-cta">立即報名</a>
+  </nav>
+</header>
 
-
-
-<!-- NAVIGATION -->
-<nav class="nav-bar">
-  <div class="nav-logo">心語能量美學</div>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#for-whom">適合對象</a></li>
-    <li><a href="#teacher">師資介紹</a></li>
-    <li><a href="#curriculum">課程內容</a></li>
-    <li><a href="#gallery">學員作品</a></li>
-    <li><a href="#highlights">課程亮點</a></li>
-    <li><a href="#retrain">三年複訓</a></li>
-    <li><a href="#community">師資社群</a></li>
-    <li><a href="#testimonials">學員見證</a></li>
-    <li><a href="#pricing" style="color:var(--gold);font-weight:500;">立即報名</a></li>
-  </ul>
-  <div class="nav-hamburger" id="hamburger" onclick="toggleNav()">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</nav>
-
-
-<!-- HERO -->
-<div class="hero">
-  <svg class="mandala-bg" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="200" cy="200" r="190" stroke="#C9A96E" stroke-width="0.5"/>
-    <circle cx="200" cy="200" r="160" stroke="#C9A96E" stroke-width="0.5"/>
-    <circle cx="200" cy="200" r="130" stroke="#C9A96E" stroke-width="0.5"/>
-    <circle cx="200" cy="200" r="100" stroke="#C9A96E" stroke-width="0.5"/>
-    <circle cx="200" cy="200" r="70" stroke="#C9A96E" stroke-width="0.5"/>
-    <circle cx="200" cy="200" r="40" stroke="#C9A96E" stroke-width="0.5"/>
-    <line x1="200" y1="10" x2="200" y2="390" stroke="#C9A96E" stroke-width="0.5"/>
-    <line x1="10" y1="200" x2="390" y2="200" stroke="#C9A96E" stroke-width="0.5"/>
-    <line x1="65" y1="65" x2="335" y2="335" stroke="#C9A96E" stroke-width="0.5"/>
-    <line x1="335" y1="65" x2="65" y2="335" stroke="#C9A96E" stroke-width="0.5"/>
-    <line x1="132" y1="10" x2="268" y2="390" stroke="#C9A96E" stroke-width="0.3"/>
-    <line x1="268" y1="10" x2="132" y2="390" stroke="#C9A96E" stroke-width="0.3"/>
-    <line x1="10" y1="132" x2="390" y2="268" stroke="#C9A96E" stroke-width="0.3"/>
-    <line x1="10" y1="268" x2="390" y2="132" stroke="#C9A96E" stroke-width="0.3"/>
-    <polygon points="200,80 220,170 200,190 180,170" fill="none" stroke="#C9A96E" stroke-width="0.5"/>
-    <polygon points="200,320 220,230 200,210 180,230" fill="none" stroke="#C9A96E" stroke-width="0.5"/>
-    <polygon points="80,200 170,220 190,200 170,180" fill="none" stroke="#C9A96E" stroke-width="0.5"/>
-    <polygon points="320,200 230,220 210,200 230,180" fill="none" stroke="#C9A96E" stroke-width="0.5"/>
-  </svg>
-
-  <div style="position:relative;z-index:1;">
-    <div class="hero-badge">中華綜合發展研究院・文創藝術研究所</div>
-    <p class="hero-institute">心語能量美學｜心靈美學藝術學程・第十四屆</p>
-    <h1 class="hero-title">曼陀羅<em>心靈</em>彩繪<br>二級講師培訓</h1>
-    <p class="hero-subtitle">Mandala Soul Painting Instructor Program — Level II</p>
-    <p class="hero-tagline">
-      不只是學會畫畫，<br>
-      而是建立一套屬於你的<br>
-      藝術與心靈教學系統。
-    </p>
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <div class="hero-stat-num">500<span style="font-size:24px">+</span></div>
-        <div class="hero-stat-label">位學員信任</div>
+<section class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="hero-mandala"><svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg"><circle cx="380.0" cy="200.0" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="378.5" cy="223.5" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="373.9" cy="246.6" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="366.3" cy="268.9" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="355.9" cy="290.0" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="342.8" cy="309.6" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="327.3" cy="327.3" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="309.6" cy="342.8" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="290.0" cy="355.9" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="268.9" cy="366.3" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="246.6" cy="373.9" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="223.5" cy="378.5" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="200.0" cy="380.0" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="176.5" cy="378.5" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="153.4" cy="373.9" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="131.1" cy="366.3" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="110.0" cy="355.9" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="90.4" cy="342.8" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="72.7" cy="327.3" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="57.2" cy="309.6" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="44.1" cy="290.0" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="33.7" cy="268.9" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="26.1" cy="246.6" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="21.5" cy="223.5" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="20.0" cy="200.0" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="21.5" cy="176.5" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="26.1" cy="153.4" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="33.7" cy="131.1" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="44.1" cy="110.0" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="57.2" cy="90.4" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="72.7" cy="72.7" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="90.4" cy="57.2" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="110.0" cy="44.1" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="131.1" cy="33.7" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="153.4" cy="26.1" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="176.5" cy="21.5" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="200.0" cy="20.0" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="223.5" cy="21.5" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="246.6" cy="26.1" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="268.9" cy="33.7" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="290.0" cy="44.1" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="309.6" cy="57.2" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="327.3" cy="72.7" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="342.8" cy="90.4" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="355.9" cy="110.0" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="366.3" cy="131.1" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="373.9" cy="153.4" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="378.5" cy="176.5" r="3.4" fill="#BC6244" opacity="0.85"/><circle cx="350.0" cy="200.0" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="348.2" cy="223.5" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="342.7" cy="246.4" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="333.7" cy="268.1" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="321.4" cy="288.2" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="306.1" cy="306.1" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="288.2" cy="321.4" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="268.1" cy="333.7" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="246.4" cy="342.7" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="223.5" cy="348.2" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="200.0" cy="350.0" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="176.5" cy="348.2" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="153.6" cy="342.7" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="131.9" cy="333.7" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="111.8" cy="321.4" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="93.9" cy="306.1" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="78.6" cy="288.2" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="66.3" cy="268.1" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="57.3" cy="246.4" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="51.8" cy="223.5" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="50.0" cy="200.0" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="51.8" cy="176.5" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="57.3" cy="153.6" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="66.3" cy="131.9" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="78.6" cy="111.8" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="93.9" cy="93.9" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="111.8" cy="78.6" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="131.9" cy="66.3" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="153.6" cy="57.3" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="176.5" cy="51.8" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="200.0" cy="50.0" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="223.5" cy="51.8" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="246.4" cy="57.3" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="268.1" cy="66.3" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="288.2" cy="78.6" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="306.1" cy="93.9" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="321.4" cy="111.8" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="333.7" cy="131.9" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="342.7" cy="153.6" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="348.2" cy="176.5" r="3.0" fill="#CE9B3F" opacity="0.85"/><circle cx="320.0" cy="200.0" r="2.8" fill="#6E9285" opacity="0.85"/><circle cx="317.7" cy="223.4" r="2.8" fill="#6E9285" opacity="0.85"/><circle cx="310.9" cy="245.9" r="2.8" fill="#6E9285" opacity="0.85"/><circle cx="299.8" cy="266.7" r="2.8" fill="#6E9285" opacity="0.85"/><circle cx="284.9" cy="284.9" r="2.8" fill="#6E9285" opacity="0.85"/><circle cx="266.7" cy="299.8" r="2.8" fill="#6E9285" opacity="0.85"/><circle cx="245.9" cy="310.9" r="2.8" fill="#6E9285" opacity="0.85"/><circle cx="223.4" cy="317.7" r="2.8" fill="#6E9285" opacity="0.85"/><circle cx="200.0" cy="320.0" r="2.8" fill="#6E9285" opacity="0.85"/><circle cx="176.6" cy="317.7" r="2.8" fill="#6E9285" opacity="0.85"/><circle cx="154.1" cy="310.9" r="2.8" fill="#6E9285" opacity="0.85"/><circle cx="133.3" cy="299.8" r="2.8" fill="#6E9285" opacity="0.85"/><circle cx="115.1" cy="284.9" r="2.8" fill="#6E9285" opacity="0.85"/><circle cx="100.2" cy="266.7" r="2.8" fill="#6E9285" opacity="0.85"/><circle cx="89.1" cy="245.9" r="2.8" fill="#6E9285" opacity="0.85"/><circle cx="82.3" cy="223.4" r="2.8" fill="#6E9285" opacity="0.85"/><circle cx="80.0" cy="200.0" r="2.8" fill="#6E9285" opacity="0.85"/><circle cx="82.3" cy="176.6" r="2.8" fill="#6E9285" opacity="0.85"/><circle cx="89.1" cy="154.1" r="2.8" fill="#6E9285" opacity="0.85"/><circle cx="100.2" cy="133.3" r="2.8" fill="#6E9285" opacity="0.85"/><circle cx="115.1" cy="115.1" r="2.8" fill="#6E9285" opacity="0.85"/><circle cx="133.3" cy="100.2" r="2.8" fill="#6E9285" opacity="0.85"/><circle cx="154.1" cy="89.1" r="2.8" fill="#6E9285" opacity="0.85"/><circle cx="176.6" cy="82.3" r="2.8" fill="#6E9285" opacity="0.85"/><circle cx="200.0" cy="80.0" r="2.8" fill="#6E9285" opacity="0.85"/><circle cx="223.4" cy="82.3" r="2.8" fill="#6E9285" opacity="0.85"/><circle cx="245.9" cy="89.1" r="2.8" fill="#6E9285" opacity="0.85"/><circle cx="266.7" cy="100.2" r="2.8" fill="#6E9285" opacity="0.85"/><circle cx="284.9" cy="115.1" r="2.8" fill="#6E9285" opacity="0.85"/><circle cx="299.8" cy="133.3" r="2.8" fill="#6E9285" opacity="0.85"/><circle cx="310.9" cy="154.1" r="2.8" fill="#6E9285" opacity="0.85"/><circle cx="317.7" cy="176.6" r="2.8" fill="#6E9285" opacity="0.85"/><circle cx="292.0" cy="200.0" r="2.6" fill="#B23E6C" opacity="0.85"/><circle cx="289.3" cy="222.0" r="2.6" fill="#B23E6C" opacity="0.85"/><circle cx="281.5" cy="242.8" r="2.6" fill="#B23E6C" opacity="0.85"/><circle cx="268.9" cy="261.0" r="2.6" fill="#B23E6C" opacity="0.85"/><circle cx="252.3" cy="275.7" r="2.6" fill="#B23E6C" opacity="0.85"/><circle cx="232.6" cy="286.0" r="2.6" fill="#B23E6C" opacity="0.85"/><circle cx="211.1" cy="291.3" r="2.6" fill="#B23E6C" opacity="0.85"/><circle cx="188.9" cy="291.3" r="2.6" fill="#B23E6C" opacity="0.85"/><circle cx="167.4" cy="286.0" r="2.6" fill="#B23E6C" opacity="0.85"/><circle cx="147.7" cy="275.7" r="2.6" fill="#B23E6C" opacity="0.85"/><circle cx="131.1" cy="261.0" r="2.6" fill="#B23E6C" opacity="0.85"/><circle cx="118.5" cy="242.8" r="2.6" fill="#B23E6C" opacity="0.85"/><circle cx="110.7" cy="222.0" r="2.6" fill="#B23E6C" opacity="0.85"/><circle cx="108.0" cy="200.0" r="2.6" fill="#B23E6C" opacity="0.85"/><circle cx="110.7" cy="178.0" r="2.6" fill="#B23E6C" opacity="0.85"/><circle cx="118.5" cy="157.2" r="2.6" fill="#B23E6C" opacity="0.85"/><circle cx="131.1" cy="139.0" r="2.6" fill="#B23E6C" opacity="0.85"/><circle cx="147.7" cy="124.3" r="2.6" fill="#B23E6C" opacity="0.85"/><circle cx="167.4" cy="114.0" r="2.6" fill="#B23E6C" opacity="0.85"/><circle cx="188.9" cy="108.7" r="2.6" fill="#B23E6C" opacity="0.85"/><circle cx="211.1" cy="108.7" r="2.6" fill="#B23E6C" opacity="0.85"/><circle cx="232.6" cy="114.0" r="2.6" fill="#B23E6C" opacity="0.85"/><circle cx="252.3" cy="124.3" r="2.6" fill="#B23E6C" opacity="0.85"/><circle cx="268.9" cy="139.0" r="2.6" fill="#B23E6C" opacity="0.85"/><circle cx="281.5" cy="157.2" r="2.6" fill="#B23E6C" opacity="0.85"/><circle cx="289.3" cy="178.0" r="2.6" fill="#B23E6C" opacity="0.85"/><circle cx="264.0" cy="200.0" r="2.4" fill="#3F7E84" opacity="0.85"/><circle cx="260.9" cy="219.8" r="2.4" fill="#3F7E84" opacity="0.85"/><circle cx="251.8" cy="237.6" r="2.4" fill="#3F7E84" opacity="0.85"/><circle cx="237.6" cy="251.8" r="2.4" fill="#3F7E84" opacity="0.85"/><circle cx="219.8" cy="260.9" r="2.4" fill="#3F7E84" opacity="0.85"/><circle cx="200.0" cy="264.0" r="2.4" fill="#3F7E84" opacity="0.85"/><circle cx="180.2" cy="260.9" r="2.4" fill="#3F7E84" opacity="0.85"/><circle cx="162.4" cy="251.8" r="2.4" fill="#3F7E84" opacity="0.85"/><circle cx="148.2" cy="237.6" r="2.4" fill="#3F7E84" opacity="0.85"/><circle cx="139.1" cy="219.8" r="2.4" fill="#3F7E84" opacity="0.85"/><circle cx="136.0" cy="200.0" r="2.4" fill="#3F7E84" opacity="0.85"/><circle cx="139.1" cy="180.2" r="2.4" fill="#3F7E84" opacity="0.85"/><circle cx="148.2" cy="162.4" r="2.4" fill="#3F7E84" opacity="0.85"/><circle cx="162.4" cy="148.2" r="2.4" fill="#3F7E84" opacity="0.85"/><circle cx="180.2" cy="139.1" r="2.4" fill="#3F7E84" opacity="0.85"/><circle cx="200.0" cy="136.0" r="2.4" fill="#3F7E84" opacity="0.85"/><circle cx="219.8" cy="139.1" r="2.4" fill="#3F7E84" opacity="0.85"/><circle cx="237.6" cy="148.2" r="2.4" fill="#3F7E84" opacity="0.85"/><circle cx="251.8" cy="162.4" r="2.4" fill="#3F7E84" opacity="0.85"/><circle cx="260.9" cy="180.2" r="2.4" fill="#3F7E84" opacity="0.85"/><path d="M200 95 q14 40 0 80 q-14 -40 0 -80" fill="none" stroke="#BC6244" stroke-width="1.4" opacity="0.5" transform="rotate(0.0 200 200)"/><path d="M200 95 q14 40 0 80 q-14 -40 0 -80" fill="none" stroke="#BC6244" stroke-width="1.4" opacity="0.5" transform="rotate(22.5 200 200)"/><path d="M200 95 q14 40 0 80 q-14 -40 0 -80" fill="none" stroke="#BC6244" stroke-width="1.4" opacity="0.5" transform="rotate(45.0 200 200)"/><path d="M200 95 q14 40 0 80 q-14 -40 0 -80" fill="none" stroke="#BC6244" stroke-width="1.4" opacity="0.5" transform="rotate(67.5 200 200)"/><path d="M200 95 q14 40 0 80 q-14 -40 0 -80" fill="none" stroke="#BC6244" stroke-width="1.4" opacity="0.5" transform="rotate(90.0 200 200)"/><path d="M200 95 q14 40 0 80 q-14 -40 0 -80" fill="none" stroke="#BC6244" stroke-width="1.4" opacity="0.5" transform="rotate(112.5 200 200)"/><path d="M200 95 q14 40 0 80 q-14 -40 0 -80" fill="none" stroke="#BC6244" stroke-width="1.4" opacity="0.5" transform="rotate(135.0 200 200)"/><path d="M200 95 q14 40 0 80 q-14 -40 0 -80" fill="none" stroke="#BC6244" stroke-width="1.4" opacity="0.5" transform="rotate(157.5 200 200)"/><path d="M200 95 q14 40 0 80 q-14 -40 0 -80" fill="none" stroke="#BC6244" stroke-width="1.4" opacity="0.5" transform="rotate(180.0 200 200)"/><path d="M200 95 q14 40 0 80 q-14 -40 0 -80" fill="none" stroke="#BC6244" stroke-width="1.4" opacity="0.5" transform="rotate(202.5 200 200)"/><path d="M200 95 q14 40 0 80 q-14 -40 0 -80" fill="none" stroke="#BC6244" stroke-width="1.4" opacity="0.5" transform="rotate(225.0 200 200)"/><path d="M200 95 q14 40 0 80 q-14 -40 0 -80" fill="none" stroke="#BC6244" stroke-width="1.4" opacity="0.5" transform="rotate(247.5 200 200)"/><path d="M200 95 q14 40 0 80 q-14 -40 0 -80" fill="none" stroke="#BC6244" stroke-width="1.4" opacity="0.5" transform="rotate(270.0 200 200)"/><path d="M200 95 q14 40 0 80 q-14 -40 0 -80" fill="none" stroke="#BC6244" stroke-width="1.4" opacity="0.5" transform="rotate(292.5 200 200)"/><path d="M200 95 q14 40 0 80 q-14 -40 0 -80" fill="none" stroke="#BC6244" stroke-width="1.4" opacity="0.5" transform="rotate(315.0 200 200)"/><path d="M200 95 q14 40 0 80 q-14 -40 0 -80" fill="none" stroke="#BC6244" stroke-width="1.4" opacity="0.5" transform="rotate(337.5 200 200)"/><circle cx="200" cy="200" r="196" fill="none" stroke="#7A5848" stroke-width="0.8" opacity="0.35"/><circle cx="200" cy="200" r="168" fill="none" stroke="#7A5848" stroke-width="0.8" opacity="0.35"/><circle cx="200" cy="200" r="138" fill="none" stroke="#7A5848" stroke-width="0.8" opacity="0.35"/><circle cx="200" cy="200" r="108" fill="none" stroke="#7A5848" stroke-width="0.8" opacity="0.35"/><circle cx="200" cy="200" r="78" fill="none" stroke="#7A5848" stroke-width="0.8" opacity="0.35"/><circle cx="200" cy="200" r="46" fill="none" stroke="#7A5848" stroke-width="0.8" opacity="0.35"/><circle cx="200" cy="200" r="24" fill="none" stroke="#CE9B3F" stroke-width="2" opacity="0.7"/><circle cx="200" cy="200" r="10" fill="#B23E6C" opacity="0.8"/></svg></div>
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="eyebrow">Mandala Soul Painting</span>
+      <h1>在一筆一點之間<br><span class="accent">靜心、療癒</span><br>遇見更平靜的自己</h1>
+      <p class="lead">曼陀羅點點畫，以圓為中心，由內而外層層綻放。不需要繪畫基礎，跟著節奏一點一點地畫，就能在色彩與圖騰中沉澱思緒、放鬆身心。</p>
+      <p class="sub-line">中華綜合發展研究院 ‧ 文創藝術研究所 ‧ 心靈美學藝術學程</p>
+      <div class="hero-actions">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdtgas1QKlAV4T7Pfj-TnGiT-slAiPzlIK32NTCHJuTmBo0Qw/viewform?usp=send_form" target="_blank" rel="noopener" class="btn btn-primary">我要報名課程 →</a>
+        <a href="#gallery" class="btn btn-ghost">先看看作品</a>
       </div>
-      <div class="hero-divider"></div>
-      <div class="hero-stat">
-        <div class="hero-stat-num">14</div>
-        <div class="hero-stat-label">屆師資傳承</div>
-      </div>
-      <div class="hero-divider"></div>
-      <div class="hero-stat">
-        <div class="hero-stat-num">15<span style="font-size:24px">+</span></div>
-        <div class="hero-stat-label">位講師已開班</div>
+    </div>
+    <div class="hero-art">
+      <div class="showcase">
+        <img data-img="hero" alt="曼陀羅心靈彩繪大師作品">
+        <span class="float-tag t1"><b>0</b><small>需要繪畫基礎</small></span>
+        <span class="float-tag t2"><b>∞</b><small>專屬於你的圖騰</small></span>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- INTRO STRIP -->
-<div class="intro-strip">
-  <div class="intro-strip-inner reveal">
-    <div class="gold-divider"><div class="gold-divider-line"></div><div class="gold-divider-gem"></div><div class="gold-divider-line"></div></div>
-    <p class="intro-quote">
-      你喜歡藝術，也對心靈療癒充滿熱情——<br>
-      但你還不確定，<strong>這份熱情能不能成為一門課？</strong>
-    </p>
-    <p class="intro-sub">
-      曼陀羅心靈彩繪，不只是藝術創作，<br>
-      更是一門融合色彩學、結構美學與能量覺察的專業系統。<br><br>
-      這門課，正是為那些準備好<strong>將熱情化為專業</strong>的你所設計的。<br><br>
-      十四屆以來，每班從不超過 6 位學員——<br>
-      因為黃彥蓁老師相信，真正的學習需要被<strong>看見、引導、陪伴</strong>。
-    </p>
-    <div class="gold-divider" style="margin-top:24px;"><div class="gold-divider-line"></div><div class="gold-divider-gem"></div><div class="gold-divider-line"></div></div>
+<section class="about" id="about">
+  <div class="wrap reveal">
+    <div class="about-text">
+      <span class="sec-tag">About</span>
+      <h2>曼陀羅，是一場<br>與自己對話的靜心旅程</h2>
+      <p>「Mandala（曼陀羅）」源自梵語，意指「圓」與「中心」。在繪製的過程中，我們從中心出發，一圈一圈向外延伸，每一個點、每一筆，都是專注當下的練習。</p>
+      <p>當思緒慢慢沉澱，呼吸與筆觸同步，焦慮與雜念也隨之放下。許多人在完成第一幅作品時，會驚訝於自己竟能如此安靜、如此專注——這正是曼陀羅彩繪迷人的療癒力量。</p>
+      <p class="quote">「你不需要畫得很好，只需要好好地畫。」</p>
+    </div>
+    <div class="about-visual"><img data-img="process" alt="曼陀羅彩繪創作過程" style="border-radius:20px;box-shadow:var(--shadow)"></div>
   </div>
-</div>
-
-
-
-<section id="classroom"><!-- PHOTO STRIP: 課程現場 -->
-<div style="background:var(--ink);padding:0;overflow:hidden;">
-  <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:2px;">
-    <div style="overflow:hidden;max-height:420px;">
-      <img src="IMG_20260228_150302.jpg" alt="心語能量美學小班上課實景" 
-           style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;filter:brightness(0.88);">
-    </div>
-    <div style="display:grid;grid-template-rows:1fr 1fr;gap:2px;">
-      <div style="overflow:hidden;">
-        <img src="IMG_20260428_114422.jpg" alt="學員專注創作中" 
-             style="width:100%;height:200px;object-fit:cover;object-position:top;display:block;filter:brightness(0.88);">
-      </div>
-      <div style="overflow:hidden;">
-        <img src="IMG_20260428_180613.jpg" alt="學員細心彩繪" 
-             style="width:100%;height:200px;object-fit:cover;object-position:top;display:block;filter:brightness(0.88);">
-      </div>
-    </div>
-    <div style="overflow:hidden;max-height:420px;">
-      <img src="FB_IMG_1776688649932.jpg" alt="學員認真創作" 
-           style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;filter:brightness(0.88);">
+  <div class="wrap">
+    <div class="benefits">
+      <div class="benefit reveal"><div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#6E9285" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M8 30c4-2 6-2 10 0s6 2 10 0 6-2 10 0"/><path d="M8 38c4-2 6-2 10 0s6 2 10 0 6-2 10 0"/><circle cx="24" cy="14" r="6"/><path d="M24 8v-3M24 23v3"/></svg></div><h4>靜心紓壓</h4><p>規律的點繪節奏，幫助大腦進入心流狀態，釋放日常壓力。</p></div>
+      <div class="benefit reveal"><div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#CE9B3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M30 8l10 10-16 16-10 2 2-10z"/><path d="M14 36c-2 4-6 4-8 6 2-4 2-6 4-8"/></svg></div><h4>零基礎友善</h4><p>不需繪畫經驗，講師全程一步步帶著你完成。</p></div>
+      <div class="benefit reveal"><div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#B23E6C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M24 40s-14-9-14-19a8 8 0 0114-5 8 8 0 0114 5c0 10-14 19-14 19z"/></svg></div><h4>專屬作品</h4><p>每一幅都是獨一無二的創作，完成後即可帶回家珍藏。</p></div>
     </div>
   </div>
-  <div style="text-align:center;padding:20px;background:var(--ink);">
-    <p style="font-size:11px;letter-spacing:3px;color:rgba(255,255,255,0.35);">INSIDE THE CLASSROOM・課堂實景</p>
-  </div>
-</div>
-</section><section id="philosophy"><!-- FOUNDER PHILOSOPHY -->
-<div style="background:var(--ink);padding:100px 40px;position:relative;overflow:hidden;">
-  <div style="position:absolute;top:-60px;right:-60px;width:400px;height:400px;border-radius:50%;border:0.5px solid rgba(201,169,110,0.08);pointer-events:none;"></div>
-  <div style="position:absolute;top:20px;right:20px;width:260px;height:260px;border-radius:50%;border:0.5px solid rgba(201,169,110,0.05);pointer-events:none;"></div>
+</section>
 
-  <div style="max-width:860px;margin:0 auto;" class="reveal">
-
-    <!-- 引言 -->
-    <div style="border-left:2px solid var(--gold);padding-left:32px;margin-bottom:64px;">
-      <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,3vw,32px);color:rgba(255,255,255,0.9);line-height:1.7;font-weight:300;font-style:italic;margin-bottom:16px;">
-        "所有專業的講師，<br>都不是一夕養成的。"
-      </p>
-      <p style="font-size:13px;color:var(--gold);letter-spacing:1px;">── 黃彥蓁老師・心語能量美學創辦人</p>
-    </div>
-
-    <!-- 理念說明 -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;">
-      <div>
-        <p style="font-size:10px;letter-spacing:3px;color:rgba(255,255,255,0.35);margin-bottom:20px;">THE PHILOSOPHY・創辦理念</p>
-        <p style="font-family:'Noto Serif TC',serif;font-size:clamp(18px,2.5vw,24px);color:#fff;line-height:1.6;font-weight:300;margin-bottom:24px;">
-          一張證書，<br>從來不等於一位<em style="color:var(--gold);font-style:normal;">真正的好老師</em>。
-        </p>
-        <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:2;margin-bottom:20px;">
-          黃彥蓁老師從事彩繪教學逾 35 年，她深知：
-          真正的教學能力，來自於一次又一次站上講台的實踐，
-          來自於不斷回頭檢視、修正、再出發的過程。
-        </p>
-        <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:2;">
-          市面上的師資課程，大多是「給你工具，祝你好運」。
-          但她想做的，是在你走出去之後，
-          依然還在你身後——<strong style="color:rgba(255,255,255,0.85);">直到你真正站穩為止</strong>。
-        </p>
+<section class="instructor" id="teacher">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-tag">Instructor</span><h2>授課講師</h2><div class="divider-dot"><i></i><i></i><i></i></div></div>
+    <div class="inst-grid">
+      <div class="inst-card reveal">
+        <h3>黃彥蓁 老師</h3>
+        <div class="role">彥蓁彩繪藝術 ‧ 國際認證彩繪藝術家 CDA</div>
+        <p>自 1989 年起投入彩繪教學至今逾 35 年，為美國 SDP 彩繪協會認證之國際彩繪藝術家（CDA），同時也是 Heritage 國際證書傳承藝術家。曾受邀至美國 Ohio 大會擔任講師，是美國大型彩繪大會的首位華人講師。</p>
+        <ul class="cred-list">
+          <li>彥蓁彩繪藝術有限公司 負責人</li>
+          <li>中華民國傢飾彩繪協會 創會理事長</li>
+          <li>中華綜合發展研究院 文創藝術研究所 所長</li>
+          <li>心靈藝術美學中心 主任</li>
+          <li>國際彩繪協會 SDP 認證彩繪藝術家 CDA</li>
+          <li>Heritage 國際證書傳承藝術家</li>
+        </ul>
+      <div style="margin-top:24px;border-radius:18px;overflow:hidden;box-shadow:var(--shadow)">
+        <img data-img="teacher" alt="黃彥蓁老師與學員" style="width:100%;display:block">
+        <div style="padding:12px 18px;background:var(--cream);text-align:center;font-size:.88rem;color:var(--ink-soft);font-weight:300">黃彥蓁老師與通過認證的學員合影</div>
       </div>
-      <div>
-        <p style="font-size:10px;letter-spacing:3px;color:rgba(255,255,255,0.35);margin-bottom:20px;">THE INNOVATION・首創制度</p>
-        <div style="background:rgba(201,169,110,0.07);border:0.5px solid rgba(201,169,110,0.25);padding:32px 28px;margin-bottom:16px;">
-          <p style="font-size:11px;letter-spacing:2px;color:var(--gold);margin-bottom:12px;">INDUSTRY FIRST・彩繪界首創</p>
-          <p style="font-family:'Noto Serif TC',serif;font-size:clamp(17px,2vw,22px);color:#fff;line-height:1.6;font-weight:300;margin-bottom:16px;">
-            三年內・無限次・免學費複訓制度
-          </p>
-          <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.9;">
-            這是黃彥蓁老師為了維持師資品質，<br>
-            在彩繪界<strong style="color:rgba(255,255,255,0.8);">首創</strong>的培育制度。<br><br>
-            不是優惠，不是促銷——<br>
-            而是一種對「教學品質」的承諾：<br>
-            <strong style="color:var(--gold);">你準備好了，才是真的準備好了。</strong>
-          </p>
-        </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
-          <div style="border:0.5px solid rgba(255,255,255,0.08);padding:16px;text-align:center;">
-            <p style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gold);font-weight:300;line-height:1;">3</p>
-            <p style="font-size:11px;color:rgba(255,255,255,0.4);margin-top:4px;">年陪伴期</p>
-          </div>
-          <div style="border:0.5px solid rgba(255,255,255,0.08);padding:16px;text-align:center;">
-            <p style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gold);font-weight:300;line-height:1;">∞</p>
-            <p style="font-size:11px;color:rgba(255,255,255,0.4);margin-top:4px;">次複訓無上限</p>
-          </div>
-          <div style="border:0.5px solid rgba(255,255,255,0.08);padding:16px;text-align:center;">
-            <p style="font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--gold);font-weight:300;line-height:1;">$0</p>
-            <p style="font-size:11px;color:rgba(255,255,255,0.4);margin-top:4px;">複訓學費</p>
-          </div>
-          <div style="border:0.5px solid rgba(255,255,255,0.08);padding:16px;text-align:center;">
-            <p style="font-size:16px;color:var(--gold);font-weight:500;line-height:1;margin-top:4px;">首創</p>
-            <p style="font-size:11px;color:rgba(255,255,255,0.4);margin-top:4px;">彩繪界唯一</p>
-          </div>
-        </div>
       </div>
-    </div>
-
-    <!-- 底部時間軸：講師養成路徑 -->
-    <div style="margin-top:72px;padding-top:48px;border-top:0.5px solid rgba(255,255,255,0.08);">
-      <p style="font-size:10px;letter-spacing:3px;color:rgba(255,255,255,0.35);text-align:center;margin-bottom:36px;">THE JOURNEY・一位好老師的養成路徑</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:0;position:relative;">
-        <div style="text-align:center;padding:0 16px;position:relative;">
-          <div style="width:40px;height:40px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--ink);font-weight:400;">1</div>
-          <p style="font-size:13px;color:#fff;font-weight:500;margin-bottom:6px;">兩天培訓</p>
-          <p style="font-size:11px;color:rgba(255,255,255,0.4);line-height:1.7;">技法・色彩・教學系統完整建立</p>
-        </div>
-        <div style="display:flex;align-items:flex-start;justify-content:center;padding-top:20px;">
-          <div style="width:40px;height:0.5px;background:rgba(201,169,110,0.4);margin-top:0;"></div>
-        </div>
-        <div style="text-align:center;padding:0 16px;">
-          <div style="width:40px;height:40px;border-radius:50%;background:rgba(201,169,110,0.2);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold);font-weight:400;">2</div>
-          <p style="font-size:13px;color:#fff;font-weight:500;margin-bottom:6px;">初次開班</p>
-          <p style="font-size:11px;color:rgba(255,255,255,0.4);line-height:1.7;">帶著學費回收的成就感，也帶著第一次教學的問題</p>
-        </div>
-        <div style="display:flex;align-items:flex-start;justify-content:center;padding-top:20px;">
-          <div style="width:40px;height:0.5px;background:rgba(201,169,110,0.4);"></div>
-        </div>
-        <div style="text-align:center;padding:0 16px;">
-          <div style="width:40px;height:40px;border-radius:50%;background:rgba(201,169,110,0.2);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold);font-weight:400;">3</div>
-          <p style="font-size:13px;color:#fff;font-weight:500;margin-bottom:6px;">回來複訓</p>
-          <p style="font-size:11px;color:rgba(255,255,255,0.4);line-height:1.7;">帶著真實教學經驗重新學習，收穫完全不同</p>
-        </div>
-        <div style="display:flex;align-items:flex-start;justify-content:center;padding-top:20px;">
-          <div style="width:40px;height:0.5px;background:rgba(201,169,110,0.4);"></div>
-        </div>
-        <div style="text-align:center;padding:0 16px;">
-          <div style="width:40px;height:40px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:16px;">✦</div>
-          <p style="font-size:13px;color:var(--gold);font-weight:500;margin-bottom:6px;">成為真正的好老師</p>
-          <p style="font-size:11px;color:rgba(255,255,255,0.4);line-height:1.7;">不斷精進，直到教學成為你自然流動的能力</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-</section><section id="for-whom"><!-- FOR WHOM -->
-<div class="for-whom-bg">
-  <div class="for-whom-inner reveal">
-    <div class="section-label">這門課適合你嗎</div>
-    <h2 class="section-heading">如果你是以下任何一種人，<br><em>這門課為你而開</em></h2>
-    <div class="persona-grid">
-      <div class="persona-card">
-        <span class="persona-icon">🎨</span>
-        <div class="persona-title">藝術創作者</div>
-        <p class="persona-desc">熱愛創作，想將自己的藝術能量系統化，並傳授給更多人。</p>
-      </div>
-      <div class="persona-card">
-        <span class="persona-icon">🌿</span>
-        <div class="persona-title">心靈療癒工作者</div>
-        <p class="persona-desc">已在帶領靜心、能量療癒或身心靈工作坊，想為學員加入有形的創作體驗。</p>
-      </div>
-      <div class="persona-card">
-        <span class="persona-icon">✏️</span>
-        <div class="persona-title">手作與美學教師</div>
-        <p class="persona-desc">目前已在教學，想拓展課程種類，增加藝術療癒的深度與吸引力。</p>
-      </div>
-      <div class="persona-card">
-        <span class="persona-icon">🌱</span>
-        <div class="persona-title">想開展第二專長的你</div>
-        <p class="persona-desc">渴望擁有一門能結合藝術、美學與心靈探索的斜槓事業，從興趣到收入。</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-</section><section id="promise"><!-- SMALL CLASS PROMISE -->
-<div style="background: #F5EFE4; padding: 80px 40px; border-top: 0.5px solid #E8D5B0; border-bottom: 0.5px solid #E8D5B0;">
-  <div style="max-width:860px; margin:0 auto;" class="reveal">
-    <div style="text-align:center; margin-bottom:48px;">
-      <p style="font-size:10px;letter-spacing:4px;color:#9B7A45;margin-bottom:14px;">OUR COMMITMENT・我們的承諾</p>
-      <h2 style="font-family:'Noto Serif TC',serif;font-size:clamp(22px,3.5vw,34px);font-weight:400;color:#1A1410;line-height:1.5;margin-bottom:20px;">
-        每班最多 10 人小班精緻制，<br>加上亞洲唯一的三年無限複訓承諾
-      </h2>
-      <p style="font-size:14px;color:#7A6A5A;line-height:2;max-width:560px;margin:0 auto;">
-        不是因為場地限制，而是因為黃彥蓁老師相信——<br>
-        在這麼重要的學習旅程裡，你值得被老師<strong style="color:#9B7A45;">真正看見</strong>。
-      </p>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:#E8D5B0;">
-      <div style="background:#F5EFE4;padding:32px 28px;text-align:center;">
-        <div style="font-family:'Cormorant Garamond',serif;font-size:48px;color:#C9A96E;font-weight:300;line-height:1;">500<span style="font-size:28px;">+</span></div>
-        <div style="font-size:13px;color:#3D3328;margin-top:8px;line-height:1.6;">位學員親身體驗<br><span style="font-size:11px;color:#7A6A5A;">超過十年的市場口碑積累</span></div>
-      </div>
-      <div style="background:#F5EFE4;padding:32px 28px;text-align:center;">
-        <div style="font-family:'Cormorant Garamond',serif;font-size:48px;color:#C9A96E;font-weight:300;line-height:1;">15<span style="font-size:28px;">+</span></div>
-        <div style="font-size:13px;color:#3D3328;margin-top:8px;line-height:1.6;">位講師實際開班<br><span style="font-size:11px;color:#7A6A5A;">不只拿證書，而是真的在教</span></div>
-      </div>
-      <div style="background:#F5EFE4;padding:32px 28px;text-align:center;">
-        <div style="font-family:'Cormorant Garamond',serif;font-size:48px;color:#C9A96E;font-weight:300;line-height:1;">14</div>
-        <div style="font-size:13px;color:#3D3328;margin-top:8px;line-height:1.6;">屆皆堅持小班<br><span style="font-size:11px;color:#7A6A5A;">品質從未因招生壓力妥協</span></div>
-      </div>
-      <div style="background:#F5EFE4;padding:32px 28px;text-align:center;">
-        <div style="font-family:'Cormorant Garamond',serif;font-size:48px;color:#C9A96E;font-weight:300;line-height:1;">2–6</div>
-        <div style="font-size:13px;color:#3D3328;margin-top:8px;line-height:1.6;">人精緻小班制<br><span style="font-size:11px;color:#7A6A5A;">老師全程親自陪伴每位學員</span></div>
-      </div>
-    </div>
-    <div style="background:#1A1410;padding:28px 36px;margin-top:1px;text-align:center;">
-      <p style="font-size:14px;color:rgba(255,255,255,0.75);line-height:2;margin:0;">
-        超過 500 位學員體驗過心語能量美學的課程，<br>
-        我們從未用「擴大招生」換取品質。<br>
-        <strong style="color:#C9A96E;">每班 2–6 人的堅持，已走過十四屆。</strong>
-      </p>
-    </div>
-  </div>
-</div>
-
-</section><section id="teacher"><!-- TEACHER -->
-<div class="teacher-section" style="padding:0;background:var(--ink);overflow:hidden;">
-
-  <!-- 師資視覺大圖帶 -->
-  <div style="display:grid;grid-template-columns:1fr 1.8fr 1fr;gap:2px;max-height:600px;overflow:hidden;">
-    <div style="overflow:hidden;background:var(--sand);">
-      <img src="MEITU_20251211_130554138.jpg" alt="心語能量美學師資團隊" 
-           style="width:100%;height:600px;object-fit:cover;object-position:top;display:block;filter:brightness(0.88);">
-    </div>
-    <div style="overflow:hidden;position:relative;">
-      <img src="FB_IMG_1765665067930.jpg" alt="黃彥蓁老師與曼陀羅作品" 
-           style="width:100%;height:600px;object-fit:cover;object-position:top 10%;display:block;">
-      <!-- 覆蓋文字 -->
-      <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top, rgba(26,20,16,0.92) 0%, transparent 60%);padding:40px 32px 32px;">
-        <p style="font-size:10px;letter-spacing:4px;color:var(--gold);margin-bottom:8px;">MASTER TEACHER・首席師資</p>
-        <h2 style="font-family:'Noto Serif TC',serif;font-size:clamp(28px,4vw,44px);font-weight:300;color:#fff;line-height:1.2;margin-bottom:6px;">黃彥蓁 老師</h2>
-        <p style="font-size:13px;color:rgba(255,255,255,0.6);letter-spacing:1px;">心語能量美學 創辦人</p>
-      </div>
-    </div>
-    <div style="overflow:hidden;">
-      <img src="MEITU_20251211_130524502.jpg" alt="黃彥蓁老師坐姿形象照" 
-           style="width:100%;height:600px;object-fit:cover;object-position:top;display:block;filter:brightness(0.9);">
-    </div>
-  </div>
-
-  <!-- 師資詳細介紹 -->
-  <div style="background:var(--cream);padding:80px 40px;">
-    <div style="max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1.6fr;gap:80px;align-items:start;" class="reveal">
-
-      <!-- 左：資歷認證 -->
-      <div>
-        <div class="section-label">關於師資</div>
-        <div class="teacher-credential-box">
-          <p class="teacher-credential-title">CREDENTIALS・資歷認證</p>
-          <div class="credential-item">
-            <div class="credential-dot"></div>
-            <p class="credential-text">美國 SDP 彩繪協會國際認證藝術家 CDA</p>
-          </div>
-          <div class="credential-item">
-            <div class="credential-dot"></div>
-            <p class="credential-text">Heritage 國際證書傳承藝術家</p>
-          </div>
-          <div class="credential-item">
-            <div class="credential-dot"></div>
-            <p class="credential-text">中華民國傢飾彩繪協會創會理事長</p>
-          </div>
-          <div class="credential-item">
-            <div class="credential-dot"></div>
-            <p class="credential-text">中華綜合發展研究院文創藝術研究所所長</p>
-          </div>
-          <div class="credential-item">
-            <div class="credential-dot"></div>
-            <p class="credential-text">出版彩繪著作六冊，含中英文版</p>
-          </div>
-          <div class="credential-item">
-            <div class="credential-dot"></div>
-            <p class="credential-text">彩繪教學資歷逾 35 年（1989 年起）</p>
-          </div>
-        </div>
-        <div class="teacher-highlight">
-          🌏 台灣首位受邀赴美國俄亥俄州<br>彩繪大會授課的華人藝術家<br><br>
-          ✦ 心語能量美學 創辦人<br>
-          ✦ 彩繪界首創免費複訓制度
-        </div>
-      </div>
-
-      <!-- 右：師資故事 -->
-      <div>
-        <h2 class="section-heading" style="font-size:clamp(22px,3vw,32px);">從一把畫筆，<em>走出一個世界</em></h2>
-        <div class="teacher-story">
-          <p>從 1989 年拿起畫筆至今，黃彥蓁老師在彩繪藝術與教學的路上，走了超過三十五年。</p>
-          <p>2015 年，她受邀赴美國俄亥俄州彩繪大會授課，成為登上這個國際殿堂的<strong>第一位華人講師</strong>。那一刻，不只是個人的榮耀——那是她將東方靈性美學帶向世界的起點。</p>
-          <p>她深信：<strong>每個人內在都有一幅等待被看見的圖。</strong></p>
-          <p>曼陀羅心靈彩繪，是她將多年藝術創作、色彩心理學研究，以及逾 500 位學員作品解析的精華，凝聚成一套完整系統。學員學到的，不只是如何畫出一幅美麗的曼陀羅——而是如何<strong>透過色彩與圖形，引導一個人遇見自己。</strong></p>
-          <p>為了讓每一位結業的講師都能真正站上講台，她在彩繪界首創「三年無限次免費複訓」的制度——<strong>因為她知道，好老師從來不是一夕養成的。</strong></p>
-          <p style="font-family:'Noto Serif TC',serif;font-size:15px;color:var(--gold-deep);border-left:2px solid var(--gold);padding-left:16px;margin-top:24px;line-height:1.9;">
-            這門課，是她三十五年心血的傾囊相授，<br>也是她給每一位有志成為講師的你，<br>最深的祝福。
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-</section><section id="curriculum"><!-- CURRICULUM -->
-<div class="curriculum-bg">
-  <div class="curriculum-inner reveal">
-    <div class="section-label">課程內容</div>
-    <h2 class="section-heading">兩天 18 小時，<br><em>建立完整的創作與教學基礎</em></h2>
-
-    <div style="margin-bottom:16px;">
-      <div class="day-label">DAY 1・藝術技法與色彩系統</div>
-      <div class="learn-grid">
-        <div class="learn-item">
-          <span class="learn-check">✦</span>
-          <div class="learn-text">
-            <strong>曼陀羅的文化背景與象徵</strong>
-            理解幾何圖形背後的靈性意義與東西方脈絡
-          </div>
-        </div>
-        <div class="learn-item" style="border-left:2px solid var(--gold-deep);background:var(--cream);">
-          <span class="learn-check" style="color:var(--gold-deep);">★</span>
-          <div class="learn-text">
-            <strong style="color:var(--gold-deep);">基礎色彩學：6色調出100+色</strong>
-            色相、明度、彩度、色溫完整理論，加上老師親自示範調色，學員現場演練——課堂結束前每人至少調出 18 種配色，帶著真實手感離開
-          </div>
-        </div>
-        <div class="learn-item">
-          <span class="learn-check">✦</span>
-          <div class="learn-text">
-            <strong>幾何結構與對稱設計技巧</strong>
-            曼陀羅骨架的精確繪製方法，從基礎到進階圖形設計
-          </div>
-        </div>
-        <div class="learn-item">
-          <span class="learn-check">✦</span>
-          <div class="learn-text">
-            <strong>進階彩繪技法實作</strong>
-            點、線、逗點、長線筆等多種筆觸，創造層次豐富的作品
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div style="margin-top:32px;">
-      <div class="day-label">DAY 2・心靈教學・引導系統・團體共創</div>
-      <div class="learn-grid">
-        <div class="learn-item">
-          <span class="learn-check">✦</span>
-          <div class="learn-text">
-            <strong>能量覺察與靜心創作方法</strong>
-            融入冥想與意圖設定，讓藝術創作成為覺察的過程
-          </div>
-        </div>
-        <div class="learn-item" style="border-left:2px solid var(--gold-deep);background:var(--cream);">
-          <span class="learn-check" style="color:var(--gold-deep);">★</span>
-          <div class="learn-text">
-            <strong style="color:var(--gold-deep);">色彩心理學 × 500位學員大數據解析</strong>
-            每個顏色的心理意義、畫在不同位置的象徵，結合黃老師親自解析逾 500 位學員作品所歸納的獨家系統——讓你能精準引導學員深入自我覺察，看見並突破內在盲點
-          </div>
-        </div>
-        <div class="learn-item">
-          <span class="learn-check">✦</span>
-          <div class="learn-text">
-            <strong>心靈彩繪課程教學流程</strong>
-            如何設計一堂完整的體驗工作坊：從暖場、創作到收尾引導
-          </div>
-        </div>
-        <div class="learn-item">
-          <span class="learn-check">✦</span>
-          <div class="learn-text">
-            <strong>學生引導技巧實練</strong>
-            如何帶領不同狀態的學員，讓每個人都能在課堂中有所收穫
-          </div>
-        </div>
-        <div class="learn-item" style="border-left:2px solid var(--gold-deep);background:var(--cream);">
-          <span class="learn-check" style="color:var(--gold-deep);">★</span>
-          <div class="learn-text">
-            <strong style="color:var(--gold-deep);">壓軸單元｜全員團體創作</strong>
-            新舊生共同在同一幅曼陀羅上創作——在共創中看見自己在團體的角色、突破慣性框架、感受集體能量的流動。這是每屆學員最難忘的課堂時刻。
-          </div>
-        </div>
-        <div class="learn-item" style="border-left:2px solid var(--gold-deep);background:var(--cream);">
-          <span class="learn-check" style="color:var(--gold-deep);">★</span>
-          <div class="learn-text">
-            <strong style="color:var(--gold-deep);">新舊生共學・能量傳承</strong>
-            結業講師與新生同堂學習，舊生的實戰經驗為新生帶來信心；新生的新鮮視角為舊生開啟新的教學思維。這是心語能量美學獨有的課堂生態。
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-</section><section id="gallery"><!-- ARTWORK GALLERY -->
-<div style="background:var(--ink);padding:80px 40px;">
-  <div style="max-width:900px;margin:0 auto;" class="reveal">
-    <div style="text-align:center;margin-bottom:40px;">
-      <p style="font-size:10px;letter-spacing:4px;color:var(--gold);margin-bottom:12px;">STUDENT ARTWORKS・學員作品</p>
-      <h2 style="font-family:'Noto Serif TC',serif;font-size:clamp(20px,3vw,30px);font-weight:300;color:#fff;line-height:1.5;">
-        這些，都是學員<em style="color:var(--gold);font-style:normal;">兩天內</em>完成的作品
-      </h2>
-    </div>
-
-    <!-- 主要大圖 -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-bottom:3px;">
-      <div style="overflow:hidden;">
-        <img src="FB_IMG_1773062278551.jpg" alt="學員曼陀羅作品" 
-             style="width:100%;height:320px;object-fit:cover;object-position:top;display:block;transition:transform 0.4s;" 
-             onmouseover="this.style.transform='scale(1.03)'" 
-             onmouseout="this.style.transform='scale(1)'">
-      </div>
-      <div style="overflow:hidden;">
-        <img src="MEITU_20260309_202627003.jpg" alt="精美曼陀羅圓盤作品" 
-             style="width:100%;height:320px;object-fit:cover;object-position:top;display:block;transition:transform 0.4s;"
-             onmouseover="this.style.transform='scale(1.03)'" 
-             onmouseout="this.style.transform='scale(1)'">
-      </div>
-    </div>
-    <!-- 小圖三格 -->
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;">
-      <div style="overflow:hidden;">
-        <img src="IMG_20260430_233614.jpg" alt="學員展示作品" 
-             style="width:100%;height:220px;object-fit:cover;object-position:top;display:block;transition:transform 0.4s;"
-             onmouseover="this.style.transform='scale(1.03)'" 
-             onmouseout="this.style.transform='scale(1)'">
-      </div>
-      <div style="overflow:hidden;">
-        <img src="IMG_20260430_233641.jpg" alt="學員展示三件作品" 
-             style="width:100%;height:220px;object-fit:cover;object-position:top;display:block;transition:transform 0.4s;"
-             onmouseover="this.style.transform='scale(1.03)'" 
-             onmouseout="this.style.transform='scale(1)'">
-      </div>
-      <div style="overflow:hidden;">
-        <img src="IMG_20260428_115928.jpg" alt="學員結業作品展示" 
-             style="width:100%;height:220px;object-fit:cover;object-position:top;display:block;transition:transform 0.4s;"
-             onmouseover="this.style.transform='scale(1.03)'" 
-             onmouseout="this.style.transform='scale(1)'">
-      </div>
-    </div>
-
-    <div style="text-align:center;margin-top:28px;padding:20px;border:0.5px solid rgba(201,169,110,0.25);border-radius:4px;">
-      <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:2;margin:0;">
-        ✦ 所有作品均為學員在兩天課程中親手完成 ✦<br>
-        <span style="font-size:12px;color:rgba(255,255,255,0.35);">無需任何彩繪基礎・老師全程示範引導</span>
-      </p>
-    </div>
-  </div>
-</div>
-</section><section id="color-science"><!-- COLOR SCIENCE & BIG DATA -->
-<div style="background:var(--cream);padding:100px 40px;">
-  <div style="max-width:900px;margin:0 auto;" class="reveal">
-
-    <div style="text-align:center;margin-bottom:64px;">
-      <p style="font-size:10px;letter-spacing:4px;color:var(--gold-deep);margin-bottom:14px;">WHAT YOU LEARN・你真正學到的</p>
-      <h2 style="font-family:'Noto Serif TC',serif;font-size:clamp(22px,3.5vw,36px);font-weight:400;color:var(--ink);line-height:1.5;margin-bottom:16px;">
-        不只是「畫曼陀羅」——<br>
-        <em style="color:var(--gold-deep);font-style:normal;">你在學習一門讀懂人心的科學</em>
-      </h2>
-      <p style="font-size:14px;color:var(--text-muted);line-height:2;max-width:580px;margin:0 auto;">
-        心語能量美學的課程，建立在兩套嚴謹的知識系統之上——<br>
-        一套來自學術，一套來自 500 位學員的真實數據。
-      </p>
-    </div>
-
-    <!-- 兩大知識系統並排 -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--gold-light);margin-bottom:2px;">
-
-      <!-- 左：色彩學 -->
-      <div style="background:var(--sand);padding:48px 40px;">
-        <div style="display:inline-block;background:var(--gold);color:var(--ink);font-size:10px;letter-spacing:3px;padding:5px 14px;margin-bottom:28px;font-weight:500;">SYSTEM 01・色彩科學</div>
-        <h3 style="font-family:'Noto Serif TC',serif;font-size:clamp(20px,2.5vw,26px);font-weight:400;color:var(--ink);line-height:1.5;margin-bottom:20px;">
-          六色調出百色——<br>
-          <span style="color:var(--gold-deep);">從理論到你手上的畫筆</span>
-        </h3>
-        <p style="font-size:14px;color:var(--ink-soft);line-height:2;margin-bottom:28px;">
-          第一堂課，黃彥蓁老師親自示範：
-          用 6 種基礎顏色，調配出上百種顏色的完整方法。
-          不只講理論——每位學員當場實際演練，
-          <strong style="color:var(--ink);">課堂結束前至少調出 18 種配色</strong>，
-          帶著真實的手感與信心離開。
-        </p>
-
-        <!-- 色彩學學習路徑 -->
-        <div style="border-top:0.5px solid var(--gold-light);padding-top:24px;">
-          <p style="font-size:11px;letter-spacing:2px;color:var(--gold-deep);margin-bottom:16px;">你將掌握的色彩能力</p>
-          <div style="display:grid;gap:10px;">
-            <div style="display:flex;align-items:flex-start;gap:12px;padding:12px;background:var(--cream);border-left:2px solid var(--gold);">
-              <span style="font-size:16px;flex-shrink:0;">🎨</span>
-              <div>
-                <p style="font-size:13px;font-weight:500;color:var(--ink);margin-bottom:2px;">色相・明度・彩度・色溫</p>
-                <p style="font-size:12px;color:var(--text-muted);line-height:1.6;">四大維度完整理解，讓你的配色不再靠直覺猜測</p>
-              </div>
-            </div>
-            <div style="display:flex;align-items:flex-start;gap:12px;padding:12px;background:var(--cream);border-left:2px solid var(--gold);">
-              <span style="font-size:16px;flex-shrink:0;">🔬</span>
-              <div>
-                <p style="font-size:13px;font-weight:500;color:var(--ink);margin-bottom:2px;">6色 → 100+色的調色系統</p>
-                <p style="font-size:12px;color:var(--text-muted);line-height:1.6;">課堂示範 + 學員實際演練，當場調出至少 18 種顏色</p>
-              </div>
-            </div>
-            <div style="display:flex;align-items:flex-start;gap:12px;padding:12px;background:var(--cream);border-left:2px solid var(--gold);">
-              <span style="font-size:16px;flex-shrink:0;">🖌️</span>
-              <div>
-                <p style="font-size:13px;font-weight:500;color:var(--ink);margin-bottom:2px;">帶著能力走，不是帶著筆記走</p>
-                <p style="font-size:12px;color:var(--text-muted);line-height:1.6;">學員能在任何場合自信地示範調色給自己的學員看</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 右：色彩心理學大數據 -->
-      <div style="background:var(--ink);padding:48px 40px;">
-        <div style="display:inline-block;background:rgba(201,169,110,0.15);border:0.5px solid var(--gold);color:var(--gold);font-size:10px;letter-spacing:3px;padding:5px 14px;margin-bottom:28px;font-weight:500;">SYSTEM 02・色彩心理學</div>
-        <h3 style="font-family:'Noto Serif TC',serif;font-size:clamp(20px,2.5vw,26px);font-weight:300;color:#fff;line-height:1.5;margin-bottom:20px;">
-          每一個顏色，<br>
-          <em style="color:var(--gold);font-style:normal;">都在說一件關於你的事</em>
-        </h3>
-        <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:2;margin-bottom:28px;">
-          每個顏色在心理學上有其代表意義，
-          而畫在曼陀羅的<strong style="color:rgba(255,255,255,0.9);">不同位置</strong>，
-          又有著更深一層的心理象徵。
-          這不只是直覺，而是有學術根據的解析系統。
-        </p>
-
-        <!-- 大數據亮點 -->
-        <div style="background:rgba(201,169,110,0.08);border:1px solid rgba(201,169,110,0.3);padding:28px 24px;margin-bottom:24px;">
-          <p style="font-size:10px;letter-spacing:3px;color:var(--gold);margin-bottom:14px;">BIG DATA・獨家大數據</p>
-          <p style="font-family:'Noto Serif TC',serif;font-size:clamp(16px,2vw,20px);color:#fff;line-height:1.7;font-weight:300;margin-bottom:12px;">
-            500 位學員作品解析，<br>
-            建立出一套無法複製的<br>
-            <strong style="color:var(--gold);">曼陀羅心理解讀系統</strong>
-          </p>
-          <p style="font-size:13px;color:rgba(255,255,255,0.5);line-height:1.8;">
-            這不是書本上的理論——<br>
-            這是黃彥蓁老師親自解析超過 500 位學員作品，
-            從真實數據中歸納出的心理規律。
-            <strong style="color:rgba(255,255,255,0.75);">色彩 × 位置 × 筆觸</strong>，
-            三個維度交叉解讀，
-            讓你能精準看見學員當下的內在狀態。
-          </p>
-        </div>
-
-        <div style="display:grid;gap:10px;">
-          <div style="display:flex;align-items:flex-start;gap:12px;">
-            <div style="width:4px;height:4px;border-radius:50%;background:var(--gold);margin-top:9px;flex-shrink:0;"></div>
-            <p style="font-size:13px;color:rgba(255,255,255,0.6);line-height:1.7;">
-              <strong style="color:rgba(255,255,255,0.85);">幫助學員更了解自己</strong>——
-              作品完成後的解析，讓學員在創作中照見平時看不見的盲點
-            </p>
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:12px;">
-            <div style="width:4px;height:4px;border-radius:50%;background:var(--gold);margin-top:9px;flex-shrink:0;"></div>
-            <p style="font-size:13px;color:rgba(255,255,255,0.6);line-height:1.7;">
-              <strong style="color:rgba(255,255,255,0.85);">引導突破的工具</strong>——
-              不只是觀察，更能深入引導，協助學員突破慣性限制
-            </p>
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:12px;">
-            <div style="width:4px;height:4px;border-radius:50%;background:var(--gold);margin-top:9px;flex-shrink:0;"></div>
-            <p style="font-size:13px;color:rgba(255,255,255,0.6);line-height:1.7;">
-              <strong style="color:rgba(255,255,255,0.85);">讓你的課程有深度</strong>——
-              學員帶走的不只是一幅畫，而是一次真實的自我覺察
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 底部整合說明：這兩個系統如何在課堂結合 -->
-    <div style="background:var(--ink);padding:40px 48px;display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:center;">
-      <div style="text-align:center;">
-        <div style="font-family:'Cormorant Garamond',serif;font-size:56px;color:var(--gold);font-weight:300;line-height:1;">×</div>
-      </div>
-      <div>
-        <p style="font-family:'Noto Serif TC',serif;font-size:clamp(15px,2vw,20px);color:#fff;line-height:1.7;font-weight:300;margin-bottom:12px;">
-          色彩科學 <span style="color:var(--gold);">×</span> 大數據心理解析
-        </p>
-        <p style="font-size:13px;color:rgba(255,255,255,0.5);line-height:1.9;margin:0;">
-          這兩套系統在課堂中交織運用——你教學員用科學調色，
-          也帶他們用心理學讀懂自己的作品。
-          <strong style="color:rgba(255,255,255,0.75);">一堂課，同時發生藝術與心靈的雙重深度。</strong>
-          這正是曼陀羅心靈彩繪與一般彩繪課程最根本的差異。
-        </p>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-</section><section id="highlights"><!-- TWO UNIQUE HIGHLIGHTS -->
-<div style="background:var(--sand-dark);padding:100px 40px;">
-  <div style="max-width:900px;margin:0 auto;" class="reveal">
-
-    <div style="text-align:center;margin-bottom:60px;">
-      <p style="font-size:10px;letter-spacing:4px;color:var(--gold-deep);margin-bottom:14px;">WHAT MAKES US DIFFERENT・與眾不同的地方</p>
-      <h2 style="font-family:'Noto Serif TC',serif;font-size:clamp(22px,3.5vw,36px);font-weight:400;color:var(--ink);line-height:1.5;">
-        這不只是一門課，<br><em style="color:var(--gold-deep);font-style:normal;">是一個讓人真正蛻變的環境</em>
-      </h2>
-    </div>
-
-    <!-- 亮點一：新舊生共學 -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;margin-bottom:2px;background:var(--gold-light);">
-      <div style="background:var(--cream);padding:48px 40px;">
-        <div style="display:inline-block;background:var(--gold);color:var(--ink);font-size:10px;letter-spacing:3px;padding:5px 14px;margin-bottom:24px;font-weight:500;">HIGHLIGHT 01</div>
-        <h3 style="font-family:'Noto Serif TC',serif;font-size:clamp(20px,2.5vw,28px);font-weight:400;color:var(--ink);line-height:1.5;margin-bottom:20px;">
-          新舊生共學——<br>
-          <span style="color:var(--gold-deep);">經驗傳承，能量共振</span>
-        </h3>
-        <p style="font-size:14px;color:var(--ink-soft);line-height:2;margin-bottom:20px;">
-          心語能量美學的課堂裡，新生與舊生共同上課。
-          這不是偶然的設計，而是深思熟慮的教學哲學。
-        </p>
-        <p style="font-size:14px;color:var(--ink-soft);line-height:2;">
-          舊生帶著已開班的實戰經驗回到課堂，
-          他們的存在本身，就是新生最真實的「未來樣子」。
-          而對舊生而言，每一次複訓都是在演練如何帶領自己未來的學員——
-          從學習者的位置，悄悄轉換為引導者的視角。
-        </p>
-      </div>
-      <div style="background:var(--ink);padding:48px 40px;">
-        <p style="font-size:13px;color:rgba(255,255,255,0.4);letter-spacing:2px;margin-bottom:28px;">新舊生共學，你能獲得的</p>
-        <div style="margin-bottom:20px;">
-          <div style="display:flex;align-items:flex-start;gap:14px;margin-bottom:16px;">
-            <div style="width:2px;height:40px;background:var(--gold);flex-shrink:0;margin-top:3px;"></div>
-            <div>
-              <p style="font-size:14px;color:var(--gold-light);font-weight:500;margin-bottom:4px;">新生的收穫</p>
-              <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.8;">看見已結業的講師如何思考、如何表達，讓「開班」從想像變成真實可觸碰的目標</p>
-            </div>
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:14px;margin-bottom:16px;">
-            <div style="width:2px;height:40px;background:var(--gold);flex-shrink:0;margin-top:3px;"></div>
-            <div>
-              <p style="font-size:14px;color:var(--gold-light);font-weight:500;margin-bottom:4px;">舊生的收穫</p>
-              <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.8;">在複訓中練習如何回應不同背景的學員，為自己未來的教學現場做最真實的準備</p>
-            </div>
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:14px;">
-            <div style="width:2px;height:40px;background:var(--gold);flex-shrink:0;margin-top:3px;"></div>
-            <div>
-              <p style="font-size:14px;color:var(--gold-light);font-weight:500;margin-bottom:4px;">課堂的能量場</p>
-              <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.8;">不同屆的學員帶著各自的生命故事相遇，形成比單純同期班更豐富、更有深度的學習場域</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 亮點二：第二天團體創作 -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--gold-light);">
-      <div style="background:var(--ink);padding:48px 40px;order:1;">
-        <p style="font-size:13px;color:rgba(255,255,255,0.4);letter-spacing:2px;margin-bottom:28px;">團體創作，你會看見的</p>
-        <div style="space-y:16px;">
-          <div style="display:flex;align-items:flex-start;gap:14px;margin-bottom:16px;">
-            <div style="width:32px;height:32px;border:0.5px solid var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-              <span style="font-size:13px;color:var(--gold);">己</span>
-            </div>
-            <div>
-              <p style="font-size:14px;color:var(--gold-light);font-weight:500;margin-bottom:4px;">看見自己在團體中的角色</p>
-              <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.8;">你是引領者、協調者，還是創意的點火者？創作不說謊。</p>
-            </div>
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:14px;margin-bottom:16px;">
-            <div style="width:32px;height:32px;border:0.5px solid var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-              <span style="font-size:13px;color:var(--gold);">框</span>
-            </div>
-            <div>
-              <p style="font-size:14px;color:var(--gold-light);font-weight:500;margin-bottom:4px;">突破自己慣性的框架</p>
-              <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.8;">在別人的創意面前，你會學習放下「應該這樣畫」的執念，讓作品自由流動。</p>
-            </div>
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:14px;margin-bottom:16px;">
-            <div style="width:32px;height:32px;border:0.5px solid var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-              <span style="font-size:13px;color:var(--gold);">吸</span>
-            </div>
-            <div>
-              <p style="font-size:14px;color:var(--gold-light);font-weight:500;margin-bottom:4px;">吸收他人創意，擴展自己的美學視野</p>
-              <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.8;">每個人的配色直覺與圖形語言都不一樣，共創讓你在一天內學到十個人的創意思維。</p>
-            </div>
-          </div>
-          <div style="display:flex;align-items:flex-start;gap:14px;">
-            <div style="width:32px;height:32px;border:0.5px solid var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-              <span style="font-size:13px;color:var(--gold);">結</span>
-            </div>
-            <div>
-              <p style="font-size:14px;color:var(--gold-light);font-weight:500;margin-bottom:4px;">建立真實的師資情誼</p>
-              <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.8;">共同完成一件作品，形成語言無法取代的連結——這是很多學員說「最難忘的課堂片段」的時刻。</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div style="background:var(--cream);padding:48px 40px;order:2;">
-        <div style="display:inline-block;background:var(--ink);color:var(--gold);font-size:10px;letter-spacing:3px;padding:5px 14px;margin-bottom:24px;font-weight:500;">HIGHLIGHT 02</div>
-        <h3 style="font-family:'Noto Serif TC',serif;font-size:clamp(20px,2.5vw,28px);font-weight:400;color:var(--ink);line-height:1.5;margin-bottom:20px;">
-          第二天團體創作——<br>
-          <span style="color:var(--gold-deep);">在共創中看見自己</span>
-        </h3>
-        <p style="font-size:14px;color:var(--ink-soft);line-height:2;margin-bottom:20px;">
-          第二天課程的壓軸單元，所有學員共同在同一幅曼陀羅上創作。
-        </p>
-        <p style="font-size:14px;color:var(--ink-soft);line-height:2;margin-bottom:20px;">
-          沒有分配，沒有指定範圍。
-          你會怎麼選擇自己的位置？遇到別人已畫的區域，你會如何回應？
-          這些在創作中自然浮現的反應，往往比任何心理測驗更誠實地照見你的內在模式。
-        </p>
-        <p style="font-size:14px;color:var(--ink-soft);line-height:2;">
-          對未來的講師而言，這更是一堂珍貴的示範課——
-          親身體驗「團體創作如何運作」，才能在自己的課堂上帶領學員走過同樣的歷程。
-        </p>
-        <div style="margin-top:28px;border-top:0.5px solid var(--gold-light);padding-top:20px;">
-          <p style="font-size:13px;color:var(--gold-deep);font-style:italic;line-height:1.8;">
-            「那幅我們一起完成的曼陀羅，<br>
-            讓我第一次理解什麼叫做<br>
-            '每個人都是完整的，在一起又更完整。'」
-          </p>
-          <p style="font-size:11px;color:var(--text-muted);margin-top:8px;">── 歷屆學員回饋（建議替換為真實見證）</p>
-        </div>
-      </div>
-    </div>
-
-
-        <!-- 團體創作作品展示：9張真實作品 -->
-        <div style="margin-top:2px;">
-
-          <!-- 第一排：三張精選 -->
-          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;">
-            <div style="overflow:hidden;">
-              <img src="456070.jpg" alt="團體創作：花卉拼圖" 
-                   style="width:100%;height:260px;object-fit:cover;object-position:top;display:block;transition:transform 0.4s;"
-                   onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
-            </div>
-            <div style="overflow:hidden;">
-              <img src="456076_0.jpg" alt="團體創作：彩色曼陀羅" 
-                   style="width:100%;height:260px;object-fit:cover;object-position:top;display:block;transition:transform 0.4s;"
-                   onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
-            </div>
-            <div style="overflow:hidden;">
-              <img src="456071_0.jpg" alt="團體創作：獨角獸" 
-                   style="width:100%;height:260px;object-fit:cover;object-position:top;display:block;transition:transform 0.4s;"
-                   onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
-            </div>
-          </div>
-
-          <!-- 第二排：大圖+兩小圖 -->
-          <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:2px;margin-top:2px;">
-            <div style="overflow:hidden;">
-              <img src="456075_0.jpg" alt="團體創作：繽紛大花" 
-                   style="width:100%;height:300px;object-fit:cover;object-position:top;display:block;transition:transform 0.4s;"
-                   onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-            </div>
-            <div style="display:grid;grid-template-rows:1fr 1fr;gap:2px;">
-              <div style="overflow:hidden;">
-                <img src="456072_0.jpg" alt="團體創作：愛心海浪" 
-                     style="width:100%;height:149px;object-fit:cover;object-position:top;display:block;transition:transform 0.4s;"
-                     onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
-              </div>
-              <div style="overflow:hidden;">
-                <img src="456073_0.jpg" alt="團體創作：紫粉花" 
-                     style="width:100%;height:149px;object-fit:cover;object-position:top;display:block;transition:transform 0.4s;"
-                     onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
-              </div>
-            </div>
-          </div>
-
-          <!-- 第三排：三張 -->
-          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;margin-top:2px;">
-            <div style="overflow:hidden;">
-              <img src="456074_0.jpg" alt="團體創作：熱帶植物" 
-                   style="width:100%;height:220px;object-fit:cover;object-position:top;display:block;transition:transform 0.4s;"
-                   onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
-            </div>
-            <div style="overflow:hidden;">
-              <img src="456077_0.jpg" alt="團體創作：蛇年" 
-                   style="width:100%;height:220px;object-fit:cover;object-position:top;display:block;transition:transform 0.4s;"
-                   onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
-            </div>
-            <div style="overflow:hidden;">
-              <img src="456080.jpg" alt="團體創作：錢來" 
-                   style="width:100%;height:220px;object-fit:cover;object-position:top;display:block;transition:transform 0.4s;"
-                   onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
-            </div>
-          </div>
-
-          <!-- 第四排：兩張 -->
-          <div style="display:grid;grid-template-columns:1fr 1.6fr;gap:2px;margin-top:2px;">
-            <div style="overflow:hidden;">
-              <img src="456081.jpg" alt="團體創作：太極陰陽蝴蝶" 
-                   style="width:100%;height:280px;object-fit:cover;object-position:top;display:block;transition:transform 0.4s;"
-                   onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
-            </div>
-            <div style="overflow:hidden;">
-              <img src="456082.jpg" alt="團體創作：海景" 
-                   style="width:100%;height:280px;object-fit:cover;object-position:top;display:block;transition:transform 0.4s;"
-                   onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
-            </div>
-          </div>
-
-        </div>
-
-        <div style="background:var(--gold);padding:20px 32px;text-align:center;">
-          <p style="font-size:13px;color:var(--ink);letter-spacing:1px;margin:0;line-height:1.8;">
-            以上 11 幅均為歷屆學員<strong>第二天壓軸「團體創作」單元</strong>完成的真實作品<br>
-            <span style="font-size:11px;opacity:0.7;">每位學員各畫一格，合在一起就是一幅完整的大作</span>
-          </p>
-        </div>
-    <!-- 底部整合語 -->
-    <div style="background:var(--gold);padding:32px 40px;text-align:center;margin-top:2px;">
-      <p style="font-family:'Noto Serif TC',serif;font-size:clamp(15px,2vw,20px);color:var(--ink);line-height:1.9;font-weight:400;">
-        新舊生的相遇 × 個人創作的深度 × 團體共創的突破——<br>
-        <strong>這三層體驗，只在心語能量美學的課堂裡同時發生。</strong>
-      </p>
-    </div>
-
-  </div>
-</div>
-
-</section><section id="retrain"><!-- UNIQUE BENEFIT - ASIA ONLY -->
-<div style="background:#1A1410; padding:100px 40px; position:relative; overflow:hidden;">
-  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%, rgba(201,169,110,0.07) 0%, transparent 70%);pointer-events:none;"></div>
-  <div style="max-width:900px;margin:0 auto;position:relative;z-index:1;" class="reveal">
-
-    <!-- 標籤 -->
-    <div style="text-align:center;margin-bottom:48px;">
-      <div style="display:inline-block;border:1px solid #C9A96E;padding:8px 28px;margin-bottom:24px;">
-        <span style="font-size:11px;letter-spacing:4px;color:#C9A96E;font-weight:400;">EXCLUSIVE BENEFIT・獨家福利</span>
-      </div>
-      <h2 style="font-family:'Noto Serif TC',serif;font-size:clamp(24px,4vw,42px);font-weight:300;color:#fff;line-height:1.4;margin-bottom:16px;">
-        彩繪界首創——<br>
-        <em style="color:#C9A96E;font-style:normal;">三年內無限次免費複訓</em>
-      </h2>
-      <p style="font-size:15px;color:rgba(255,255,255,0.6);line-height:2;max-width:580px;margin:0 auto;">
-        這是黃彥蓁老師為維持師資品質，<br>
-        在彩繪界<strong style="color:#C9A96E;">首創</strong>的培育制度——<br>
-        亞洲唯一，全球找不到第二家。
-      </p>
-    </div>
-
-    <!-- 核心說明卡 -->
-    <div style="background:rgba(201,169,110,0.08);border:1px solid rgba(201,169,110,0.35);padding:48px 40px;margin-bottom:32px;text-align:center;">
-      <p style="font-family:'Noto Serif TC',serif;font-size:clamp(18px,2.5vw,26px);color:#fff;line-height:1.8;font-weight:300;margin-bottom:24px;">
-        結業後三年內，<br>
-        你可以<strong style="color:#C9A96E;">無限次數</strong>回來複訓——<br>
-        <span style="font-size:0.85em;color:rgba(255,255,255,0.7);">只需支付材料費、場地分攤與餐費，<strong style="color:#fff;">學費永遠是零。</strong></span>
-      </p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:rgba(201,169,110,0.2);margin-top:32px;">
-        <div style="background:#1A1410;padding:28px 20px;text-align:center;">
-          <div style="font-family:'Cormorant Garamond',serif;font-size:44px;color:#C9A96E;font-weight:300;line-height:1;">3</div>
-          <div style="font-size:12px;color:rgba(255,255,255,0.6);margin-top:6px;line-height:1.5;">年有效期<br><span style="font-size:11px;color:rgba(255,255,255,0.35);">結業後即刻生效</span></div>
-        </div>
-        <div style="background:#1A1410;padding:28px 20px;text-align:center;">
-          <div style="font-family:'Cormorant Garamond',serif;font-size:44px;color:#C9A96E;font-weight:300;line-height:1;">∞</div>
-          <div style="font-size:12px;color:rgba(255,255,255,0.6);margin-top:6px;line-height:1.5;">次複訓次數<br><span style="font-size:11px;color:rgba(255,255,255,0.35);">沒有上限</span></div>
-        </div>
-        <div style="background:#1A1410;padding:28px 20px;text-align:center;">
-          <div style="font-family:'Cormorant Garamond',serif;font-size:44px;color:#C9A96E;font-weight:300;line-height:1;">$0</div>
-          <div style="font-size:12px;color:rgba(255,255,255,0.6);margin-top:6px;line-height:1.5;">複訓學費<br><span style="font-size:11px;color:rgba(255,255,255,0.35);">只需材料費與餐費</span></div>
-        </div>
-        <div style="background:#1A1410;padding:28px 20px;text-align:center;">
-          <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:#C9A96E;font-weight:300;line-height:1.2;margin-top:8px;">亞洲<br>唯一</div>
-          <div style="font-size:12px;color:rgba(255,255,255,0.6);margin-top:6px;line-height:1.5;">同類課程中<br><span style="font-size:11px;color:rgba(255,255,255,0.35);">全球僅此一家</span></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 為什麼這個福利這麼重要 -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-      <div style="border:0.5px solid rgba(255,255,255,0.1);padding:28px 24px;">
-        <div style="font-size:20px;margin-bottom:12px;">🔄</div>
-        <p style="font-size:14px;color:#C9A96E;font-weight:500;margin-bottom:8px;">技法一直在進化</p>
-        <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.8;">課程內容持續更新，複訓讓你同步掌握最新技法，教學不落伍。</p>
-      </div>
-      <div style="border:0.5px solid rgba(255,255,255,0.1);padding:28px 24px;">
-        <div style="font-size:20px;margin-bottom:12px;">💪</div>
-        <p style="font-size:14px;color:#C9A96E;font-weight:500;margin-bottom:8px;">開班前的信心補給</p>
-        <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.8;">準備開第一堂課前緊張？回來複訓，把每個細節再走一遍，帶著滿滿把握上場。</p>
-      </div>
-      <div style="border:0.5px solid rgba(255,255,255,0.1);padding:28px 24px;">
-        <div style="font-size:20px;margin-bottom:12px;">👥</div>
-        <p style="font-size:14px;color:#C9A96E;font-weight:500;margin-bottom:8px;">師資社群的持續連結</p>
-        <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.8;">每次複訓都是與同期、跨期講師交流的機會，形成互相支持的師資生態圈。</p>
-      </div>
-      <div style="border:0.5px solid rgba(255,255,255,0.1);padding:28px 24px;">
-        <div style="font-size:20px;margin-bottom:12px;">💰</div>
-        <p style="font-size:14px;color:#C9A96E;font-weight:500;margin-bottom:8px;">真正的長期投資回報</p>
-        <p style="font-size:13px;color:rgba(255,255,255,0.55);line-height:1.8;">NT$21,000 不只買一次培訓，而是三年內無數次的學習機會——攤下來，每次複訓幾乎是零成本。</p>
-      </div>
-    </div>
-
-    <!-- 底部金色標語 -->
-    <div style="text-align:center;margin-top:48px;padding-top:40px;border-top:0.5px solid rgba(201,169,110,0.2);">
-      <p style="font-family:'Noto Serif TC',serif;font-size:clamp(16px,2.5vw,22px);color:rgba(255,255,255,0.85);line-height:1.9;font-weight:300;">
-        其他課程給你一張證書，<br>
-        <strong style="color:#C9A96E;">我們給你三年的陪伴。</strong>
-      </p>
-    </div>
-
-  </div>
-</div>
-
-</section><section id="roi"><!-- ROI -->
-<div class="roi-section">
-  <div class="roi-inner reveal">
-    <div class="section-label" style="color:rgba(255,255,255,0.45);">結業之後</div>
-    <h2 class="section-heading" style="color:#fff;">學完這門課，<br><em style="color:var(--gold-light);">你能做什麼？</em></h2>
-
-    <div class="roi-grid">
-      <div class="roi-card">
-        <p class="roi-card-title">🎓 取得專業認證</p>
-        <ul class="roi-list">
-          <li>獲頒曼陀羅心靈彩繪<br>二級講師證書</li>
-          <li>由中華綜合發展研究院<br>文創藝術研究所認證核發</li>
-          <li>具備開設體驗班與<br>工作坊的正式資格</li>
+      <div class="exp-card reveal">
+        <h3>教學與出版經歷</h3>
+        <ul>
+          <li>2021 — 與 OMIA 學東西合作「歐式平筆玫瑰」課程</li>
+          <li>2020 — 出版《我的彩繪花園水性色鉛筆書》</li>
+          <li>2019 — 出版《玫瑰職人學》</li>
+          <li>2018 — 與 Yotta 線上課程平台合作水彩課程</li>
+          <li>2015 — 受邀至美國 Ohio 大會教授彩繪（首位華人講師）</li>
+          <li>2011 — 出版《拼貼彩繪輕鬆學》</li>
+          <li>參與 Jansen Art Studio 國際教育課程設計</li>
+          <li>出版台灣第一套彩繪教學 DVD《第一堂彩繪課》</li>
         </ul>
       </div>
-      <div class="roi-card">
-        <p class="roi-card-title">🌱 發展你的教學事業</p>
-        <ul class="roi-list">
-          <li>以獨立講師身分開班授課</li>
-          <li>融入既有的療癒或教學服務</li>
-          <li>加入師資社群，共享<br>教材資源與推廣支持</li>
-          <li>複訓時擔任「資深學員」角色<br>實際練習帶領課堂</li>
-          <li style="margin-top:8px;color:rgba(255,255,255,0.9);font-style:italic;">已有超過 15 位結業學員<br>在台灣各地持續開班授課</li>
+    </div>
+  </div>
+</section>
+
+<section class="course" id="course">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-tag">The Course</span><h2>一級講師課程內容</h2><div class="divider-dot"><i></i><i></i><i></i></div>
+      <p>從認識工具到完成一幅曼陀羅作品，循序漸進，享受純粹的創作時光。</p></div>
+    <div class="course-grid">
+      <div class="course-card reveal">
+        <h3>課程進行方式</h3>
+        <p class="csub">循序漸進的六個步驟，第一次拿筆也能安心完成。</p>
+        <div class="step"><div class="num">1</div><div><h5>探索色彩與工具</h5><p>認識壓克力顏料與各式點繪工具，了解各自的效果。</p></div></div>
+        <div class="step"><div class="num">2</div><div><h5>筆觸技巧練習</h5><p>從點、線到漸層，練習基礎筆觸，熟悉手感與力道。</p></div></div>
+        <div class="step"><div class="num">3</div><div><h5>構圖與佈局</h5><p>學習從中心出發安排圖騰、配色、疊色與收尾技法。</p></div></div>
+        <div class="step"><div class="num">4</div><div><h5>靜心創作</h5><p>沉浸在專注放鬆的心流裡，享受創作本身。</p></div></div>
+        <div class="step"><div class="num">5</div><div><h5>作品紀錄</h5><p>為完成的作品拍下美美的紀念照。</p></div></div>
+        <div class="step"><div class="num">6</div><div><h5>課後諮詢</h5><p>課後講師持續陪伴，繪畫問題歡迎隨時詢問。</p></div></div>
+      </div>
+      <div class="kit reveal">
+        <h3>課程提供工具組</h3>
+        <p class="ksub">課後素材皆可帶回，繼續享受多次創作的療癒樂趣。</p>
+        <ul>
+          <li>講義（附 A5 資料袋收納）</li>
+          <li>專用點繪工具筆組</li>
+          <li>工具筆架</li>
+          <li>曼陀羅專用打稿器（多種尺寸）</li>
+          <li>圓規</li>
+          <li>曼陀羅專用畫板與畫卡</li>
+          <li>壓克力顏料（多色自由選）</li>
+          <li>作品展示小木架</li>
         </ul>
       </div>
-
-      <div class="roi-calc">
-        <p class="roi-calc-title">💡 簡單試算：NT$21,000 能買到什麼？</p>
-        <div class="roi-calc-body">
-          <div class="roi-calc-step">
-            <div class="roi-calc-num">4hr</div>
-            <div class="roi-calc-label">開一堂<br>曼陀羅體驗班</div>
-          </div>
-          <div class="roi-calc-arrow">×</div>
-          <div class="roi-calc-step">
-            <div class="roi-calc-num">NT$1,800</div>
-            <div class="roi-calc-label">每位學員<br>收費參考</div>
-          </div>
-          <div class="roi-calc-arrow">×</div>
-          <div class="roi-calc-step">
-            <div class="roi-calc-num">12人</div>
-            <div class="roi-calc-label">只需這些學員<br>即可回收學費</div>
-          </div>
-          <div class="roi-calc-arrow">=</div>
-          <div class="roi-calc-step">
-            <div class="roi-calc-num" style="color:var(--teal-deep);">NT$21,600</div>
-            <div class="roi-calc-label">✓ 學費全數回收<br>後續每場純收入</div>
-          </div>
-        </div>
-        <div style="border-top:0.5px solid rgba(26,20,16,0.15);margin-top:24px;padding-top:20px;text-align:center;">
-          <p style="font-size:13px;color:var(--ink-soft);line-height:1.8;">
-            ＋ 三年內無限次複訓（免學費）<br>
-            <strong style="color:var(--ink);">每次複訓攤提成本 ≈ NT$0</strong><br>
-            <span style="font-size:12px;color:#7A6A5A;">這是亞洲唯一提供此福利的曼陀羅講師培訓</span>
-          </p>
-        </div>
-      </div>
+    </div>
+    <div class="info-strip">
+      <div class="info-box reveal"><div class="lbl">課程時長</div><div class="val">依課程安排<small>詳見報名表</small></div></div>
+      <div class="info-box reveal"><div class="lbl">適合對象</div><div class="val">零基礎<small>大人小孩皆宜</small></div></div>
+      <div class="info-box reveal"><div class="lbl">上課地點</div><div class="val">台中<small>另可預約包班</small></div></div>
+      <div class="info-box reveal"><div class="lbl">主辦單位</div><div class="val">中華綜合發展研究院<small>文創藝術研究所</small></div></div>
     </div>
   </div>
-</div>
+</section>
 
-
-</section><section id="community"><!-- INSTRUCTOR COMMUNITY -->
-<div style="background:var(--ink);padding:0;overflow:hidden;">
-
-  <!-- 大圖主視覺：最正式的白色系排排站 -->
-  <div style="position:relative;overflow:hidden;max-height:520px;">
-    <img src="MEITU_20251211_130830765.jpg" alt="心語能量美學師資團隊" 
-         style="width:100%;height:520px;object-fit:cover;object-position:top;display:block;filter:brightness(0.75);">
-    <div style="position:absolute;inset:0;background:linear-gradient(to right, rgba(26,20,16,0.7) 0%, transparent 40%, transparent 60%, rgba(26,20,16,0.7) 100%);"></div>
-    <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px;">
-      <p style="font-size:10px;letter-spacing:4px;color:var(--gold);margin-bottom:16px;">INSTRUCTOR COMMUNITY・師資社群</p>
-      <h2 style="font-family:'Noto Serif TC',serif;font-size:clamp(24px,4vw,48px);font-weight:300;color:#fff;line-height:1.4;margin-bottom:16px;">
-        你加入的，<br>不只是一門課——<br>
-        <em style="color:var(--gold);font-style:normal;">是一個師資家族</em>
-      </h2>
-      <p style="font-size:14px;color:rgba(255,255,255,0.7);line-height:2;max-width:520px;">
-        超過 40 位結業講師，遍佈台灣各地持續開班。<br>
-        這是一個互相支持、共同成長的師資生態圈。
-      </p>
+<section class="cohorts" id="cohorts">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-tag">Our Graduates</span><h2>歷屆培訓成果</h2><div class="divider-dot"><i></i><i></i><i></i></div>
+      <p>三屆培訓，每一位學員都帶著自己獨一無二的曼陀羅作品，成為通過認證的一級講師。</p></div>
+    <div class="cohort-grid">
+      <div class="cohort-card reveal"><img data-img="group1" alt="第一屆講師培訓"><div class="label"><h4>第一屆講師培訓</h4><p>七位學員完成認證，綻放各自風采</p></div></div>
+      <div class="cohort-card reveal"><img data-img="group2" alt="第二屆講師培訓"><div class="label"><h4>第二屆講師培訓</h4><p>作品更加多元豐富，技法持續精進</p></div></div>
+      <div class="cohort-card reveal"><img data-img="group3" alt="第三屆講師培訓"><div class="label"><h4>第三屆講師培訓</h4><p>從傳統盤面到創意托盤，風格百花齊放</p></div></div>
     </div>
   </div>
+</section>
 
-  <!-- 四格小圖：不同場合的師資合照 -->
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(201,169,110,0.15);">
-    <div style="overflow:hidden;">
-      <img src="MEITU_20251211_130609391.jpg" alt="師資團隊合照" 
-           style="width:100%;height:200px;object-fit:cover;object-position:top;display:block;filter:brightness(0.85);transition:filter 0.3s;"
-           onmouseover="this.style.filter='brightness(1)'" onmouseout="this.style.filter='brightness(0.85)'">
-    </div>
-    <div style="overflow:hidden;">
-      <img src="MEITU_20251211_130742640.jpg" alt="師資圍裙合照" 
-           style="width:100%;height:200px;object-fit:cover;object-position:top;display:block;filter:brightness(0.85);transition:filter 0.3s;"
-           onmouseover="this.style.filter='brightness(1)'" onmouseout="this.style.filter='brightness(0.85)'">
-    </div>
-    <div style="overflow:hidden;">
-      <img src="MEITU_20251211_130756765.jpg" alt="師資白色系合照" 
-           style="width:100%;height:200px;object-fit:cover;object-position:top;display:block;filter:brightness(0.85);transition:filter 0.3s;"
-           onmouseover="this.style.filter='brightness(1)'" onmouseout="this.style.filter='brightness(0.85)'">
-    </div>
-    <div style="overflow:hidden;">
-      <img src="MEITU_20251211_130851654.jpg" alt="師資樓梯藝術照" 
-           style="width:100%;height:200px;object-fit:cover;object-position:top;display:block;filter:brightness(0.85);transition:filter 0.3s;"
-           onmouseover="this.style.filter='brightness(1)'" onmouseout="this.style.filter='brightness(0.85)'">
+
+<section class="making" id="making" style="background:var(--cream)">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-tag">In Progress</span><h2>創作花絮</h2><div class="divider-dot"><i></i><i></i><i></i></div>
+      <p>每一筆專注、每一點用心，在靜心的過程中，獨一無二的圖騰悄悄綻放。</p></div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px">
+      <div class="reveal" style="border-radius:16px;overflow:hidden;box-shadow:var(--shadow)"><img data-img="proc1" alt="創作中" style="width:100%;aspect-ratio:9/16;object-fit:cover"></div>
+      <div class="reveal" style="border-radius:16px;overflow:hidden;box-shadow:var(--shadow)"><img data-img="proc2" alt="創作中" style="width:100%;aspect-ratio:9/16;object-fit:cover"></div>
+      <div class="reveal" style="border-radius:16px;overflow:hidden;box-shadow:var(--shadow)"><img data-img="proc3" alt="創作中" style="width:100%;aspect-ratio:9/16;object-fit:cover"></div>
+      <div class="reveal" style="border-radius:16px;overflow:hidden;box-shadow:var(--shadow)"><img data-img="proc4" alt="創作中" style="width:100%;aspect-ratio:9/16;object-fit:cover"></div>
     </div>
   </div>
+</section>
 
-  <!-- 說明文字帶 -->
-  <div style="background:rgba(201,169,110,0.08);border-top:0.5px solid rgba(201,169,110,0.2);border-bottom:0.5px solid rgba(201,169,110,0.2);padding:32px 40px;">
-    <div style="max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;text-align:center;">
-      <div>
-        <p style="font-size:13px;color:var(--gold-light);font-weight:500;margin-bottom:6px;">🤝 互相支持的師資網絡</p>
-        <p style="font-size:12px;color:rgba(255,255,255,0.45);line-height:1.7;">結業後自動加入師資群，共享教材、資源與推廣互助</p>
-      </div>
-      <div>
-        <p style="font-size:13px;color:var(--gold-light);font-weight:500;margin-bottom:6px;">📸 專業形象照拍攝</p>
-        <p style="font-size:12px;color:rgba(255,255,255,0.45);line-height:1.7;">你看到的這些美麗師資照，都是師資社群共同創造的品牌資產</p>
-      </div>
-      <div>
-        <p style="font-size:13px;color:var(--gold-light);font-weight:500;margin-bottom:6px;">🌱 持續成長的生態圈</p>
-        <p style="font-size:12px;color:rgba(255,255,255,0.45);line-height:1.7;">新舊師資共同複訓、交流、成長——這個圈子會一直陪著你</p>
-      </div>
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-tag">Gallery</span><h2>作品藝廊</h2><div class="divider-dot"><i></i><i></i><i></i></div>
+      <p>歷屆學員與講師的精選作品。每一幅都是靜心創作的結晶，點擊可放大欣賞。</p></div>
+    <div class="g-masonry">
+      <figure class="g-item reveal" data-img-src="art1"><img data-img="art1" alt="鳳凰涅槃"><figcaption class="g-cap"><b>鳳凰涅槃</b><span>金銀灰 ‧ 老鷹與月亮</span></figcaption></figure>
+      <figure class="g-item reveal" data-img-src="art7"><img data-img="art7" alt="四季流轉"><figcaption class="g-cap"><b>四色綻放</b><span>十角盤 ‧ 四件作品</span></figcaption></figure>
+      <figure class="g-item reveal" data-img-src="art2"><img data-img="art2" alt="大地暖意"><figcaption class="g-cap"><b>大地暖意</b><span>赭金配色 ‧ 精緻點繪</span></figcaption></figure>
+      <figure class="g-item reveal" data-img-src="art8"><img data-img="art8" alt="五彩繽紛"><figcaption class="g-cap"><b>花語托盤</b><span>五件彩繪托盤</span></figcaption></figure>
+      <figure class="g-item reveal" data-img-src="art3"><img data-img="art3" alt="藍金孔雀"><figcaption class="g-cap"><b>藍金孔雀</b><span>藍框 ‧ 金點孔雀羽</span></figcaption></figure>
+      <figure class="g-item reveal" data-img-src="art5"><img data-img="art5" alt="海洋珊瑚"><figcaption class="g-cap"><b>海洋珊瑚</b><span>藍底 ‧ 紅珊瑚</span></figcaption></figure>
+      <figure class="g-item reveal" data-img-src="art4"><img data-img="art4" alt="靛藍花語"><figcaption class="g-cap"><b>靛藍花語</b><span>銀藍 ‧ 心型花瓣</span></figcaption></figure>
+      <figure class="g-item reveal" data-img-src="art6"><img data-img="art6" alt="酒紅玫瑰"><figcaption class="g-cap"><b>酒紅玫瑰</b><span>酒紅底 ‧ 蛋殼鑲嵌</span></figcaption></figure>
+      <figure class="g-item reveal" data-img-src="inst1"><img data-img="inst1" alt="暖陽綻放"><figcaption class="g-cap"><b>暖陽綻放</b><span>赭紅底 ‧ 暖色點繪</span></figcaption></figure>
+      <figure class="g-item reveal" data-img-src="inst2"><img data-img="inst2" alt="靜謐之羽"><figcaption class="g-cap"><b>靜謐之羽</b><span>藍綠調 ‧ 孔雀羽紋</span></figcaption></figure>
+      <figure class="g-item reveal" data-img-src="inst3"><img data-img="inst3" alt="春日花語"><figcaption class="g-cap"><b>春日花語</b><span>綠框 ‧ 桃紅花心</span></figcaption></figure>
+      <figure class="g-item reveal" data-img-src="inst4"><img data-img="inst4" alt="華麗綻放"><figcaption class="g-cap"><b>華麗綻放</b><span>深綠底 ‧ 繁複圖騰</span></figcaption></figure>
+
+      <figure class="g-item reveal" data-img-src="ind1"><img data-img="ind1" alt="秋日暖陽"><figcaption class="g-cap"><b>秋日暖陽</b><span>棕底 ‧ 橘綠花瓣</span></figcaption></figure>
+      <figure class="g-item reveal" data-img-src="ind2"><img data-img="ind2" alt="春風拂面"><figcaption class="g-cap"><b>春風拂面</b><span>綠框 ‧ 桃紅綻放</span></figcaption></figure>
+      <figure class="g-item reveal" data-img-src="ind3"><img data-img="ind3" alt="深綠華彩"><figcaption class="g-cap"><b>深綠華彩</b><span>金框 ‧ 桃紅蓮花</span></figcaption></figure>
+      <figure class="g-item reveal" data-img-src="ind4"><img data-img="ind4" alt="藍色之心"><figcaption class="g-cap"><b>藍色之心</b><span>藍底 ‧ 紅心圖騰</span></figcaption></figure>
+      <figure class="g-item reveal" data-img-src="ind5"><img data-img="ind5" alt="藍棕幾何"><figcaption class="g-cap"><b>藍棕幾何</b><span>棕底 ‧ 藍色梅花</span></figcaption></figure>
+      <figure class="g-item reveal" data-img-src="ind6"><img data-img="ind6" alt="夜之心語"><figcaption class="g-cap"><b>夜之心語</b><span>黑底 ‧ 愛心翅膀</span></figcaption></figure>
+      <figure class="g-item reveal" data-img-src="ind7"><img data-img="ind7" alt="雲間花語"><figcaption class="g-cap"><b>雲間花語</b><span>綠底 ‧ 祥雲風箏</span></figcaption></figure>
     </div>
   </div>
+</section>
 
-</div>
+<div class="lightbox" id="lightbox"><span class="close" id="lbClose">×</span><img id="lbImg" src="" alt="作品放大"></div>
 
-</section><section id="testimonials"><!-- TESTIMONIALS PLACEHOLDER -->
-<div class="testimonials-section">
-  <div class="testimonials-inner reveal">
-    <!-- 見證主視覺大照片 -->
-    <div style="margin-bottom:48px;display:grid;grid-template-columns:1fr 1fr;gap:3px;border-radius:var(--border-radius-lg);overflow:hidden;">
-      <div style="overflow:hidden;">
-        <img src="IMG_20260419_190952.jpg" alt="心語能量美學第十四屆學員結業合照" 
-             style="width:100%;height:320px;object-fit:cover;object-position:top;display:block;">
-      </div>
-      <div style="overflow:hidden;">
-        <img src="FB_IMG_1773062260055.jpg" alt="歷屆學員結業合照" 
-             style="width:100%;height:320px;object-fit:cover;object-position:top;display:block;">
-      </div>
-    </div>
-    <div class="section-label">學員聲音</div>
-    <h2 class="section-heading">500 位學員的選擇，<br><em>15 位講師用行動證明</em></h2>
-
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:32px;">
-      <div style="background:var(--sand);border-radius:var(--border-radius-md);padding:16px;text-align:center;">
-        <div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--gold-deep);font-weight:300;">500+</div>
-        <div style="font-size:11px;color:var(--text-muted);margin-top:4px;">位學員信任</div>
-      </div>
-      <div style="background:var(--sand);border-radius:var(--border-radius-md);padding:16px;text-align:center;">
-        <div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--gold-deep);font-weight:300;">15+</div>
-        <div style="font-size:11px;color:var(--text-muted);margin-top:4px;">位講師已開班</div>
-      </div>
-      <div style="background:var(--sand);border-radius:var(--border-radius-md);padding:16px;text-align:center;">
-        <div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--gold-deep);font-weight:300;">14</div>
-        <div style="font-size:11px;color:var(--text-muted);margin-top:4px;">屆口碑傳承</div>
-      </div>
-      <div style="background:var(--sand);border-radius:var(--border-radius-md);padding:16px;text-align:center;">
-        <div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--gold-deep);font-weight:300;">2–6</div>
-        <div style="font-size:11px;color:var(--text-muted);margin-top:4px;">人精緻小班</div>
-      </div>
-    </div>
-
-    <div class="testi-note">
-      以下為歷屆學員真實回饋。如您是本課程結業學員，歡迎分享您的學習心得——您的故事，可能正是下一位學員踏出那一步的契機。
-    </div>
-
-    <!-- 六大學員見證卡片 -->
-    <div class="testi-placeholder-grid">
-
-      <!-- 見證一：秀琪・團體創作 -->
-      <div class="testi-card">
-        <span class="testi-quote-mark">"</span>
-        <p class="testi-text">被老師指派當小老師，心裡很緊張——我拉線條不擅長。但後來發現，每一條線有它自己獨特的感覺，每一個圓把它畫好就夠了。我們每個人都很包容跟尊重，畫錯了，同學說「沒關係，不要急，我幫你」。</p>
-        <p style="font-size:13px;color:var(--ink-soft);line-height:1.8;font-style:italic;margin:0 0 16px;border-left:2px solid var(--gold-light);padding-left:12px;">「大家彼此等待，彼此包容，彼此看見。」</p>
-        <p class="testi-author">── 秀琪・學員</p>
-        <p class="testi-role">第二天團體創作課後分享</p>
-      </div>
-
-      <!-- 見證二：複訓藥師・成長蛻變 -->
-      <div class="testi-card">
-        <span class="testi-quote-mark">"</span>
-        <p class="testi-text">複訓跟第一次上課，自己可以看得出來差異很大。以前一直想「要用什麼顏色」，現在是心血來潮，想畫什麼就畫什麼，隨自己的心意，很自然。用心去畫就好，不要用頭腦去想。</p>
-        <p style="font-size:13px;color:var(--ink-soft);line-height:1.8;font-style:italic;margin:0 0 16px;border-left:2px solid var(--gold-light);padding-left:12px;">「學曼陀羅讓我更愛自己，不要一天到晚為別人忙碌，要給自己空間。」</p>
-        <p class="testi-author">── 複訓學員（藥師）</p>
-        <p class="testi-role">結業後回來複訓・課後分享</p>
-      </div>
-
-      <!-- 見證三：追蹤老師十幾年的學員 -->
-      <div class="testi-card">
-        <span class="testi-quote-mark">"</span>
-        <p class="testi-text">我追蹤燕子老師從蝶古巴特、木器彩繪這一類，追了十幾年。來學這個，是因為知道老師在彩繪有一定的底子，她會告訴我很多技巧，讓我少走冤枉路。色彩學讓我明白：用6瓶顏料，可以調出無限多的顏色，而且每個顏色都代表一種性格。</p>
-        <p style="font-size:13px;color:var(--ink-soft);line-height:1.8;font-style:italic;margin:0 0 16px;border-left:2px solid var(--gold-light);padding-left:12px;">「有付費學技巧，跟只上體驗班，學到的深度真的不一樣。」</p>
-        <p class="testi-author">── 追蹤老師十幾年的學員</p>
-        <p class="testi-role">首次參加師資培訓課後分享</p>
-      </div>
-
-      <!-- 見證四：資深複訓學員・教學實習 -->
-      <div class="testi-card">
-        <span class="testi-quote-mark">"</span>
-        <p class="testi-text">課程架構非常清晰，由簡入繁，一步一步讓你理解、操作、再精進。無論你已有繪畫經驗，或完全是初學者，學習都會很有效率。最棒的是老師讓我們實際試教——知道跟做到，真的是兩件事。</p>
-        <p style="font-size:13px;color:var(--ink-soft);line-height:1.8;font-style:italic;margin:0 0 16px;border-left:2px solid var(--gold-light);padding-left:12px;">「這裡不會讓你變成學習後的孤兒——結業後，有人一直在你身後陪著你。」</p>
-        <p class="testi-author">── 第一屆資深複訓學員</p>
-        <p class="testi-role">複訓次數最多・見證課程不斷精進</p>
-      </div>
-
-      <!-- 見證五：曼陀羅讓我靜下來 -->
-      <div class="testi-card">
-        <span class="testi-quote-mark">"</span>
-        <p class="testi-text">我是一個很難靜下來的人，個性急躁，工作也要快。但當我看曼陀羅影片的時候，我發現我竟然可以很專注、活在當下地去 focus 這一件事情。這是第一件讓我可以這麼忘我、讓心真正靜下來的事。</p>
-        <p style="font-size:13px;color:var(--ink-soft);line-height:1.8;font-style:italic;margin:0 0 16px;border-left:2px solid var(--gold-light);padding-left:12px;">「在畫作的當下，我的身體、心理和意識，他們是合在一起的。」</p>
-        <p class="testi-author">── 學員分享</p>
-        <p class="testi-role">談曼陀羅對身心靈的療癒力量</p>
-      </div>
-
-      <!-- 見證六：色彩解析照見自己 -->
-      <div class="testi-card">
-        <span class="testi-quote-mark">"</span>
-        <p class="testi-text">第二次畫完，我多了粉色系，黃色少了很多。老師說我是很想為別人做，扛太多，很委屈，外強內好。我透過這個解析，看見了自己——原來我一直沒有看見我自己。這讓我的方向更清楚，要把愛放對地方，也要保留給自己。</p>
-        <p style="font-size:13px;color:var(--ink-soft);line-height:1.8;font-style:italic;margin:0 0 16px;border-left:2px solid var(--gold-light);padding-left:12px;">「透過解析，我更清楚我現在在哪裡，我真心有熱誠要去做什麼。」</p>
-        <p class="testi-author">── 學員分享</p>
-        <p class="testi-role">談色彩心理學解析的自我覺察</p>
-      </div>
-
-    </div>
-
-    <!-- 秀琪金句特寫 -->
-    <div style="margin-top:48px;background:var(--ink);padding:48px 40px;text-align:center;position:relative;overflow:hidden;">
-      <div style="position:absolute;top:-30px;left:50%;transform:translateX(-50%);font-family:'Cormorant Garamond',serif;font-size:180px;color:rgba(201,169,110,0.04);font-weight:300;line-height:1;pointer-events:none;">"</div>
-      <p style="font-size:10px;letter-spacing:3px;color:rgba(255,255,255,0.3);margin-bottom:24px;">STUDENT VOICE・學員的話</p>
-      <p style="font-family:'Noto Serif TC',serif;font-size:clamp(18px,3vw,28px);color:#fff;line-height:1.9;font-weight:300;max-width:640px;margin:0 auto 24px;">
-        「大家彼此等待，<br>
-        <em style="color:var(--gold);font-style:normal;">彼此包容，彼此看見。</em>」
-      </p>
-      <p style="font-size:13px;color:rgba(255,255,255,0.4);">── 秀琪・第十四屆學員・課後真實分享</p>
-    </div>
-
-    <!-- 複訓學員大引言 -->
-    <div style="margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:2px;">
-
-      <div style="background:var(--sand);padding:40px 36px;border-bottom:3px solid var(--gold);">
-        <p style="font-size:10px;letter-spacing:3px;color:var(--gold-deep);margin-bottom:20px;">SOUL PAINTING・心靈的聲音</p>
-        <p style="font-family:'Noto Serif TC',serif;font-size:clamp(16px,2vw,21px);color:var(--ink);line-height:1.9;font-weight:400;margin-bottom:20px;">
-          「我是一個很難靜下來的人。<br><br>
-          但在畫作的當下，<br>
-          我的身體、心理和意識，<br>
-          <em style="color:var(--gold-deep);font-style:normal;">他們是合在一起的。</em>」
-        </p>
-        <p style="font-size:12px;color:var(--text-muted);">── 學員分享・談曼陀羅的療癒力量</p>
-      </div>
-
-      <div style="background:var(--ink);padding:40px 36px;">
-        <p style="font-size:10px;letter-spacing:3px;color:rgba(255,255,255,0.35);margin-bottom:20px;">THE POWER OF COLOR・色彩照見自己</p>
-        <p style="font-family:'Noto Serif TC',serif;font-size:clamp(15px,1.8vw,19px);color:#fff;line-height:1.9;font-weight:300;margin-bottom:20px;">
-          「我一直以為我兒子是商業的人，<br>
-          但從他的曼陀羅作品裡我看見——<br>
-          <em style="color:var(--gold);font-style:normal;">他其實是一個超大愛的人。</em><br><br>
-          色彩，是無法隱藏的。」
-        </p>
-        <p style="font-size:12px;color:rgba(255,255,255,0.35);">── 複訓學員・談色彩心理學解析的震撼</p>
-      </div>
-
-      <div style="background:var(--teal-deep);padding:40px 36px;grid-column:1/-1;">
-        <p style="font-size:10px;letter-spacing:3px;color:rgba(255,255,255,0.4);margin-bottom:20px;">FROM STUDENT TO INSTRUCTOR・從學員到講師</p>
-        <p style="font-family:'Noto Serif TC',serif;font-size:clamp(16px,2vw,22px);color:#fff;line-height:1.9;font-weight:300;margin-bottom:16px;">
-          「這裡不會讓你變成<em style="color:var(--gold-light);font-style:normal;">學習後的孤兒</em>——<br>
-          結業後，有人一直在你身後陪著你。<br><br>
-          知道，跟做到，真的是兩件事。<br>
-          <em style="color:var(--gold-light);font-style:normal;">這門課，讓我真正做到了。</em>」
-        </p>
-        <p style="font-size:12px;color:rgba(255,255,255,0.4);">── 第一屆資深複訓學員・複訓次數最多・見證課程十四屆的成長</p>
-      </div>
-
+<section class="signup" id="signup">
+  <div class="wrap reveal">
+    <span class="sec-tag">Join Us</span>
+    <h2>準備好開啟你的靜心創作旅程了嗎？</h2>
+    <p>曼陀羅心靈彩繪一級講師課程，名額有限，小班制教學。填寫報名表，開始屬於你的療癒時光。</p>
+    <div class="hero-actions" style="justify-content:center">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdtgas1QKlAV4T7Pfj-TnGiT-slAiPzlIK32NTCHJuTmBo0Qw/viewform?usp=send_form" target="_blank" rel="noopener" class="btn btn-light">填寫報名表 →</a>
+      <a href="#contact" class="btn btn-outline">其他聯絡方式</a>
     </div>
   </div>
-</div>
+</section>
 
-</section><section id="certificate"><!-- CERTIFICATE STRIP -->
-<div class="cert-strip">
-  <div class="cert-strip-inner reveal">
-    <div class="section-label">結業認證</div>
-    <h2 class="section-heading" style="font-size:clamp(20px,3vw,30px);">完成課程，取得正式師資認定</h2>
-    <div class="cert-box">
-      <p class="cert-title">曼陀羅心靈彩繪　二級講師證書</p>
-      <p class="cert-subtitle">中華綜合發展研究院・文創藝術研究所　核發</p>
-    </div>
-    <p class="cert-requirement">
-      完成 18 小時培訓課程，並提交一件曼陀羅作品，即可申請結業講師證書。<br>
-      持有證書者，具備開設曼陀羅心靈彩繪體驗班及工作坊之資格。
-    </p>
-  </div>
-</div>
-
-</section><section id="pricing"><!-- SCHEDULE & PRICING -->
-<div class="schedule-section">
-  <div class="schedule-inner reveal">
-    <div class="section-label" style="color:rgba(255,255,255,0.4);">課程資訊</div>
-    <h2 class="section-heading">班別、地點與費用</h2>
-
-    <div class="location-grid">
-      <div class="location-card">
-        <p class="location-city">台中班</p>
-        <div class="location-info">
-          <strong>上課地點</strong>
-          台中市西屯區中康街 7 號<br>（瑞恩悅琚）
-          <br><br>
-          <strong>上課時間</strong>
-          10:00 – 20:00
-          <br><br>
-          <strong>開課班別</strong>
-          <span class="class-tag">假日班 E｜4/12（六）+ 4/19（日）</span>
-          <span class="class-tag">假日班 G｜6/6（六）+ 6/7（日）</span>
-        </div>
-      </div>
-      <div class="location-card">
-        <p class="location-city">台北班</p>
-        <div class="location-info">
-          <strong>上課地點</strong>
-          台北市松江路 330 巷 26 號<br>（喜悅舒活藝文堂）
-          <br><br>
-          <strong>上課時間</strong>
-          11:00 – 21:00
-          <br><br>
-          <strong>開課班別</strong>
-          <span class="class-tag">假日班 F｜6/13（六）+ 6/14（日）</span>
-        </div>
-      </div>
-    </div>
-
-    <p style="font-size:12px;color:rgba(255,255,255,0.3);margin-top:16px;text-align:center;letter-spacing:1px;">
-      ※ 小班制教學，每班最多 10 人 ・ 報名確認後方保留名額
-    </p>
-
-    <div class="pricing-box">
-      <div class="pricing-left">
-        <p class="price-original">原價 NT$22,800</p>
-        <div class="price-main">21,000</div>
-        <p class="price-unit">新台幣・新春限時特惠</p>
-        <div class="price-deadline">
-          ⏰ 優惠截止：<strong style="color:var(--gold);">2026 年 4 月 28 日</strong><br>
-          逾期恢復原價 NT$22,800<br>
-          每班限額 6 人，額滿即止
-        </div>
-        <p class="per-hour-note">
-          18 小時培訓 ÷ NT$21,000<br>
-          平均每小時學費：約 NT$1,167<br><br>
-          每班僅 2–6 人的專屬指導<br>
-          台灣同等師資背景的<br>小班課程中最具競爭力的定價
-        </p>
-      </div>
-      <div class="pricing-right">
-        <p class="includes-label">INCLUDED・費用已包含</p>
-        <ul class="includes-list">
-          <li>兩天午餐</li>
-          <li>下午茶與飲料</li>
-          <li>全部課程材料</li>
-          <li>完整講義教材</li>
-          <li>結業講師證書申請資格</li>
-        </ul>
-        <div style="margin-top:20px;background:rgba(201,169,110,0.12);border:0.5px solid rgba(201,169,110,0.4);padding:14px 16px;">
-          <p style="font-size:11px;color:rgba(255,255,255,0.5);letter-spacing:1px;margin-bottom:6px;">INDUSTRY FIRST・彩繪界首創</p>
-          <p style="font-size:13px;color:#E8D5B0;line-height:1.8;margin:0;">
-            ✦ 結業後 <strong style="color:#C9A96E;">3 年內無限次複訓</strong><br>
-            ✦ 複訓學費永遠 <strong style="color:#C9A96E;">NT$0</strong><br>
-            ✦ 只需材料費・場地費・餐費<br>
-            <span style="font-size:11px;color:rgba(255,255,255,0.35);margin-top:4px;display:block;">亞洲唯一・全球僅此一家</span>
-          </p>
-        </div>
-      </div>
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-tag">Contact</span><h2>聯絡我們</h2><div class="divider-dot"><i></i><i></i><i></i></div>
+      <p>有任何課程相關問題，都歡迎與我們聯繫。</p></div>
+    <div class="c-grid">
+      <a class="c-card reveal" href="https://line.me/" target="_blank" rel="noopener"><div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#06C755" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="9" width="36" height="26" rx="9"/><path d="M16 20v8M16 20l6 8v-8M27 20v8h5M37 20v8M37 20h-4M37 24h-3"/></svg></div><div class="lbl">LINE</div><div class="val">@請填入LINE ID</div></a>
+      <a class="c-card reveal" href="tel:+886000000000"><div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#BC6244" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M14 8l6 2 2 8-4 3a18 18 0 009 9l3-4 8 2 2 6c0 2-2 4-5 4C24 40 8 24 8 13c0-3 2-5 4-5z"/></svg></div><div class="lbl">電話</div><div class="val">請填入電話號碼</div></a>
+      <a class="c-card reveal" href="https://instagram.com/" target="_blank" rel="noopener"><div class="ico"><svg viewBox="0 0 48 48" fill="none" stroke="#B23E6C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><rect x="9" y="9" width="30" height="30" rx="9"/><circle cx="24" cy="24" r="7"/><circle cx="33" cy="15" r="1.6" fill="#B23E6C" stroke="none"/></svg></div><div class="lbl">Instagram</div><div class="val">@請填入IG帳號</div></a>
     </div>
   </div>
-</div>
+</section>
 
-</section><section id="cta"><!-- CTA -->
-<div class="cta-section">
-  <div class="cta-inner reveal">
-    <p class="cta-eyebrow">ENROLL NOW・立即加入</p>
-    <h2 class="cta-heading">500 位學員的起點<br>15 位講師的出發地——<br><span style="font-size:0.8em;font-weight:300;">下一位，是你嗎？</span></h2>
-    <p class="cta-sub">
-      超過 500 位學員曾在心語能量美學的課堂裡遇見曼陀羅，<br>
-      其中超過 15 位進一步成為活躍授課的講師——<br>
-      有人開設親子班，有人走進企業，有人成為身心靈工作坊的常駐夥伴。<br><br>
-      每班最多 10 人，名額確認後即截止開放。<br>
-      你準備好了嗎？
-    </p>
-    <div class="cta-buttons">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeak11VXL41_jswMJWrl0VAuuOXTvdeHsD1P_Ft1wAzn1XukQ/viewform" target="_blank" class="btn-primary">立即填寫報名表</a>
-      <a href="https://www.facebook.com/colorscantell" target="_blank" class="btn-secondary">前往粉絲頁了解更多</a>
+<footer>
+  <div class="wrap">
+    <div class="fbrand"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(0 50 50)"/><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(30 50 50)"/><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(60 50 50)"/><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(90 50 50)"/><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(120 50 50)"/><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(150 50 50)"/><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(180 50 50)"/><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(210 50 50)"/><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(240 50 50)"/><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(270 50 50)"/><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(300 50 50)"/><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(330 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(0 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(30 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(60 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(90 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(120 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(150 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(180 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(210 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(240 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(270 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(300 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(330 50 50)"/><circle cx="50" cy="50" r="13" fill="none" stroke="#6E9285" stroke-width="2"/><circle cx="50" cy="50" r="6" fill="#B23E6C"/><circle cx="50" cy="50" r="2.4" fill="#FAF4EA"/></svg> 曼陀羅心靈彩繪</div>
+    <p class="fmotto">中華綜合發展研究院 ‧ 文創藝術研究所 ‧ 心靈美學藝術學程</p>
+    <div class="fsocial">
+      <a href="https://line.me/" target="_blank" rel="noopener" aria-label="LINE"><svg width="20" height="20" viewBox="0 0 48 48" fill="none" stroke="#E8D8C6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="9" width="36" height="26" rx="9"/><path d="M16 20v8M16 20l6 8v-8M27 20v8h5M37 20v8M37 20h-4M37 24h-3"/></svg></a>
+      <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 48 48" fill="none" stroke="#E8D8C6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><rect x="9" y="9" width="30" height="30" rx="9"/><circle cx="24" cy="24" r="7"/></svg></a>
+      <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 48 48" fill="none" stroke="#E8D8C6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M28 14h4V8h-5c-5 0-8 3-8 8v4h-5v6h5v14h6V26h5l1-6h-6v-3c0-2 1-3 3-3z"/></svg></a>
     </div>
-    <div class="cta-urgency">
-      <div class="urgency-item"><div class="urgency-dot"></div>每班限額 6 人</div>
-      <div class="urgency-item"><div class="urgency-dot"></div>優惠截止 4 月 28 日</div>
-      <div class="urgency-item"><div class="urgency-dot"></div>彩繪界首創・三年免費複訓</div>
-      <div class="urgency-item"><div class="urgency-dot"></div>結業頒發講師證書</div>
-    </div>
+    <p class="fcopy">© 2026 曼陀羅心靈彩繪 Mandala Soul Painting ‧ 黃彥蓁老師 ‧ All Rights Reserved.</p>
   </div>
-</div>
-
-<!-- FOOTER -->
-<div class="footer">
-  <p class="footer-logo">心語能量美學・黃彥蓁老師</p>
-  <p class="footer-sub">心語能量美學｜中華綜合發展研究院 文創藝術研究所・心靈美學藝術學程</p>
-  <p class="footer-contact">
-    Facebook：<a href="https://www.facebook.com/colorscantell" target="_blank">facebook.com/colorscantell</a><br>
-    報名表單：<a href="https://docs.google.com/forms/d/e/1FAIpQLSeak11VXL41_jswMJWrl0VAuuOXTvdeHsD1P_Ft1wAzn1XukQ/viewform" target="_blank">點此填寫報名資料</a>
-  </p>
-</div>
+</footer>
 
 <script>
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(el => {
-    if (el.isIntersecting) {
-      el.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.1 });
-
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-</script>
-
-<script>
-function toggleNav() {
-  const links = document.getElementById('navLinks');
-  const ham = document.getElementById('hamburger');
-  links.classList.toggle('open');
-}
-
-// 點選連結後關閉手機選單
-document.querySelectorAll('.nav-links a').forEach(a => {
-  a.addEventListener('click', () => {
-    document.getElementById('navLinks').classList.remove('open');
-  });
-});
-
-// 滾動時高亮當前區塊
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a');
-
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(section => {
-    const top = section.offsetTop - 80;
-    if (window.scrollY >= top) current = section.id;
-  });
-  navLinks.forEach(a => {
-    a.classList.remove('active');
-    if (a.getAttribute('href') === '#' + current) a.classList.add('active');
-  });
-});
+const IMGS={"hero": "images/hero.jpg", "process": "images/process.jpg", "group1": "images/group1.jpg", "group2": "images/group2.jpg", "group3": "images/group3.jpg", "art1": "images/art1.jpg", "art2": "images/art2.jpg", "art3": "images/art3.jpg", "art4": "images/art4.jpg", "art5": "images/art5.jpg", "art6": "images/art6.jpg", "art7": "images/art7.jpg", "art8": "images/art8.jpg", "inst1": "images/inst1.jpg", "inst2": "images/inst2.jpg", "inst3": "images/inst3.jpg", "inst4": "images/inst4.jpg", "proc1": "images/proc1.jpg", "proc2": "images/proc2.jpg", "proc3": "images/proc3.jpg", "proc4": "images/proc4.jpg", "ind1": "images/ind1.jpg", "ind2": "images/ind2.jpg", "ind3": "images/ind3.jpg", "ind4": "images/ind4.jpg", "ind5": "images/ind5.jpg", "ind6": "images/ind6.jpg", "ind7": "images/ind7.jpg", "teacher": "images/teacher.jpg"};
+document.querySelectorAll('[data-img]').forEach(el=>{el.src=IMGS[el.dataset.img]});
+document.querySelectorAll('[data-img-src]').forEach(el=>{el.dataset.full=IMGS[el.getAttribute('data-img-src')]});
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>{nav.classList.toggle('scrolled',scrollY>40)});
+const burger=document.getElementById('burger'),links=document.getElementById('links');
+burger.addEventListener('click',()=>links.classList.toggle('open'));
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const lb=document.getElementById('lightbox'),lbImg=document.getElementById('lbImg'),lbClose=document.getElementById('lbClose');
+document.querySelectorAll('.g-item').forEach(it=>it.addEventListener('click',()=>{lbImg.src=it.dataset.full;lb.classList.add('open')}));
+function closeLb(){lb.classList.remove('open')}
+lbClose.addEventListener('click',closeLb);
+lb.addEventListener('click',e=>{if(e.target===lb)closeLb()});
+addEventListener('keydown',e=>{if(e.key==='Escape')closeLb()});
 </script>
 </body>
 </html>
