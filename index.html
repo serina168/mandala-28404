@@ -31,12 +31,12 @@ header.nav.scrolled{border-bottom-color:var(--line);box-shadow:0 6px 26px -18px 
 .brand{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-weight:700;font-size:1.12rem;letter-spacing:.08em;color:var(--brown)}
 .brand .mk{width:34px;height:34px;flex:none} .brand .mk svg{width:100%;height:100%;display:block;animation:spin 60s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
-nav.links{display:flex;gap:30px;align-items:center}
-nav.links a{font-size:.92rem;font-weight:500;color:var(--ink-soft);position:relative;letter-spacing:.04em;transition:.25s}
+nav.links{display:flex;gap:22px;align-items:center}
+nav.links a{font-size:.9rem;font-weight:500;color:var(--ink-soft);position:relative;letter-spacing:.04em;transition:.25s;white-space:nowrap}
 nav.links a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--clay);transition:.3s;border-radius:2px}
 nav.links a:hover{color:var(--clay-deep)} nav.links a:hover::after{width:100%}
-.nav-cta{padding:9px 20px;background:var(--clay);color:#fff!important;border-radius:40px;font-weight:500;box-shadow:0 8px 20px -8px var(--clay);transition:.3s}
-.nav-cta:hover{background:var(--clay-deep);transform:translateY(-2px)} .nav-cta::after{display:none!important}
+.nav-cta{padding:8px 20px;background:transparent;color:var(--gold)!important;border:1.5px solid var(--gold);border-radius:40px;font-weight:600;letter-spacing:.08em;transition:.3s}
+.nav-cta:hover{background:var(--gold);color:#fff!important;transform:translateY(-2px);box-shadow:0 8px 20px -8px var(--gold)} .nav-cta::after{display:none!important}
 .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:6px}
 .burger span{width:26px;height:2px;background:var(--brown);border-radius:2px;transition:.3s}
 
@@ -210,11 +210,15 @@ footer .fcopy{font-size:.8rem;opacity:.6;border-top:1px solid rgba(232,216,198,.
   <a href="#top" class="brand"><span class="mk"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(0 50 50)"/><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(30 50 50)"/><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(60 50 50)"/><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(90 50 50)"/><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(120 50 50)"/><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(150 50 50)"/><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(180 50 50)"/><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(210 50 50)"/><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(240 50 50)"/><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(270 50 50)"/><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(300 50 50)"/><ellipse cx="50" cy="22" rx="4.6" ry="11" fill="none" stroke="#BC6244" stroke-width="2" transform="rotate(330 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(0 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(30 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(60 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(90 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(120 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(150 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(180 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(210 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(240 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(270 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(300 50 50)"/><circle cx="50" cy="9" r="2.1" fill="#CE9B3F" transform="rotate(330 50 50)"/><circle cx="50" cy="50" r="13" fill="none" stroke="#6E9285" stroke-width="2"/><circle cx="50" cy="50" r="6" fill="#B23E6C"/><circle cx="50" cy="50" r="2.4" fill="#FAF4EA"/></svg></span>曼陀羅心靈彩繪</a>
   <button class="burger" id="burger" aria-label="選單"><span></span><span></span><span></span></button>
   <nav class="links" id="links">
-    <a href="#about">關於課程</a>
-    <a href="#teacher">授課講師</a>
-    <a href="#course">課程內容</a>
-    <a href="#gallery">作品藝廊</a>
-    <a href="https://forms.gle/ogjm98mwzJgGDMiX7" target="_blank" rel="noopener" class="nav-cta">立即報名</a>
+    <a href="#why-us">課程特色</a>
+    <a href="#curriculum">課程內容</a>
+    <a href="#artworks">學員作品</a>
+    <a href="#teacher">師資介紹</a>
+    <a href="#cohorts">歷屆紀錄</a>
+    <a href="#collab">共創作品</a>
+    <a href="#support">課後支援</a>
+    <a href="#pricing">費用班別</a>
+    <a href="#enroll" class="nav-cta">立即報名</a>
   </nav>
 </header>
 
@@ -311,12 +315,13 @@ footer .fcopy{font-size:.8rem;opacity:.6;border-top:1px solid rgba(232,216,198,.
         <div class="step"><div class="num">6</div><div><h5>心得分享</h5><p>學員分享創作過程中的心得與挑戰，指導教師提供反饋與建議。</p></div></div>
       </div>
       <div class="course-card reveal">
-        <h3>Day 2　完成與教學</h3>
-        <p class="csub">完成作品、作品解析、教學技巧引導，培養講師的專業引導力。</p>
-        <div class="step"><div class="num">1</div><div><h5>木器創作 — 最終階段</h5><p>最終調整與完成，學習將施華洛世奇鑽飾融入曼陀羅設計。</p></div></div>
-        <div class="step"><div class="num">2</div><div><h5>心得分享</h5><p>學員分享創作過程中的心得與挑戰，指導教師提供反饋與建議。</p></div></div>
-        <div class="step"><div class="num">3</div><div><h5>15 件作品解析</h5><p>提供 15 件曼陀羅作品範例，學習如何解析每件作品的內在狀態與情感表達。</p></div></div>
+        <h3>Day 2　解析與教學</h3>
+        <p class="csub">從作品解析到教學實戰，培養講師的專業引導力。</p>
+        <div class="step"><div class="num">1</div><div><h5>15 件作品解析</h5><p>提供 15 件曼陀羅作品範例，學習如何解析每件作品的內在狀態與情感表達，培養洞察力。</p></div></div>
+        <div class="step"><div class="num">2</div><div><h5>團體創作</h5><p>分組討論創作主題與設計理念，在大型畫布上從基礎繪製到細節深化，完成團體作品。</p></div></div>
+        <div class="step"><div class="num">3</div><div><h5>作品講評</h5><p>每組展示完成的團體作品，並分享創作過程中的心得與挑戰。</p></div></div>
         <div class="step"><div class="num">4</div><div><h5>教學技巧引導</h5><p>學習如何引導學生，解析作品中的內在狀態。強調溝通技巧與創意激發方法。</p></div></div>
+        <div class="step"><div class="num">5</div><div><h5>實際演練</h5><p>學員輪流擔任講師，模擬教學情境，引導其他學員進行小型創作。指導教師提供反饋。</p></div></div>
       </div>
     </div>
 
@@ -331,7 +336,8 @@ footer .fcopy{font-size:.8rem;opacity:.6;border-top:1px solid rgba(232,216,198,.
           <li>施華洛世奇鑽飾套組</li>
           <li>珠寶膠、沾珠筆等專業工具</li>
           <li>高級貂毛筆、橢圓筆、斜筆各一支</li>
-                  </ul>
+          <li>團體教學模擬用圓盤木器</li>
+        </ul>
         <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--line)">
           <h3 style="font-size:1.1rem;margin-bottom:8px">學員自備</h3>
           <ul>
@@ -346,7 +352,7 @@ footer .fcopy{font-size:.8rem;opacity:.6;border-top:1px solid rgba(232,216,198,.
           <ul style="margin-top:12px">
             <li style="border-color:rgba(243,230,214,.12);color:#fff">完成 22 小時課程</li>
             <li style="border-color:rgba(243,230,214,.12);color:#fff">提交一幅曼陀羅心靈彩繪作品，展示課程技法並通過考核</li>
-            <li style="border-color:rgba(243,230,214,.12);color:#fff">證書費 $4,200 元（課程結束三個月內完成考核，獎勵價 $3,500 元）</li>
+            <li style="border-color:rgba(243,230,214,.12);color:#fff">證書費 $4,200 元（課程結束兩個月內完成考核，獎勵價 $3,500 元）</li>
           </ul>
         </div>
         <div class="kit reveal">
@@ -367,7 +373,7 @@ footer .fcopy{font-size:.8rem;opacity:.6;border-top:1px solid rgba(232,216,198,.
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px">
         <div style="padding:16px;background:var(--paper);border-radius:14px;border:1px solid var(--line);font-size:.88rem;color:var(--ink-soft);font-weight:300"><span style="display:block;font-family:var(--serif);font-weight:600;color:var(--brown);margin-bottom:4px;font-size:1rem">免費教學輔導</span>持續提供教學上的指導與支援</div>
         <div style="padding:16px;background:var(--paper);border-radius:14px;border:1px solid var(--line);font-size:.88rem;color:var(--ink-soft);font-weight:300"><span style="display:block;font-family:var(--serif);font-weight:600;color:var(--brown);margin-bottom:4px;font-size:1rem">講師價進貨</span>以講師優惠價購入材料，適用於教學與販售</div>
-        <div style="padding:16px;background:var(--paper);border-radius:14px;border:1px solid var(--line);font-size:.88rem;color:var(--ink-soft);font-weight:300"><span style="display:block;font-family:var(--serif);font-weight:600;color:var(--brown);margin-bottom:4px;font-size:1rem">四年內免學費複訓</span>僅需支付場地、材料及餐費（22 小時 $6,800 元）</div>
+        <div style="padding:16px;background:var(--paper);border-radius:14px;border:1px solid var(--line);font-size:.88rem;color:var(--ink-soft);font-weight:300"><span style="display:block;font-family:var(--serif);font-weight:600;color:var(--brown);margin-bottom:4px;font-size:1rem">永久免學費複訓</span>僅需支付場地、材料及餐費（22 小時 $6,800 元）</div>
         <div style="padding:16px;background:var(--paper);border-radius:14px;border:1px solid var(--line);font-size:.88rem;color:var(--ink-soft);font-weight:300"><span style="display:block;font-family:var(--serif);font-weight:600;color:var(--brown);margin-bottom:4px;font-size:1rem">教學助教機會</span>參與單項課程或企業合作教學之助教，累積教學經驗</div>
         <div style="padding:16px;background:var(--paper);border-radius:14px;border:1px solid var(--line);font-size:.88rem;color:var(--ink-soft);font-weight:300"><span style="display:block;font-family:var(--serif);font-weight:600;color:var(--brown);margin-bottom:4px;font-size:1rem">專屬師資群組</span>即時解決教學問題，不定期師資聚會促進交流</div>
         <div style="padding:16px;background:var(--paper);border-radius:14px;border:1px solid var(--line);font-size:.88rem;color:var(--ink-soft);font-weight:300"><span style="display:block;font-family:var(--serif);font-weight:600;color:var(--brown);margin-bottom:4px;font-size:1rem">二級升級</span>完成一級課程後，可教授二級課程並協助學員申請證書</div>
